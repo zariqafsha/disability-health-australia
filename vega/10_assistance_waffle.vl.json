@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "100-unit waffle: receipt of assistance with daily activities among people with disability living in households who needed assistance. Formal providers may also coexist with informal providers. AIHW People with disability in Australia 2026 summary.",
+  "background": "transparent",
+  "width": 440,
+  "height": 330,
+  "data": {
+    "url": "data/10_assistance_waffle.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum.col)",
+      "as": "xc"
+    },
+    {
+      "calculate": "toNumber(datum.row)",
+      "as": "yc"
+    }
+  ],
+  "mark": {
+    "type": "rect",
+    "cornerRadius": 4,
+    "stroke": "#FFFFFF",
+    "strokeWidth": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "xc",
+      "type": "ordinal",
+      "sort": "ascending",
+      "axis": null,
+      "scale": {
+        "paddingInner": 0.025,
+        "paddingOuter": 0.025
+      }
+    },
+    "y": {
+      "field": "yc",
+      "type": "ordinal",
+      "sort": "ascending",
+      "axis": null,
+      "scale": {
+        "paddingInner": 0.025,
+        "paddingOuter": 0.025
+      }
+    },
+    "color": {
+      "field": "assistance_type",
+      "type": "nominal",
+      "sort": [
+        "Formal assistance (may also receive informal)",
+        "Informal assistance only",
+        "No assistance"
+      ],
+      "title": null,
+      "scale": {
+        "domain": [
+          "Formal assistance (may also receive informal)",
+          "Informal assistance only",
+          "No assistance"
+        ],
+        "range": [
+          "#168F8B",
+          "#DEA053",
+          "#B9C4C7"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "vertical",
+        "labelFontSize": 11,
+        "labelLimit": 360,
+        "symbolSize": 155,
+        "title": null
+      }
+    },
+    "tooltip": [
+      {
+        "field": "assistance_type",
+        "title": "Assistance received"
+      },
+      {
+        "field": "share_pct",
+        "title": "Share of those needing assistance (%)",
+        "format": ".0f"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#486267",
+      "titleColor": "#456064"
+    },
+    "header": {
+      "labelFont": "Arial",
+      "labelColor": "#173E42"
+    }
+  }
+}

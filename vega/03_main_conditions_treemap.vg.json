@@ -1,0 +1,217 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Treemap of mutually exclusive main health conditions, SDAC 2022 via AIHW 2026. Non-published Other groups are derived residuals for closure.",
+  "width": 940,
+  "height": 420,
+  "padding": 0,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding",
+    "resize": true
+  },
+  "background": "transparent",
+  "data": [
+    {
+      "name": "tree",
+      "url": "data/03_treemap_nodes.json",
+      "transform": [
+        {
+          "type": "stratify",
+          "key": "id",
+          "parentKey": "parent"
+        },
+        {
+          "type": "treemap",
+          "field": "value",
+          "method": "squarify",
+          "ratio": 1.25,
+          "round": true,
+          "size": [
+            {
+              "signal": "width"
+            },
+            {
+              "signal": "height"
+            }
+          ],
+          "paddingInner": 4,
+          "paddingOuter": 0
+        }
+      ]
+    },
+    {
+      "name": "leaves",
+      "source": "tree",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "!datum.children"
+        }
+      ]
+    },
+    {
+      "name": "labels",
+      "source": "leaves",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "(datum.x1 - datum.x0) > 76 && (datum.y1 - datum.y0) > 60"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "surface",
+      "type": "ordinal",
+      "domain": [
+        "Physical",
+        "Mental or behavioural"
+      ],
+      "range": [
+        "#137C80",
+        "#E3A458"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {
+        "data": "leaves"
+      },
+      "encode": {
+        "enter": {
+          "stroke": {
+            "value": "#FBFAF5"
+          },
+          "strokeWidth": {
+            "value": 3
+          },
+          "cornerRadius": {
+            "value": 3
+          }
+        },
+        "update": {
+          "x": {
+            "field": "x0"
+          },
+          "y": {
+            "field": "y0"
+          },
+          "x2": {
+            "field": "x1"
+          },
+          "y2": {
+            "field": "y1"
+          },
+          "fill": {
+            "scale": "surface",
+            "field": "condition_group"
+          },
+          "fillOpacity": {
+            "signal": "datum.condition_group === 'Physical' ? 0.65 + datum.value / 90 : 0.76 + datum.value / 90"
+          },
+          "tooltip": {
+            "signal": "{'Main condition': datum.display, 'Group': datum.condition_group, 'Share of people with disability': format(datum.value, '.1f') + '%', 'Value': datum.value_type} "
+          }
+        },
+        "hover": {
+          "stroke": {
+            "value": "#112B31"
+          },
+          "strokeWidth": {
+            "value": 2
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "labels"
+      },
+      "encode": {
+        "enter": {
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": 700
+          },
+          "fill": {
+            "value": "#12383E"
+          },
+          "interactive": {
+            "value": false
+          }
+        },
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 11"
+          },
+          "y": {
+            "signal": "datum.y0 + 11"
+          },
+          "text": {
+            "signal": "(datum.x1-datum.x0) < 150 && length(datum.short_label) > 15 ? slice(datum.short_label, 0, 13) + '…' : datum.short_label"
+          },
+          "limit": {
+            "signal": "max(35, datum.x1-datum.x0-20)"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "labels"
+      },
+      "encode": {
+        "enter": {
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "top"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 18
+          },
+          "fontWeight": {
+            "value": 800
+          },
+          "fill": {
+            "value": "#12383E"
+          },
+          "interactive": {
+            "value": false
+          }
+        },
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 11"
+          },
+          "y": {
+            "signal": "datum.y0 + 36"
+          },
+          "text": {
+            "signal": "format(datum.value, '.1f') + '%'"
+          }
+        }
+      }
+    }
+  ]
+}

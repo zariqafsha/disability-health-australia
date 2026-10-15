@@ -1,0 +1,443 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Weighted bipartite node-link diagram of service-specific main reasons for missed care. Links show conditional percentages, not patient counts or flows. AIHW, 2022 SDAC.",
+  "background": "transparent",
+  "width": 720,
+  "height": 380,
+  "padding": {
+    "left": 6,
+    "top": 14,
+    "right": 8,
+    "bottom": 12
+  },
+  "autosize": {
+    "type": "pad",
+    "resize": true
+  },
+  "data": [
+    {
+      "name": "links",
+      "url": "data/09_barriers_cost_wait.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "percent_of_unmet": "number",
+          "year": "number"
+        }
+      },
+      "transform": [
+        {
+          "type": "formula",
+          "as": "row",
+          "expr": "datum.service === 'GP' ? 0 : (datum.service === 'Medical specialist' ? 1 : 2)"
+        },
+        {
+          "type": "formula",
+          "as": "cost",
+          "expr": "datum.barrier === 'Cost' ? 1 : 0"
+        },
+        {
+          "type": "formula",
+          "as": "sourceY",
+          "expr": "105 + datum.row * 105 + (datum.cost ? 9 : -9)"
+        },
+        {
+          "type": "formula",
+          "as": "targetY",
+          "expr": "(datum.cost ? 279 : 121) + datum.row * 25"
+        },
+        {
+          "type": "formula",
+          "as": "brief",
+          "expr": "datum.service === 'GP' ? 'GP' : (datum.service === 'Medical specialist' ? 'Specialist' : 'Dental')"
+        },
+        {
+          "type": "linkpath",
+          "shape": "diagonal",
+          "orient": "horizontal",
+          "sourceX": {
+            "expr": "142"
+          },
+          "sourceY": {
+            "field": "sourceY"
+          },
+          "targetX": {
+            "expr": "width - 197"
+          },
+          "targetY": {
+            "field": "targetY"
+          },
+          "as": "path"
+        }
+      ]
+    },
+    {
+      "name": "services",
+      "values": [
+        {
+          "label": "GP",
+          "y": 105
+        },
+        {
+          "label": "Medical specialist",
+          "y": 210
+        },
+        {
+          "label": "Dental care",
+          "y": 315
+        }
+      ]
+    },
+    {
+      "name": "barrierTitles",
+      "values": [
+        {
+          "name": "Waiting / unavailable",
+          "y": 84,
+          "color": "#177B83"
+        },
+        {
+          "name": "Cost",
+          "y": 241,
+          "color": "#D58B4B"
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "reasonColor",
+      "type": "ordinal",
+      "domain": [
+        "Waiting time / unavailable",
+        "Cost"
+      ],
+      "range": [
+        "#177B83",
+        "#D58B4B"
+      ]
+    },
+    {
+      "name": "lineWeight",
+      "type": "linear",
+      "domain": [
+        0,
+        50
+      ],
+      "range": [
+        0,
+        14
+      ],
+      "zero": true
+    }
+  ],
+  "marks": [
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 4
+          },
+          "y": {
+            "value": 42
+          },
+          "text": {
+            "value": "CARE MISSED"
+          },
+          "fill": {
+            "value": "#607C7F"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": "bold"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "width-198"
+          },
+          "y": {
+            "value": 42
+          },
+          "text": {
+            "value": "MAIN REASON"
+          },
+          "fill": {
+            "value": "#607C7F"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": "bold"
+          }
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {
+        "data": "services"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 0
+          },
+          "x2": {
+            "value": 125
+          },
+          "y": {
+            "signal": "datum.y-24"
+          },
+          "y2": {
+            "signal": "datum.y+24"
+          },
+          "cornerRadius": {
+            "value": 7
+          },
+          "fill": {
+            "value": "#EDF5F2"
+          },
+          "stroke": {
+            "value": "#BEDCD5"
+          },
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "path",
+      "from": {
+        "data": "links"
+      },
+      "encode": {
+        "enter": {
+          "stroke": {
+            "scale": "reasonColor",
+            "field": "barrier"
+          },
+          "fill": {
+            "value": null
+          },
+          "strokeWidth": {
+            "scale": "lineWeight",
+            "field": "percent_of_unmet"
+          },
+          "strokeCap": {
+            "value": "round"
+          },
+          "tooltip": {
+            "signal": "datum.service + ' \u2022 ' + datum.barrier + ': ' + format(datum.percent_of_unmet, '.1f') + '% of people who missed that service'"
+          }
+        },
+        "update": {
+          "path": {
+            "field": "path"
+          },
+          "strokeOpacity": {
+            "value": 0.62
+          },
+          "cursor": {
+            "value": "crosshair"
+          }
+        },
+        "hover": {
+          "strokeOpacity": {
+            "value": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {
+        "data": "links"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 142
+          },
+          "y": {
+            "field": "sourceY"
+          },
+          "size": {
+            "value": 53
+          },
+          "fill": {
+            "scale": "reasonColor",
+            "field": "barrier"
+          },
+          "stroke": {
+            "value": "#FFFFFF"
+          },
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "symbol",
+      "from": {
+        "data": "links"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "width-197"
+          },
+          "y": {
+            "field": "targetY"
+          },
+          "size": {
+            "value": 67
+          },
+          "fill": {
+            "scale": "reasonColor",
+            "field": "barrier"
+          },
+          "stroke": {
+            "value": "#FFFFFF"
+          },
+          "strokeWidth": {
+            "value": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "services"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 12
+          },
+          "y": {
+            "field": "y"
+          },
+          "text": {
+            "field": "label"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 13
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#204349"
+          },
+          "limit": {
+            "value": 111
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "barrierTitles"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "width-198"
+          },
+          "y": {
+            "field": "y"
+          },
+          "text": {
+            "field": "name"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "field": "color"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "links"
+      },
+      "encode": {
+        "enter": {
+          "x": {
+            "signal": "width-183"
+          },
+          "y": {
+            "field": "targetY"
+          },
+          "text": {
+            "signal": "datum.brief + '  ' + format(datum.percent_of_unmet, '.1f') + '%'"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#334E53"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "encode": {
+        "enter": {
+          "x": {
+            "value": 4
+          },
+          "y": {
+            "value": 369
+          },
+          "text": {
+            "value": "THICKER CONNECTION = HIGHER SHARE CITING THAT REASON"
+          },
+          "fontSize": {
+            "value": 10
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "#627D80"
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Arial",
+    "background": "transparent"
+  }
+}

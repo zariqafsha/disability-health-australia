@@ -1,0 +1,141 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Unmet health care (GP, specialist, dental) by all people with disability and two overlapping disability groups. Values represent percent of each group living in households missing needed care at least once in 2022. Source AIHW ACCESS.2 and ACCESS.3.",
+  "background": "transparent",
+  "width": "container",
+  "height": 260,
+  "data": {
+    "url": "data/08_unmet_care_by_disability.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum.unmet_pct)",
+      "as": "pct"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "service",
+      "type": "nominal",
+      "sort": [
+        "GP",
+        "Medical specialist",
+        "Dental professional"
+      ],
+      "title": null,
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 12,
+        "labelLimit": 175,
+        "labelPadding": 9,
+        "ticks": false,
+        "domain": false
+      }
+    },
+    "y": {
+      "field": "disability_group",
+      "type": "nominal",
+      "sort": [
+        "All people with disability",
+        "Psychosocial disability",
+        "Sensory or speech disability"
+      ],
+      "title": null,
+      "axis": {
+        "labelFontSize": 12,
+        "labelLimit": 220,
+        "labelPadding": 10,
+        "ticks": false,
+        "domain": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 4,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 4
+      },
+      "encoding": {
+        "color": {
+          "field": "pct",
+          "type": "quantitative",
+          "title": "Unmet need (%)",
+          "scale": {
+            "domain": [
+              0,
+              40
+            ],
+            "range": [
+              "#F8F1E5",
+              "#F3CF98",
+              "#DB985E",
+              "#9F4D38"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 260
+          }
+        },
+        "tooltip": [
+          {
+            "field": "disability_group",
+            "title": "Disability group"
+          },
+          {
+            "field": "service",
+            "title": "Service"
+          },
+          {
+            "field": "pct",
+            "title": "Unmet care at least once (%)",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 17,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "pct",
+          "type": "quantitative",
+          "format": ".0f"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.pct >= 30",
+            "value": "#FFFFFF"
+          },
+          "value": "#4B3126"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#486267",
+      "titleColor": "#456064"
+    },
+    "header": {
+      "labelFont": "Arial",
+      "labelColor": "#173E42"
+    }
+  }
+}

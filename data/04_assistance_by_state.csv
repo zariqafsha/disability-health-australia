@@ -1,0 +1,9 @@
+state,state_code,rate_2016_pct,rate_2021_pct,count_2021,source_url
+New South Wales,NSW,5.4,5.8,464712,https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia
+Victoria,VIC,5.1,5.9,382073,https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia
+Queensland,QLD,5.2,6.0,309366,https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia
+South Australia,SA,6.0,6.7,118634,https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia
+Western Australia,WA,3.9,4.6,122348,https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia
+Tasmania,TAS,6.4,6.8,38023,https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia
+Northern Territory,NT,3.0,3.6,8308,https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia
+Australian Capital Territory,ACT,4.2,4.6,20782,https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia

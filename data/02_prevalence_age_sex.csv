@@ -1,0 +1,29 @@
+age_group,age_order,sex,year,prevalence_pct,source_url
+0-4,1,Male,2022,7.2,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+0-4,1,Female,2022,4.1,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+5-14,2,Male,2022,16.4,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+5-14,2,Female,2022,10.7,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+15-24,3,Male,2022,14.4,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+15-24,3,Female,2022,13.2,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+25-34,4,Male,2022,9.7,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+25-34,4,Female,2022,11.2,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+35-44,5,Male,2022,10.3,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+35-44,5,Female,2022,12.5,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+45-54,6,Male,2022,16.9,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+45-54,6,Female,2022,18.4,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+55-59,7,Male,2022,24.3,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+55-59,7,Female,2022,27.9,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+60-64,8,Male,2022,30.8,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+60-64,8,Female,2022,34.7,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+65-69,9,Male,2022,41.5,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+65-69,9,Female,2022,39.5,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+70-74,10,Male,2022,46.5,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+70-74,10,Female,2022,43.8,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+75-79,11,Male,2022,55.4,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+75-79,11,Female,2022,51.4,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+80-84,12,Male,2022,66.6,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+80-84,12,Female,2022,68.5,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+85-89,13,Male,2022,76.8,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+85-89,13,Female,2022,77.6,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+90 and over,14,Male,2022,86.3,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022
+90 and over,14,Female,2022,82.2,https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022

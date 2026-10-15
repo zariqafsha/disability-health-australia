@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "background": "transparent",
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "DM Sans",
+    "axis": {
+      "labelColor": "#405963",
+      "titleColor": "#405963"
+    },
+    "legend": {
+      "labelColor": "#3A5159",
+      "titleColor": "#3A5159",
+      "labelFontSize": 11
+    }
+  },
+  "description": "ABS 2021 Census core-activity assistance need: percentage of all residents for states and territories, choose 2016 or 2021.",
+  "height": 410,
+  "projection": {
+    "type": "mercator"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
+    "format": {
+      "type": "json",
+      "property": "features"
+    }
+  },
+  "params": [
+    {
+      "name": "assistanceYear",
+      "value": 2021,
+      "bind": {
+        "input": "select",
+        "options": [
+          2016,
+          2021
+        ],
+        "name": "Census year: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "lookup": "properties.STATE_NAME",
+      "from": {
+        "data": {
+          "url": "data/04_assistance_by_state.csv",
+          "format": {
+            "type": "csv"
+          }
+        },
+        "key": "state",
+        "fields": [
+          "rate_2016_pct",
+          "rate_2021_pct",
+          "count_2021"
+        ]
+      }
+    },
+    {
+      "calculate": "toNumber(assistanceYear) === 2016 ? toNumber(datum.rate_2016_pct) : toNumber(datum.rate_2021_pct)",
+      "as": "share_needing_assistance_pct"
+    },
+    {
+      "calculate": "assistanceYear === 2021 ? toNumber(datum.count_2021) : null",
+      "as": "people_needing_assistance_2021"
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    "stroke": "#FFFFFF",
+    "strokeWidth": 1.2
+  },
+  "encoding": {
+    "color": {
+      "field": "share_needing_assistance_pct",
+      "type": "quantitative",
+      "title": "Need assistance (%)",
+      "scale": {
+        "domain": [
+          3.0,
+          7.0
+        ],
+        "range": [
+          "#EAF5EF",
+          "#B1D9CF",
+          "#52A59F",
+          "#07666D"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "gradientLength": 260,
+        "format": ".1f",
+        "titleFontSize": 12
+      }
+    },
+    "tooltip": [
+      {
+        "field": "properties.STATE_NAME",
+        "type": "nominal",
+        "title": "State or territory"
+      },
+      {
+        "field": "share_needing_assistance_pct",
+        "type": "quantitative",
+        "title": "Residents needing assistance",
+        "format": ".1f"
+      }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Published NDIA active participant counts on 30 June of 2022 to 2026 (NDIA Q4 2025-26 full report Figure 1). Annual totals are point-in-time stock counts, not new entrants.",
+  "width": "container",
+  "height": 305,
+  "background": "transparent",
+  "padding": {
+    "left": 8,
+    "right": 60,
+    "top": 20,
+    "bottom": 8
+  },
+  "data": {
+    "url": "data/11_ndis_participant_trend.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum.year)",
+      "as": "yr"
+    },
+    {
+      "calculate": "toNumber(datum.participants)",
+      "as": "total"
+    },
+    {
+      "calculate": "toNumber(datum.net_addition_since_previous_june)",
+      "as": "net_growth"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "yr",
+      "type": "quantitative",
+      "title": "30 June each year",
+      "scale": {
+        "domain": [
+          2021.7,
+          2026.35
+        ],
+        "nice": false
+      },
+      "axis": {
+        "values": [
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "format": "d",
+        "labelFontSize": 12,
+        "grid": false,
+        "domain": false,
+        "ticks": false,
+        "labelPadding": 10
+      }
+    },
+    "y": {
+      "field": "total",
+      "type": "quantitative",
+      "title": "Active participants",
+      "scale": {
+        "domain": [
+          0,
+          850000
+        ]
+      },
+      "axis": {
+        "format": ".2s",
+        "values": [
+          0,
+          200000,
+          400000,
+          600000,
+          800000
+        ],
+        "gridColor": "#E5ECE7",
+        "domain": false,
+        "ticks": false,
+        "titlePadding": 12,
+        "labelFontSize": 11
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "opacity": 0.12,
+        "color": "#16827B"
+      },
+      "encoding": {
+        "order": {
+          "field": "yr"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#137C7D",
+        "strokeWidth": 3.5
+      },
+      "encoding": {
+        "order": {
+          "field": "yr"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 145,
+        "fill": "#137C7D",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "yr",
+            "type": "quantitative",
+            "title": "Year ending 30 June",
+            "format": "d"
+          },
+          {
+            "field": "total",
+            "type": "quantitative",
+            "title": "Active NDIS participants",
+            "format": ","
+          },
+          {
+            "field": "net_growth",
+            "type": "quantitative",
+            "title": "Net change from prior June",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.yr == 2022"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "color": "#3A5159",
+        "fontWeight": 700,
+        "fontSize": 13,
+        "dy": -18
+      },
+      "encoding": {
+        "text": {
+          "field": "total",
+          "type": "quantitative",
+          "format": ","
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.yr == 2026"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "color": "#105F62",
+        "fontWeight": 800,
+        "fontSize": 15,
+        "dy": -19,
+        "dx": -24
+      },
+      "encoding": {
+        "text": {
+          "field": "total",
+          "type": "quantitative",
+          "format": ","
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#50636A",
+      "titleColor": "#455D62"
+    }
+  }
+}

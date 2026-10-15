@@ -1,0 +1,46 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Disability prevalence (%) within each age and sex group in 2022, ABS 2022 SDAC.",
+  "width": "container",
+  "height": 148,
+  "background": "transparent",
+  "data": {"url": "data/02_prevalence_age_sex.csv", "format": {"type": "csv"}},
+  "transform": [{"calculate": "toNumber(datum.prevalence_pct)", "as": "rate"}],
+  "encoding": {
+    "x": {
+      "field": "age_group", "type": "ordinal", "title": "Age (years)",
+      "sort": ["0-4", "5-14", "15-24", "25-34", "35-44", "45-54", "55-59", "60-64", "65-69", "70-74", "75-79", "80-84", "85-89", "90 and over"],
+      "axis": {"labelFontSize": 11, "labelAngle": -44, "labelPadding": 8, "domain": false, "tickSize": 0, "titlePadding": 18}
+    },
+    "y": {
+      "field": "sex", "type": "nominal", "title": null,
+      "sort": ["Male", "Female"],
+      "axis": {"labelFontSize": 13, "labelFontWeight": "bold", "domain": false, "ticks": false, "labelPadding": 10}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "rect", "stroke": "#FBFAF5", "strokeWidth": 3, "cornerRadius": 3},
+      "encoding": {
+        "color": {
+          "field": "rate", "type": "quantitative", "title": "Prevalence (%)",
+          "scale": {"domain": [0, 90], "range": ["#EDF5F2", "#B4DED6", "#67B5AF", "#227F80", "#085058"]},
+          "legend": {"orient": "bottom", "direction": "horizontal", "gradientLength": 280, "labelFontSize": 11, "titleFontSize": 12, "titlePadding": 5}
+        },
+        "tooltip": [
+          {"field": "age_group", "title": "Age group"},
+          {"field": "sex", "title": "Sex"},
+          {"field": "rate", "title": "Prevalence (%)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "fontSize": 11, "fontWeight": 650},
+      "encoding": {
+        "text": {"field": "rate", "type": "quantitative", "format": ".1f"},
+        "color": {"condition": {"test": "datum.rate >= 47", "value": "#FFFFFF"}, "value": "#183A40"}
+      }
+    }
+  ],
+  "config": {"view": {"stroke": null}, "axis": {"labelColor": "#45565F", "titleColor": "#45565F", "labelFont": "Arial", "titleFont": "Arial"}}
+}

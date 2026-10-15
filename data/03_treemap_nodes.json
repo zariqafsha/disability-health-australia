@@ -1,0 +1,143 @@
+[
+  {
+    "id": "root",
+    "parent": null,
+    "display": "All main conditions",
+    "value": 0,
+    "condition_group": "All"
+  },
+  {
+    "id": "physical",
+    "parent": "root",
+    "display": "Physical conditions",
+    "value": 0,
+    "condition_group": "Physical"
+  },
+  {
+    "id": "mental",
+    "parent": "root",
+    "display": "Mental & behavioural",
+    "value": 0,
+    "condition_group": "Mental or behavioural"
+  },
+  {
+    "id": "condition0",
+    "parent": "physical",
+    "display": "Musculoskeletal system / connective tissue",
+    "short_label": "Musculoskeletal",
+    "value": 27.8,
+    "condition_group": "Physical",
+    "value_type": "Published",
+    "note": "Published; Figure POPULATION.8"
+  },
+  {
+    "id": "condition1",
+    "parent": "physical",
+    "display": "Injury, poisoning and external causes",
+    "short_label": "Injury / external causes",
+    "value": 8.2,
+    "condition_group": "Physical",
+    "value_type": "Published",
+    "note": "Published; Figure POPULATION.8"
+  },
+  {
+    "id": "condition2",
+    "parent": "physical",
+    "display": "Ear and mastoid process",
+    "short_label": "Ear / hearing",
+    "value": 7.2,
+    "condition_group": "Physical",
+    "value_type": "Published",
+    "note": "Published; Figure POPULATION.8"
+  },
+  {
+    "id": "condition3",
+    "parent": "physical",
+    "display": "Nervous system",
+    "short_label": "Nervous system",
+    "value": 5.6,
+    "condition_group": "Physical",
+    "value_type": "Published",
+    "note": "Published; Figure POPULATION.8"
+  },
+  {
+    "id": "condition4",
+    "parent": "physical",
+    "display": "Circulatory system",
+    "short_label": "Circulatory",
+    "value": 5.3,
+    "condition_group": "Physical",
+    "value_type": "Published",
+    "note": "Published; Figure POPULATION.8"
+  },
+  {
+    "id": "condition5",
+    "parent": "physical",
+    "display": "Respiratory system",
+    "short_label": "Respiratory",
+    "value": 4.9,
+    "condition_group": "Physical",
+    "value_type": "Published",
+    "note": "Published; Figure POPULATION.8"
+  },
+  {
+    "id": "condition6",
+    "parent": "physical",
+    "display": "Endocrine, nutritional and metabolic",
+    "short_label": "Endocrine / metabolic",
+    "value": 2.8,
+    "condition_group": "Physical",
+    "value_type": "Published",
+    "note": "Published; Figure POPULATION.8"
+  },
+  {
+    "id": "condition7",
+    "parent": "physical",
+    "display": "Other physical main conditions",
+    "short_label": "Other physical",
+    "value": 13.5,
+    "condition_group": "Physical",
+    "value_type": "Derived residual",
+    "note": "Derived residual: 75.3 minus listed physical categories"
+  },
+  {
+    "id": "condition8",
+    "parent": "mental",
+    "display": "Anxiety disorders",
+    "short_label": "Anxiety disorders",
+    "value": 7.4,
+    "condition_group": "Mental or behavioural",
+    "value_type": "Published",
+    "note": "Published; AIHW Main health condition narrative"
+  },
+  {
+    "id": "condition9",
+    "parent": "mental",
+    "display": "Psychological development conditions",
+    "short_label": "Psychological development",
+    "value": 4.9,
+    "condition_group": "Mental or behavioural",
+    "value_type": "Published",
+    "note": "Published; AIHW Main health condition narrative"
+  },
+  {
+    "id": "condition10",
+    "parent": "mental",
+    "display": "Behavioural, cognitive or emotional conditions",
+    "short_label": "Behavioural / cognitive",
+    "value": 4.4,
+    "condition_group": "Mental or behavioural",
+    "value_type": "Published",
+    "note": "Published; AIHW Main health condition narrative"
+  },
+  {
+    "id": "condition11",
+    "parent": "mental",
+    "display": "Other mental or behavioural main conditions",
+    "short_label": "Other mental / behavioural",
+    "value": 8.0,
+    "condition_group": "Mental or behavioural",
+    "value_type": "Derived residual",
+    "note": "Derived residual: 24.7 minus listed mental categories"
+  }
+]

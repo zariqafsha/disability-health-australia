@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Crude population disability prevalence from five ABS Survey of Disability, Ageing and Carers survey years. Years are quantitative so time gaps are proportional.",
+  "width": "container",
+  "height": 285,
+  "padding": {"left": 8, "right": 20, "top": 20, "bottom": 5},
+  "background": "transparent",
+  "data": {"url": "data/01_prevalence_trend.csv", "format": {"type": "csv"}},
+  "transform": [
+    {"calculate": "toNumber(datum.year)", "as": "survey_year"},
+    {"calculate": "toNumber(datum.prevalence_pct)", "as": "rate"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "survey_year", "type": "quantitative", "title": null,
+      "scale": {"domain": [2008, 2023], "nice": false},
+      "axis": {"values": [2009, 2012, 2015, 2018, 2022], "format": "d", "labelFontSize": 12, "tickSize": 0, "labelPadding": 9, "grid": false, "domain": false}
+    },
+    "y": {
+      "field": "rate", "type": "quantitative", "title": "Share of Australians (%)",
+      "scale": {"domain": [0, 25], "nice": false},
+      "axis": {"values": [0, 5, 10, 15, 20, 25], "labelFontSize": 11, "grid": true, "gridColor": "#E7E8E1", "tickSize": 0, "domain": false, "titlePadding": 12}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "stroke": "#0F777A", "strokeWidth": 3.5},
+      "encoding": {"order": {"field": "survey_year"}}
+    },
+    {
+      "mark": {"type": "point", "filled": true, "fill": "#0F777A", "stroke": "#FFFFFF", "strokeWidth": 2, "size": 135},
+      "encoding": {
+        "tooltip": [
+          {"field": "survey_year", "title": "Survey year", "type": "quantitative", "format": "d"},
+          {"field": "rate", "title": "Disability prevalence", "type": "quantitative", "format": ".1f", "formatType": "number"}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": "datum.survey_year == 2018"}],
+      "mark": {"type": "text", "dy": 20, "fontSize": 12, "fontWeight": 700, "color": "#52636A"},
+      "encoding": {"text": {"field": "rate", "type": "quantitative", "format": ".1f"}}
+    },
+    {
+      "transform": [{"filter": "datum.survey_year == 2022"}],
+      "mark": {"type": "text", "dy": -16, "dx": -5, "fontSize": 17, "fontWeight": 800, "color": "#0B5559"},
+      "encoding": {"text": {"field": "rate", "type": "quantitative", "format": ".1f"}}
+    }
+  ],
+  "config": {"view": {"stroke": null}, "axis": {"labelColor": "#45565F", "titleColor": "#45565F", "labelFont": "Arial", "titleFont": "Arial"}}
+}

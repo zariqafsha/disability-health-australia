@@ -1,0 +1,134 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "background": "transparent",
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "DM Sans",
+    "axis": {
+      "labelColor": "#405963",
+      "titleColor": "#405963"
+    },
+    "legend": {
+      "labelColor": "#3A5159",
+      "titleColor": "#3A5159",
+      "labelFontSize": 11
+    }
+  },
+  "description": "NDIS active participants on 30 June 2026, filtered by primary disability; circles use schematic anchor points within jurisdictions, NOT residential locations.",
+  "height": 455,
+  "projection": {
+    "type": "mercator"
+  },
+  "params": [
+    {
+      "name": "disabilityChoice",
+      "value": "All active participants",
+      "bind": {
+        "input": "select",
+        "name": "Primary disability: ",
+        "options": [
+          "All active participants",
+          "Autism",
+          "Intellectual disability",
+          "Psychosocial disability",
+          "Cerebral palsy",
+          "Acquired brain injury"
+        ]
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#EAF0EB",
+        "stroke": "#B6C9C4",
+        "strokeWidth": 1.1
+      }
+    },
+    {
+      "data": {
+        "url": "data/05_ndis_participants_by_state_and_disability.csv",
+        "format": {
+          "type": "csv"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.primary_disability === disabilityChoice"
+        },
+        {
+          "calculate": "toNumber(datum.participants)",
+          "as": "count"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "fill": "#E6A252",
+        "fillOpacity": 0.77,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.4
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "count",
+          "type": "quantitative",
+          "title": "Number of participants",
+          "scale": {
+            "domain": [
+              0,
+              231000
+            ],
+            "range": [
+              60,
+              3900
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "format": ",.0f",
+            "symbolFillColor": "#E6A252",
+            "symbolStrokeColor": "#FFFFFF",
+            "titleFontSize": 12
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State or territory"
+          },
+          {
+            "field": "primary_disability",
+            "type": "nominal",
+            "title": "Primary disability group"
+          },
+          {
+            "field": "count",
+            "type": "quantitative",
+            "title": "Active NDIS participants",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ]
+}

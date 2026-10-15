@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive story about disability prevalence, health services and how NDIS support has changed over time, using ABS, AIHW and NDIS data.">
+  <meta name="theme-color" content="#102D34">
+  <title>Living with Disability in Australia | FIT3179</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Libraries recommended/allowed in FIT3179: Vega + Vega-Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5/build/vega.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5/build/vega-lite.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build/vega-embed.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to visualisations</a>
+  <header class="site-header">
+    <div class="site-header__inner wrap">
+      <div class="brand"><span class="brand__symbol" aria-hidden="true">✳</span><span>THE DATA STORY <small>FIT3179 · AUSTRALIA</small></span></div>
+      <span class="issue">FOUR CHAPTERS <span aria-hidden="true">/</span> 12 CHARTS <span class="issue__draft">DRAFT — REVIEW BEFORE SUBMISSION</span></span>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__line"></span> DISABILITY & HEALTH SERVICES · AUSTRALIA</p>
+          <h1 id="page-title">Living with disability in <em>Australia.</em></h1>
+          <p class="hero__subtitle">Who lives with disability, where is support needed, and can people access healthcare and daily assistance?</p>
+          <div class="hero__explanation">This visual story combines disability-survey, Census, AIHW and NDIS reporting. Follow all <strong>four chapters</strong>: disability prevalence, geographic support patterns, healthcare access and NDIS changes from 2022 to 2026.</div>
+        </div>
+        <div class="hero__motif" aria-hidden="true">
+          <div class="motif-circle motif-circle--big"></div>
+          <div class="motif-circle motif-circle--medium"></div>
+          <div class="motif-circle motif-circle--small"></div>
+          <div class="motif-lines"><span></span><span></span><span></span><span></span><span></span></div>
+          <span class="hero__motif-caption">PEOPLE · PATTERNS · PLACE</span>
+        </div>
+      </div>
+      <div class="wrap hero__stats" aria-label="Key figures from 2022">
+        <div class="stat"><span class="stat__number">5.5<span>m</span></span><div class="stat__body"><strong>Australians</strong><span>estimated to have disability in 2022</span></div></div>
+        <div class="stat"><span class="stat__number">21.4<span>%</span></span><div class="stat__body"><strong>Of the population</strong><span>had disability in the 2022 survey</span></div></div>
+        <div class="stat"><span class="stat__number">+3.7<span>pp</span></span><div class="stat__body"><strong>Since 2018</strong><span>difference in reported prevalence</span></div></div>
+      </div>
+      <p class="wrap hero__stat-source">Source: ABS 2022 SDAC via <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/disability-population/how-many-people-have-disability" target="_blank" rel="noopener noreferrer">AIHW (2026)</a>. Estimates are not exact headcounts. pp = percentage points.</p>
+    </section>
+
+    <section class="wrap narrative-intro" aria-labelledby="section-heading">
+      <div class="chapter-index"><span>CHAPTER</span><strong>01</strong><span>OF 04</span></div>
+      <div>
+        <p class="eyebrow">UNDERSTANDING THE POPULATION</p>
+        <h2 id="section-heading">Who lives with disability?</h2>
+        <p>Before we ask whether services are accessible, we need to understand the people those services are meant to reach. Start with the national trend, then see how prevalence changes with age and which main health conditions are reported.</p>
+      </div>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart1-heading">
+      <div class="exhibit__topline"><span>FIGURE 01</span><span>2009—2022 · AUSTRALIA</span></div>
+      <div class="exhibit__head">
+        <div><p class="eyebrow eyebrow--dark">THE NATIONAL PICTURE</p><h3 id="chart1-heading">A stable decade, then a rise.</h3></div>
+        <p>In 2022, an estimated 21.4% of Australians had disability—up from 17.7% in 2018. The graph shows five separate survey years, not an annual measurement.</p>
+      </div>
+      <div class="exhibit__body exhibit__body--split">
+        <div class="chart-holder" id="chart-1" role="img" aria-label="Line chart of Australian disability prevalence from 2009 to 2022: 18.5, 18.5, 18.3, 17.7 and 21.4 percent."><span class="chart-loading">Loading chart 1…</span></div>
+        <aside class="takeaway"><div class="takeaway__icon" aria-hidden="true">↗</div><p class="takeaway__label">WHAT TO NOTICE</p><p>After remaining between <strong>17.7% and 18.5%</strong> over the four earlier surveys, prevalence reached <strong>21.4%</strong> in 2022.</p><small>The increase may reflect multiple influences, including changes in reporting, awareness and survey methods—not necessarily a single cause.</small></aside>
+      </div>
+      <p class="chart-note">Hover over a point for its precise value. Vertical axis starts at zero; survey years are spaced according to the calendar. Source: <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/disability-population/how-many-people-have-disability" target="_blank" rel="noopener noreferrer">AIHW, Figure POPULATION.3</a>.</p>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart2-heading">
+      <div class="exhibit__topline"><span>FIGURE 02</span><span>2022 · AGE × SEX</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">WHO IS MOST AFFECTED?</p><h3 id="chart2-heading">Disability prevalence rises sharply with age.</h3></div><p>Each coloured cell represents the share of <strong>people in that age-and-sex group</strong> who reported disability. Darker cells indicate higher prevalence.</p></div>
+      <div class="chart-holder chart-holder--wide" id="chart-2" role="img" aria-label="Heatmap with two sex rows and 14 age groups, with darker colours at older ages, reaching over 80% among people aged 90 and over."><span class="chart-loading">Loading chart 2…</span></div>
+      <div class="insight-row"><div class="insight-row__metric">86.3<span>%</span></div><p>Among Australian males aged <strong>90 years and over</strong>, prevalence was 86.3% in 2022, compared with 7.2% for boys aged 0–4. Age has a major association with reported disability prevalence.</p></div>
+      <p class="chart-note">Numbers in the cells are percentages; hover to see age group, sex and value. Source: <a href="https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022" target="_blank" rel="noopener noreferrer">ABS, Disability prevalence by age and sex (2022)</a>. Values are survey estimates.</p>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart3-heading">
+      <div class="exhibit__topline"><span>FIGURE 03</span><span>2022 · MAIN HEALTH CONDITION</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">UNDERSTANDING THE CAUSE OF LIMITATIONS</p><h3 id="chart3-heading">Not all disabilities have the same underlying condition.</h3></div><p>The area of each rectangle represents the share of <strong>people with disability</strong> reporting that category as their <em>main</em> health condition (the condition causing them the most problems).</p></div>
+      <div class="legend"><div><span class="legend__swatch legend__swatch--physical"></span>Physical main condition <strong>75.3%</strong></div><div><span class="legend__swatch legend__swatch--mental"></span>Mental or behavioural main condition <strong>24.7%</strong></div></div>
+      <div class="chart-holder chart-holder--treemap" id="chart-3" role="img" aria-label="Treemap of main health conditions reported by Australians with disability in 2022. Physical conditions occupy 75.3 percent, and mental or behavioural conditions 24.7 percent. The largest single category is musculoskeletal conditions at 27.8 percent."><span class="chart-loading">Loading chart 3…</span></div>
+      <p class="chart-note">Hover over each rectangle for the complete condition name and percentage. “Other” groups were calculated as residuals from published rounded totals and are approximate. This is a <strong>main health condition</strong> chart, not a chart of all co-occurring health conditions or disability types. Source: <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/disability-population/how-many-people-have-disability" target="_blank" rel="noopener noreferrer">AIHW, Figure POPULATION.8 and accompanying text</a>.</p>
+    </section>
+
+
+    <section class="section-bridge" aria-labelledby="section2-heading">
+      <div class="wrap section-bridge__inner">
+        <div class="section-bridge__number">02 <span>/ 04</span></div>
+        <div><p class="eyebrow">GEOGRAPHIC PATTERNS · NEED & SUPPORT</p><h2 id="section2-heading">Where is support needed?</h2>
+        <p>Disability is not spread evenly across Australia. Compare <strong>need for help with everyday activities</strong>, <strong>NDIS participation</strong> and <strong>the share of funding used</strong>. These are different measures drawn from separate sources and reference periods.</p></div>
+      </div>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart4-heading">
+      <div class="exhibit__topline"><span>FIGURE 04 · CHOROPLETH MAP</span><span>ABS CENSUS · 2016 / 2021</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">WHERE ASSISTANCE IS NEEDED</p><h3 id="chart4-heading">A higher share needed assistance in Tasmania.</h3></div><p>Use the year selector to compare the <strong>percentage of all residents</strong> needing help with a core activity: self-care, mobility or communication. Darker states have a higher rate.</p></div>
+      <div class="exhibit__body exhibit__body--split">
+        <div class="chart-holder chart-holder--map" id="chart-4" role="img" aria-label="Interactive Australian state choropleth map of core activity assistance needs in 2016 or 2021. Tasmania reached 6.8 percent in 2021."><span class="chart-loading">Loading choropleth map…</span></div>
+        <aside class="takeaway"><div class="takeaway__icon" aria-hidden="true">↗</div><p class="takeaway__label">2021 SNAPSHOT</p><p><strong>6.8%</strong> in Tasmania versus <strong>3.6%</strong> in the Northern Territory.</p><small>These are Census assistance-need rates—not overall disability prevalence. Age structure contributes to the geographic differences.</small></aside>
+      </div>
+      <p class="chart-note">Select 2016 or 2021 above the map. The figure measures <strong>core-activity need for assistance</strong>, a narrower definition than the Survey of Disability, Ageing and Carers. Source: <a href="https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia" target="_blank" rel="noopener noreferrer">ABS, 2021 Census profile, state table</a>. The state boundaries are from an <a href="https://github.com/rowanhogan/australian-states" target="_blank" rel="noopener noreferrer">independently maintained GeoJSON file</a> and are used for display.</p>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart5-heading">
+      <div class="exhibit__topline"><span>FIGURE 05 · PROPORTIONAL SYMBOL MAP</span><span>NDIS · 30 JUNE 2026</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">SUPPORT THROUGH THE NDIS</p><h3 id="chart5-heading">Participant counts are concentrated in populous states.</h3></div><p>The size of each circle represents the <strong>number of active NDIS participants</strong>. Change the primary disability category to see how different groups are distributed across the states and territories.</p></div>
+      <div class="chart-holder chart-holder--map" id="chart-5" role="img" aria-label="Interactive Australian proportional symbol map for June 2026 NDIS participant counts, with disability-type selector. The largest states are New South Wales, Victoria and Queensland."><span class="chart-loading">Loading symbol map…</span></div>
+      <div class="insight-row"><div class="insight-row__metric">230,427</div><p>New South Wales had the largest <strong>active NDIS participant count</strong> at 30 June 2026, followed by Victoria (210,846). Larger counts do not necessarily indicate greater unmet need: population size also matters.</p></div>
+      <p class="chart-note">Circle locations are <strong>schematic state reference points</strong>, not participant residences, hospitals or service addresses. Symbols encode counts, not percentages. The mapped eight jurisdictions total 781,904; the national 782,013 also includes 93 participants in other territories and 16 with missing locations. Source: <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">NDIA June 2026 Quarterly Report, Appendix D.1 and D.8</a>.</p>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart6-heading">
+      <div class="exhibit__topline"><span>FIGURE 06 · TILE-GRID MAP</span><span>NDIS · OCT 2025–MAR 2026</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">FROM FUNDING TO ACTUAL USE</p><h3 id="chart6-heading">Allocated support isn't always fully used.</h3></div><p>Every state and territory has the same tile size. The colour and label show the <strong>share of NDIS plan funding used</strong>. Choose a participant group to compare utilisation differences.</p></div>
+      <div class="exhibit__body exhibit__body--split">
+        <div class="chart-holder chart-holder--tile" id="chart-6" role="img" aria-label="Equal-area tile grid map for Australia showing plan budget utilisation, with choice of all participants, in supported independent living, or not in supported independent living."><span class="chart-loading">Loading tile map…</span></div>
+        <aside class="takeaway takeaway--amber"><div class="takeaway__icon" aria-hidden="true">%</div><p class="takeaway__label">WHY THIS MATTERS</p><p>National utilisation was <strong>73%</strong> for the measured period across the two living-support groups combined.</p><small>Funding utilisation is not a direct measure of service quality or satisfaction. Recent payments may be reported late.</small></aside>
+      </div>
+      <p class="chart-note"><strong>Tile-map layout is schematic:</strong> the eight equal-size tiles preserve only approximate relative state positions, not real borders or land areas. SIL means Supported Independent Living. For these figures, utilisation refers to <strong>1 October 2025–31 March 2026</strong>, and certain in-kind supports/plans are excluded; actual utilisation may be higher. Source: <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">NDIA June 2026 Quarterly Report, Appendix D.29 and notes</a>.</p>
+    </section>
+
+
+    <section class="section-bridge section-bridge--care" aria-labelledby="section3-heading">
+      <div class="wrap section-bridge__inner">
+        <div class="section-bridge__number">03 <span>/ 04</span></div>
+        <div><p class="eyebrow">HEALTHCARE ACCESS · 2022 SURVEY</p><h2 id="section3-heading">Can people get the care they need?</h2>
+        <p>Going to the doctor is one part of the picture. <strong>Missing out when care is needed</strong> is another. This chapter compares which health services people used, who experienced unmet need, what prevented access, and where daily assistance came from.</p></div>
+      </div>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart7-heading">
+      <div class="exhibit__topline"><span>FIGURE 07 · PICTOGRAM GRID</span><span>AIHW / ABS SURVEY · 2022</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">USING HEALTHCARE</p><h3 id="chart7-heading">Most saw a GP—but other services were used less often.</h3></div><p>Each panel contains <strong>100 person symbols</strong>. Each coloured figure stands for 1% of people with disability who used the service in the previous year. <strong>Percentages appear beside service names</strong> for quick comparisons.</p></div>
+      <div class="chart-holder chart-holder--pictogram" id="chart-7" role="img" aria-label="Six pictogram panels showing health service use among Australians with disability in 2022: GP 93%, medical specialist 63%, dental 51%, emergency department 25%, hospital admission 25%, telehealth 43%."><span class="chart-loading">Loading pictograms…</span></div>
+      <div class="insight-row"><div class="insight-row__metric">93<span>%</span></div><p>Almost all people with disability living in households saw a GP, but fewer saw a medical specialist (<strong>63%</strong>) or dental professional (<strong>51%</strong>). These activities can overlap; percentages are not parts of a whole.</p></div>
+      <p class="chart-note"><strong>Reading:</strong> one coloured silhouette = 1% of people with disability living in households. The chart shows visits for their own health during the preceding 12 months; it does not measure care quality. Source: <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/health/access-to-health-services" target="_blank" rel="noopener noreferrer">AIHW (2026), Figure ACCESS.1 and supporting text (2022 SDAC)</a>.</p>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart8-heading">
+      <div class="exhibit__topline"><span>FIGURE 08 · HEATMAP</span><span>2022 · UNMET CARE × DISABILITY GROUP</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">WHEN PEOPLE MISS OUT</p><h3 id="chart8-heading">People with psychosocial disability report more missed care.</h3></div><p>Colours represent the percentage who <strong>needed a service but did not receive it at least once</strong> in the previous year. Compare the all-disability baseline with two selected disability groups.</p></div>
+      <div class="chart-holder chart-holder--care-heatmap" id="chart-8" role="img" aria-label="Heatmap comparing unmet GP, medical specialist and dental care. Among people with psychosocial disability the rates were 26%, 20%, 25%; among sensory or speech disability the rates were 16%, 12%, 16%; national disability baseline 20%, 14%, 19%."><span class="chart-loading">Loading unmet-care heatmap…</span></div>
+      <div class="insight-row insight-row--amber"><div class="insight-row__metric">26<span>%</span></div><p>Among people with <strong>psychosocial disability</strong>, 26% missed needed GP care at least once—compared with <strong>16%</strong> among those with sensory or speech disability.</p></div>
+      <p class="chart-note">The two disability groups can <strong>overlap</strong> with other disabilities and must not be added together. Values refer to people with disability living in households and having at least one episode of unmet need; these are <strong>not</strong> percentages of all medical appointments. Source: <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/health/access-to-health-services" target="_blank" rel="noopener noreferrer">AIHW (2026), Figures ACCESS.2–ACCESS.3 and supporting text</a>.</p>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart9-heading">
+      <div class="exhibit__topline"><span>FIGURE 09 · WEIGHTED NODE–LINK DIAGRAM</span><span>2022 · REASONS FOR UNMET NEED</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">WHY CARE IS MISSED</p><h3 id="chart9-heading">Different services, different obstacles to care.</h3></div><p>Follow the connections from each <strong>missed healthcare service</strong> to two reported barriers. <strong>Thicker links</strong> mean a larger share of people who missed <em>that specific service</em> named the barrier.</p></div>
+      <div class="exhibit__body exhibit__body--split">
+        <div class="chart-holder chart-holder--barrier" id="chart-9" role="img" aria-label="Weighted node-link network between three healthcare services and two barriers: GP cost 8.8%, GP waiting 43%; medical specialist cost 24%, waiting 26%; dental cost 46%, waiting 8.5%. Line widths represent service-specific percentages, not numbers of people."><span class="chart-loading">Loading barriers comparison…</span></div>
+        <aside class="takeaway takeaway--amber"><div class="takeaway__icon" aria-hidden="true">!</div><p class="takeaway__label">TWO DISTINCT BARRIERS</p><p><strong>46%</strong> of those who missed dental care identified cost as the main reason. <strong>43%</strong> of those who missed GP care identified waiting or unavailability.</p><small>These figures use different service-specific groups of people with unmet need.</small></aside>
+      </div>
+      <p class="chart-note"><strong>Denominator:</strong> for each service, people with disability who needed care at least once but did not receive it. Line widths represent <strong>service-specific percentages, not numbers of people or patient flows</strong>. The same person may have missed several services; other barriers (such as scheduling or transport) are omitted. Percentages must <strong>not</strong> be added across services. Source: <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/health/access-to-health-services" target="_blank" rel="noopener noreferrer">AIHW (2026), Figure ACCESS.2</a>.</p>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart10-heading">
+      <div class="exhibit__topline"><span>FIGURE 10 · WAFFLE CHART</span><span>2022 · HELP WITH DAILY ACTIVITIES</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">BEYOND HEALTHCARE</p><h3 id="chart10-heading">Some people who need daily assistance receive none.</h3></div><p>Of people with disability who <strong>needed assistance with daily activities</strong>, each tile below represents one percentage point. The colours show three mutually exclusive patterns of help received.</p></div>
+      <div class="exhibit__body exhibit__body--split">
+        <div class="chart-holder chart-holder--waffle" id="chart-10" role="img" aria-label="A 100-tile waffle: 57 percent receive formal assistance (sometimes together with informal help); 33 percent receive informal-only help; 10 percent receive no help."><span class="chart-loading">Loading assistance waffle…</span></div>
+        <aside class="takeaway"><div class="takeaway__icon" aria-hidden="true">10</div><p class="takeaway__label">THE SUPPORT GAP</p><p><strong>1 in 10</strong> people who needed assistance with daily activities received <strong>no assistance</strong>.</p><small>Formal assistance includes paid and organised services. Most people in the formal group also received help from family or friends.</small></aside>
+      </div>
+      <p class="chart-note"><strong>Denominator:</strong> people with disability living in households who needed daily-activity assistance (about 61% of people with disability living in households). Formal = 57% (may overlap with informal help); informal <em>only</em> = 33%; none = 10%. These three groups do sum to 100%. Source: <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/summary" target="_blank" rel="noopener noreferrer">AIHW (2026), Summary — Social support</a>.</p>
+    </section>
+
+    <section class="section-bridge section-bridge--trends" aria-labelledby="section4-heading">
+      <div class="wrap section-bridge__inner">
+        <div class="section-bridge__number">04 <span>/ 04</span></div>
+        <div><p class="eyebrow">THE CHANGING NDIS · 2022–2026</p><h2 id="section4-heading">Is disability support keeping pace?</h2>
+        <p>Finally, look beyond individual snapshots. The number of NDIS participants has expanded—but how much allocated support funding people use varies by living-support needs. <strong>Growth in participation is not the same as successful access to every service.</strong></p></div>
+      </div>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart11-heading">
+      <div class="exhibit__topline"><span>FIGURE 11 · ANNOTATED AREA / LINE</span><span>NDIA · 30 JUNE 2022–2026</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">A LARGER SCHEME</p><h3 id="chart11-heading">Almost a quarter of a million more participants in four years.</h3></div><p>The chart shows the national count of people holding an <strong>active NDIS plan on 30 June</strong> each year. Hover to compare annual totals and the net change since the previous June.</p></div>
+      <div class="exhibit__body exhibit__body--split">
+        <div class="chart-holder chart-holder--trend" id="chart-11" role="img" aria-label="National active NDIS participants grew from 534,655 in June 2022 to 782,013 in June 2026, with intermediate points 610,502, 661,267, and 739,414."><span class="chart-loading">Loading participant trend…</span></div>
+        <aside class="takeaway"><div class="takeaway__icon" aria-hidden="true">↗</div><p class="takeaway__label">FOUR-YEAR CHANGE</p><p><strong>+247,358</strong> active NDIS participants, a <strong>46.3%</strong> increase from June 2022 to June 2026.</p><small>Net growth is not the count of people joining: some participants exited during each year.</small></aside>
+      </div>
+      <p class="chart-note"><strong>Important:</strong> NDIS participants are people eligible for NDIS supports, not all Australians living with disability. Each point is a snapshot as of 30 June. Source: <a href="https://ndis.gov.au/media/8796/download?attachment=" target="_blank" rel="noopener noreferrer">NDIA, June 2026 Quarterly Report, Figure 1 (p. 14)</a>.</p>
+    </section>
+
+    <section class="wrap exhibit" aria-labelledby="chart12-heading">
+      <div class="exhibit__topline"><span>FIGURE 12 · INTERACTIVE GROUP TRENDS</span><span>NDIA · MATCHED OCTOBER–MARCH WINDOWS</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">FUNDING PUT TO USE</p><h3 id="chart12-heading">Plan utilisation differs substantially by support needs.</h3></div><p>These percentages show the <strong>share of committed NDIS supports paid for</strong> during each October–March window. Compare participants receiving Supported Independent Living (SIL), other participants and all participants. Hover over the lines or points for the exact values. All three groups are shown together for comparison.</p></div>
+      <div class="chart-holder chart-holder--util" id="chart-12" role="img" aria-label="National plan utilisation from October to March in 2024, 2025 and 2026: SIL 89, 87, 87 percent; not SIL 71, 68, 68 percent; all participants 77, 74, 73 percent."><span class="chart-loading">Loading utilisation trends…</span></div>
+      <div class="insight-row"><div class="insight-row__metric">19<span>pp</span></div><p>In the October 2025–March 2026 window, utilisation was <strong>87%</strong> for people in SIL and <strong>68%</strong> for those not in SIL—a <strong>19-percentage-point gap</strong>. Group composition and support needs differ, so this is not a like-for-like comparison of care quality.</p></div>
+      <p class="chart-note"><strong>Time period:</strong> each point uses the six months from 1 October of the preceding year to 31 March of the labelled year; the most recent April–June quarter is excluded because of payment-reporting lags. <strong>Chart 12 replaces the original support-class concept</strong> because comparable published class-level historical figures could not be independently extracted. Figures exclude certain in-kind supports and plans; utilisation may be understated. The axis starts at 50% to make modest changes legible. Sources: <a href="https://www.ndis.gov.au/media/7219/download?attachment=" target="_blank" rel="noopener noreferrer">2024 Appendix D.28</a>, <a href="https://ndis.gov.au/media/7893/download?attachment=" target="_blank" rel="noopener noreferrer">2025 Appendix D.29</a>, <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">2026 Appendix D.29</a>.</p>
+    </section>
+
+    <section class="wrap chapter-ending chapter-ending--final">
+      <span class="chapter-ending__kicker">THE TAKEAWAY</span>
+      <h2>More people are getting NDIS support.<br><em>Access and utilisation still differ.</em></h2>
+      <p>Disability affects Australians of all ages, with markedly different experiences across groups and places. The NDIS is supporting more participants, but national expansion alone does not tell us whether people get all the healthcare and daily help they need. Understanding unmet needs and differing patterns of support is crucial.</p>
+      <div class="chapter-roadmap"><span class="chapter-roadmap__done">01 · WHO HAS DISABILITY?</span><span class="chapter-roadmap__done">02 · WHERE IS SUPPORT NEEDED?</span><span class="chapter-roadmap__done">03 · CAN PEOPLE GET CARE?</span><span class="chapter-roadmap__done">04 · HOW IS SUPPORT CHANGING?</span></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footer__inner"><div><strong>Disability & Health Services in Australia</strong><p>FIT3179 Data Visualisation 2 · Four-chapter draft · October 2026</p><p>Sources: <a href="https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022" target="_blank" rel="noopener noreferrer">ABS SDAC 2022</a>, <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/disability-population/how-many-people-have-disability" target="_blank" rel="noopener noreferrer">AIHW 2026</a>, <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">NDIS 2026</a>, <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/health/access-to-health-services" target="_blank" rel="noopener noreferrer">AIHW healthcare access 2026</a>, and <a href="https://ndis.gov.au/publications/quarterly-reports" target="_blank" rel="noopener noreferrer">NDIA historical quarterly reports</a>.</p></div><div class="footer__aside"><span>CREATED FOR A GENERAL AUDIENCE</span><span>AUTHOR: Zariq Afsha Bin Zainal Abidin</span><span>AI ASSISTANCE: CHECK FOR ERROR AND SPELLING WITH CHATGPT; VERIFY AND ACKNOWLEDGE.</span></div></div></footer>
+</body>
+</html>

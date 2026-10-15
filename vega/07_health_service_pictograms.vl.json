@@ -1,0 +1,120 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Six 10×10 person-icon panels; each symbol represents one percentage point of health-service usage among people with disability living in households, SDAC 2022. Titles include direct percentages and glyphs are enlarged for readability. Source: AIHW 2026 ACCESS.1.",
+  "background": "transparent",
+  "data": {
+    "url": "data/07_health_service_usage_pictogram.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum.usage_pct)",
+      "as": "pct"
+    },
+    {
+      "calculate": "toNumber(datum.used)",
+      "as": "filled"
+    },
+    {
+      "calculate": "datum.service + ' · ' + datum.usage_pct + '%'",
+      "as": "service_display"
+    }
+  ],
+  "facet": {
+    "field": "service_display",
+    "type": "nominal",
+    "sort": [
+      "GP visit · 93%",
+      "Medical specialist · 63%",
+      "Dental care · 51%",
+      "Emergency visit · 25%",
+      "Hospital admission · 25%",
+      "Telehealth · 43%"
+    ],
+    "header": {
+      "labelFontSize": 17,
+      "labelFontWeight": "bold",
+      "labelPadding": 13,
+      "labelLimit": 260,
+      "title": null
+    }
+  },
+  "columns": 3,
+  "spec": {
+    "width": 238,
+    "height": 220,
+    "mark": {
+      "type": "point",
+      "filled": true,
+      "shape": "M -0.17 -0.375 L 0.17 -0.375 C 0.26 -0.375 0.33 -0.285 0.33 -0.175 L 0.33 0.15 L 0.19 0.15 L 0.19 0.5 L 0.045 0.5 L 0.045 0.155 L -0.045 0.155 L -0.045 0.5 L -0.19 0.5 L -0.19 0.15 L -0.33 0.15 L -0.33 -0.175 C -0.33 -0.285 -0.26 -0.375 -0.17 -0.375 Z M -0.155 -0.625 A 0.155 0.155 0 1 1 0.155 -0.625 A 0.155 0.155 0 1 1 -0.155 -0.625 Z",
+      "size": 510,
+      "strokeWidth": 0
+    },
+    "encoding": {
+      "x": {
+        "field": "col",
+        "type": "ordinal",
+        "sort": "ascending",
+        "axis": null,
+        "scale": {
+          "paddingInner": 0.07,
+          "paddingOuter": 0.16
+        }
+      },
+      "y": {
+        "field": "row",
+        "type": "ordinal",
+        "sort": "ascending",
+        "axis": null,
+        "scale": {
+          "paddingInner": 0.09,
+          "paddingOuter": 0.12
+        }
+      },
+      "color": {
+        "condition": {
+          "test": "datum.filled == 1",
+          "value": "#1D8989"
+        },
+        "value": "#D6E0DD"
+      },
+      "tooltip": [
+        {
+          "field": "service_full",
+          "title": "Health service"
+        },
+        {
+          "field": "pct",
+          "title": "Used in last 12 months (%)",
+          "format": ".0f"
+        }
+      ]
+    }
+  },
+  "resolve": {
+    "scale": {
+      "x": "independent",
+      "y": "independent"
+    }
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#486267",
+      "titleColor": "#456064"
+    },
+    "header": {
+      "labelFont": "Arial",
+      "labelColor": "#173E42"
+    },
+    "facet": {
+      "spacing": 17
+    }
+  }
+}

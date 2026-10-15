@@ -1,0 +1,198 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "National NDIS committed-support utilisation from comparable six-month windows Oct-March in 2024, 2025, 2026 Q4 NDIA reports, national total by SIL status. Source D.28/29. This is not a direct measure of service availability. Fixed 2026-10-16: removed layered legend selection which generated duplicate chooseGroup_tuple signal. Hover tooltips retained.",
+  "width": "container",
+  "height": 325,
+  "background": "transparent",
+  "padding": {
+    "left": 5,
+    "right": 60,
+    "top": 22,
+    "bottom": 8
+  },
+  "data": {
+    "url": "data/12_ndis_utilisation_trend.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum.report_year)",
+      "as": "yr"
+    },
+    {
+      "calculate": "toNumber(datum.utilisation_pct)",
+      "as": "rate"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "yr",
+      "type": "quantitative",
+      "title": "Six months ending 31 March",
+      "scale": {
+        "domain": [
+          2023.8,
+          2026.36
+        ],
+        "nice": false
+      },
+      "axis": {
+        "values": [
+          2024,
+          2025,
+          2026
+        ],
+        "format": "d",
+        "labelFontSize": 12,
+        "labelPadding": 10,
+        "grid": false,
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "y": {
+      "field": "rate",
+      "type": "quantitative",
+      "title": "Plan utilisation (%)",
+      "scale": {
+        "domain": [
+          50,
+          95
+        ],
+        "nice": false
+      },
+      "axis": {
+        "values": [
+          50,
+          60,
+          70,
+          80,
+          90
+        ],
+        "gridColor": "#E5ECE7",
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 11,
+        "labelExpr": "datum.value+\"%\"",
+        "titlePadding": 12
+      }
+    },
+    "color": {
+      "field": "participant_group",
+      "type": "nominal",
+      "title": "Participant group",
+      "sort": [
+        "In SIL",
+        "Not in SIL",
+        "All participants"
+      ],
+      "scale": {
+        "domain": [
+          "In SIL",
+          "Not in SIL",
+          "All participants"
+        ],
+        "range": [
+          "#167F83",
+          "#E0A15C",
+          "#77849D"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "labelFontSize": 12,
+        "labelLimit": 210,
+        "symbolSize": 135,
+        "direction": "horizontal"
+      }
+    },
+    "detail": {
+      "field": "participant_group",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "participant_group",
+        "title": "Group"
+      },
+      {
+        "field": "yr",
+        "title": "Year ending March",
+        "type": "quantitative",
+        "format": "d"
+      },
+      {
+        "field": "rate",
+        "title": "Plan budget used (%)",
+        "type": "quantitative",
+        "format": ".0f"
+      },
+      {
+        "field": "measurement_start",
+        "title": "Window starts"
+      },
+      {
+        "field": "measurement_end",
+        "title": "Window ends"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3.2,
+        "point": false
+      },
+      "encoding": {
+        "order": {
+          "field": "yr"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 145,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.8
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.yr == 2026"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 10,
+        "fontSize": 12,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "text": {
+          "field": "rate",
+          "type": "quantitative",
+          "format": ".0f"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#50636A",
+      "titleColor": "#455D62"
+    }
+  }
+}

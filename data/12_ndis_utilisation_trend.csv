@@ -1,0 +1,10 @@
+report_year,measurement_start,measurement_end,participant_group,utilisation_pct,source_url,table_reference
+2024,2023-10-01,2024-03-31,In SIL,89,https://www.ndis.gov.au/media/7219/download?attachment=,Appendix Table D.28
+2024,2023-10-01,2024-03-31,Not in SIL,71,https://www.ndis.gov.au/media/7219/download?attachment=,Appendix Table D.28
+2024,2023-10-01,2024-03-31,All participants,77,https://www.ndis.gov.au/media/7219/download?attachment=,Appendix Table D.28
+2025,2024-10-01,2025-03-31,In SIL,87,https://ndis.gov.au/media/7893/download?attachment=,Appendix Table D.29
+2025,2024-10-01,2025-03-31,Not in SIL,68,https://ndis.gov.au/media/7893/download?attachment=,Appendix Table D.29
+2025,2024-10-01,2025-03-31,All participants,74,https://ndis.gov.au/media/7893/download?attachment=,Appendix Table D.29
+2026,2025-10-01,2026-03-31,In SIL,87,https://www.ndis.gov.au/media/8793/download?attachment=,Appendix Table D.29
+2026,2025-10-01,2026-03-31,Not in SIL,68,https://www.ndis.gov.au/media/8793/download?attachment=,Appendix Table D.29
+2026,2025-10-01,2026-03-31,All participants,73,https://www.ndis.gov.au/media/8793/download?attachment=,Appendix Table D.29
