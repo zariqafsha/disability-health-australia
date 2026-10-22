@@ -1,0 +1,692 @@
+name,lat,lon,state
+State Forensic Mental Health Service,-31.9609,115.7884,WA
+Justice Health Services,-33.9691,151.2432,NSW
+The Children's Hospital at Westmead,-33.8016,150.9918,NSW
+Sydney Children's Hospital,-33.9172,151.2383,NSW
+Sacred Heart Health Service,-33.8805,151.2192,NSW
+St Vincent's Hospital [Darlinghurst],-33.8797,151.2211,NSW
+St Joseph's Hospital,-33.8487,151.0283,NSW
+Balmain Hospital,-33.8595,151.1815,NSW
+Canterbury Hospital,-33.9196,151.0983,NSW
+Royal Prince Alfred Hospital,-33.8893,151.1829,NSW
+Tresillian Care Centres,-33.9187,151.0975,NSW
+Concord Repatriation Hospital,-33.8373,151.0927,NSW
+Royal Prince Alfred Institute of Rheumatology & Orthopaedics,-33.8883,151.1807,NSW
+Karitane,-33.8798,150.9658,NSW
+Camden Hospital,-34.0627,150.6933,NSW
+Fairfield Hospital,-33.8601,150.9043,NSW
+Liverpool Hospital,-33.92,150.9308,NSW
+Campbelltown Hospital,-34.0777,150.8063,NSW
+Bankstown Lidcombe Hospital,-33.9331,151.0208,NSW
+Braeside Hospital,-33.8619,150.9022,NSW
+Bowral Hospital,-34.485,150.4238,NSW
+Sydney Hospital / Sydney Eye Hospital,-33.8679,151.2126,NSW
+Calvary Health Care - Sydney,-33.9761,151.1362,NSW
+Gower Wilson Multi Purpose Service,-31.5356,159.0713,NSW
+War Memorial Hospital,-33.8975,151.2538,NSW
+Prince of Wales Hospital,-33.9185,151.2394,NSW
+St George Hospital NSW,-33.967,151.1338,NSW
+Sutherland Hospital,-34.0373,151.1152,NSW
+Royal Hospital for Women,-33.919,151.2379,NSW
+Bulli Hospital,-34.3367,150.9073,NSW
+Coledale Hospital,-34.2838,150.9508,NSW
+Kiama Hospital,-34.6829,150.8505,NSW
+Milton Ulladulla Hospital,-35.3173,150.4389,NSW
+Port Kembla Hospital,-34.4859,150.8818,NSW
+Shoalhaven Hospital,-34.8688,150.5957,NSW
+Wollongong Hospital,-34.4249,150.8835,NSW
+Shellharbour Hospital,-34.559,150.8409,NSW
+Illawarra Mental Health Services,-34.4262,150.8913,NSW
+David Berry Hospital,-34.7759,150.7128,NSW
+Auburn Hospital,-33.8599,151.0332,NSW
+Blacktown Hospital,-33.7756,150.9175,NSW
+Mount Druitt Hospital,-33.7659,150.8296,NSW
+Westmead Hospital,-33.8044,150.9878,NSW
+Blue Mountains Hospital,-33.7053,150.3211,NSW
+Nepean Hospital,-33.7599,150.7126,NSW
+Springwood Hospital,-33.6905,150.5711,NSW
+Hawkesbury Hospital,-33.6107,150.8208,NSW
+"Tresillian Family Care Centre, Kingswood",-33.7582,150.7144,NSW
+Wentworth Psychiatric Services,-33.7602,150.7126,NSW
+Lithgow Hospital,-33.4988,150.1277,NSW
+Portland Tabulam Health Centre,-33.3584,149.9786,NSW
+Greenwich Hospital,-33.8273,151.1834,NSW
+Neringah Hospital,-33.7179,151.1146,NSW
+Hornsby Ku-ring-gai Hospital,-33.7014,151.1129,NSW
+Mona Vale Hospital,-33.6854,151.3066,NSW
+Royal North Shore Hospital,-33.8213,151.1897,NSW
+Royal Rehabilitation Hospital,-33.8218,151.1078,NSW
+Ryde Hospital,-33.7955,151.0898,NSW
+Gosford Hospital,-33.4195,151.3403,NSW
+Woy Woy Hospital,-33.4967,151.321,NSW
+Long Jetty Health Care Centre,-33.369,151.4685,NSW
+Wyong Hospital,-33.2611,151.4808,NSW
+Armidale Hospital,-30.5127,151.6556,NSW
+Barraba Multi Purpose Service,-30.3825,150.6058,NSW
+Bingara Multi Purpose Service,-29.8641,150.5792,NSW
+Boggabri Multi Purpose Service,-30.7115,150.04,NSW
+Glen Innes Hospital,-29.7333,151.7317,NSW
+Gunnedah Hospital,-30.9831,150.2513,NSW
+Guyra Multi Purpose Service,-30.2139,151.6791,NSW
+Inverell Hospital,-29.7707,151.1301,NSW
+Manilla Hospital,-30.7457,150.7322,NSW
+Moree Hospital,-29.4707,149.8396,NSW
+Narrabri Hospital,-30.3259,149.7771,NSW
+Tenterfield Hospital,-29.0451,152.0136,NSW
+Quirindi Hospital,-31.5003,150.6766,NSW
+Tamworth Hospital,-31.0741,150.9242,NSW
+Tingha Multi Purpose Service,-29.9508,151.2067,NSW
+Vegetable Creek Multi Purpose Service Emmaville,-29.4505,151.5992,NSW
+Walcha Multi Purpose Service,-30.9878,151.5914,NSW
+Warialda Multi Purpose Service,-29.5388,150.5796,NSW
+Wee Waa Hospital,-30.2254,149.4483,NSW
+Werris Creek Hospital,-31.3467,150.6525,NSW
+Bulahdelah Hospital,-32.4039,152.21,NSW
+Gloucester Soldiers' Memorial Hospital,-32.0148,151.9586,NSW
+Manning Hospital,-31.9104,152.4545,NSW
+Wingham Hospital,-31.8781,152.3652,NSW
+Cessnock Hospital,-32.8278,151.3484,NSW
+Dungog Hospital,-32.4019,151.7462,NSW
+Kurri Kurri Hospital,-32.825,151.463,NSW
+Maitland Hospital,-32.7267,151.5459,NSW
+Merriwa Multi Purpose Service,-32.1427,150.3613,NSW
+Muswellbrook Hospital,-32.2645,150.9003,NSW
+Denman Multi Purpose Service,-32.3895,150.6845,NSW
+Calvary Mater Newcastle,-32.8994,151.7209,NSW
+Belmont Hospital,-33.0246,151.6482,NSW
+"Scott Memorial Hospital, Scone",-32.0515,150.8769,NSW
+Singleton Hospital,-32.5671,151.1857,NSW
+"Wilson Memorial Community Hospital, Murrurundi",-31.7704,150.8348,NSW
+Tomaree Community Hospital,-32.7201,152.1589,NSW
+John Hunter Hospital,-32.9222,151.6924,NSW
+Ballina District Hospital,-28.8635,153.564,NSW
+Casino and District Memorial Hospital,-28.8598,153.0358,NSW
+Bonalbo Hospital,-28.7338,152.6228,NSW
+Grafton Base Hospital,-29.6748,152.9413,NSW
+Kyogle Multi Purpose Service,-28.6271,153.0017,NSW
+Lismore Base Hospital,-28.8092,153.291,NSW
+Nimbin Multi Purpose Service,-28.5974,153.2232,NSW
+Maclean District Hospital,-29.4542,153.2011,NSW
+Murwillumbah District Hospital,-28.3234,153.4008,NSW
+The Tweed Hospital,-28.1772,153.5455,NSW
+Urbenville Multi Purpose Service,-28.4715,152.543,NSW
+Riverlands Drug and Alcohol Centre,-28.8083,153.2911,NSW
+Bellinger River District Hospital,-30.4573,152.8932,NSW
+Coffs Harbour Hospital,-30.3176,153.0937,NSW
+Dorrigo Multi Purpose Service,-30.3406,152.7139,NSW
+Kempsey District Hospital,-31.0678,152.82,NSW
+Macksville District Hospital,-30.7137,152.9198,NSW
+Wauchope District Memorial Hospital,-31.4572,152.7281,NSW
+Port Macquarie Base Hospital,-31.4523,152.8783,NSW
+Batemans Bay Hospital,-35.7141,150.1824,NSW
+South East Regional Hospital,-36.6891,149.8585,NSW
+Bombala Multi Purpose Service,-36.9175,149.2354,NSW
+Braidwood Multi Purpose Service,-35.4432,149.8053,NSW
+Cooma Hospital and Health Service,-36.2414,149.1305,NSW
+Crookwell District Hospital,-34.4642,149.4674,NSW
+Delegate Multi Purpose Service,-37.045,148.946,NSW
+Goulburn Base Hospital,-34.7475,149.7128,NSW
+Moruya Hospital,-35.9041,150.0708,NSW
+Pambula Hospital,-36.9263,149.8792,NSW
+Queanbeyan Hospital,-35.3477,149.2323,NSW
+Bourke Street Health Service,-34.7487,149.7193,NSW
+Yass District Hospital,-34.8441,148.9064,NSW
+Lake Cargelligo Multi Purpose Service,-33.292,146.3743,NSW
+Wyalong Hospital,-33.9164,147.1965,NSW
+Barham Hospital,-35.6238,144.1335,NSW
+Berrigan Multi Purpose Service,-35.6623,145.813,NSW
+Culcairn Multi Purpose Service,-35.6674,147.0421,NSW
+Corowa Health Service,-35.9935,146.3835,NSW
+Deniliquin Hospital,-35.524,144.9633,NSW
+Finley Hospital,-35.6417,145.5681,NSW
+Henty Multi Purpose Service,-35.5158,147.0318,NSW
+Holbrook Hospital,-35.724,147.3203,NSW
+Jerilderie Multi Purpose Service,-35.3566,145.7206,NSW
+Mercy Care Hospital - Albury,-36.0692,146.9168,NSW
+Urana Multi Purpose Service,-35.3254,146.2673,NSW
+Tocumwal Hospital,-35.8154,145.569,NSW
+Tumbarumba Multi Purpose Service,-35.7787,148.0062,NSW
+Boorowa Multi Purpose Service,-34.4428,148.7271,NSW
+Mercy Care Hospital - Young,-34.321,148.2887,NSW
+Murrumburrah-Harden Hospital,-34.5553,148.3602,NSW
+Young Hospital,-34.3204,148.2885,NSW
+Batlow/Adelong Multi Purpose Service,-35.522,148.1479,NSW
+Griffith Base Hospital,-34.2821,146.0438,NSW
+Gundagai Hospital,-35.0514,148.1018,NSW
+Hay Hospital,-34.5003,144.8514,NSW
+Hillston Hospital,-33.4788,145.539,NSW
+Junee Multi Purpose Service,-34.8669,147.5813,NSW
+Coolamon-Ganmain Multi Purpose Service,-34.8199,147.1993,NSW
+Leeton Hospital,-34.5452,146.4088,NSW
+Lockhart Hospital,-35.2224,146.7191,NSW
+Narrandera Hospital,-34.7432,146.5477,NSW
+Temora Hospital,-34.4439,147.5426,NSW
+Tumut Hospital,-35.3073,148.2196,NSW
+Wagga Wagga Hospital,-35.1181,147.3569,NSW
+Cootamundra Hospital,-34.6344,148.0128,NSW
+Bourke Multi Purpose Service,-30.0928,145.948,NSW
+Brewarrina Multi Purpose Service,-29.9616,146.8638,NSW
+Cobar Health Service,-31.509,145.8253,NSW
+Collarenebri Multi Purpose Service,-29.5449,148.5819,NSW
+Coolah Multi Purpose Service,-31.8215,149.71,NSW
+Coonabarabran Health Service,-31.2748,149.2848,NSW
+Baradine Multi Purpose Service,-30.9453,149.0662,NSW
+Coonamble Multi Purpose Service,-30.9648,148.3875,NSW
+Gulargambone Multi Purpose Service,-31.3298,148.4692,NSW
+Dubbo Hospital,-32.2393,148.6208,NSW
+Dunedoo Multi Purpose Service,-32.0172,149.3974,NSW
+Gilgandra Multi Purpose Service,-31.7046,148.6649,NSW
+Gulgong Multi Purpose Service,-32.3669,149.5219,NSW
+Mudgee Health Service,-32.6032,149.5882,NSW
+Narromine Health Service,-32.2426,148.2392,NSW
+Nyngan Multi Purpose Service,-31.56,147.2088,NSW
+Trangie Multi Purpose Service,-32.0308,147.9764,NSW
+Walgett Multipurpose Service,-30.0306,148.116,NSW
+Warren Multi Purpose Service,-31.694,147.8357,NSW
+Wellington Health Service,-32.5497,148.952,NSW
+Lightning Ridge Multi Purpose Service,-29.43,147.9819,NSW
+Lourdes Hospital Dubbo,-32.2385,148.6274,NSW
+Bathurst Base Hospital,-33.4065,149.5727,NSW
+Blayney Multi Purpose Service,-33.5377,149.249,NSW
+Canowindra Soldiers Memorial Hospital,-33.5572,148.6766,NSW
+Condobolin Health Service,-33.0823,147.1542,NSW
+Cowra Health Service,-33.8321,148.6924,NSW
+Eugowra Memorial Multipurpose Service,-33.4244,148.3668,NSW
+Lachlan Health Service - Forbes,-33.3963,148.0138,NSW
+Grenfell Multi Purpose Service,-33.8943,148.1678,NSW
+Molong Health Service,-33.0876,148.8597,NSW
+Oberon Multi Purpose Service,-33.7052,149.8536,NSW
+Orange Health Service,-33.3173,149.094,NSW
+Lachlan Health Service - Parkes,-33.1515,148.1698,NSW
+Peak Hill Multipurpose Service,-32.7359,148.1996,NSW
+Trundle Multi Purpose Health Service,-32.9211,147.7043,NSW
+Rylstone Multi Purpose Service,-32.8041,149.9757,NSW
+Tottenham Multipurpose Service,-32.2427,147.358,NSW
+Tullamore Multi Purpose Health Service,-32.6351,147.569,NSW
+Balranald Multi Purpose Service,-34.6445,143.5684,NSW
+Wentworth Hospital,-34.11,141.9225,NSW
+Broken Hill Hospital,-31.9476,141.4547,NSW
+Wilcannia Multi Purpose Service,-31.5576,143.3853,NSW
+Thomas Walker Hospital,-33.8323,151.0979,NSW
+Cumberland Hospital,-33.8016,150.9952,NSW
+Macquarie Hospital,-33.8023,151.1248,NSW
+Coral Tree Family Centre,-33.8043,151.1262,NSW
+Morisset Hospital,-33.1285,151.5128,NSW
+Hunter New England Mental Health Service,-32.8979,151.7207,NSW
+Kenmore Hospital,-34.7213,149.7513,NSW
+Western District Health Service [Hamilton],-37.7365,142.0306,Vic
+Western District Health Service [Penshurst],-37.8773,142.2825,Vic
+Colac Area Health,-38.3412,143.5829,Vic
+Hesse Rural Health Service [Winchelsea],-38.2434,143.9854,Vic
+Otway Health & Community Services [Apollo Bay],-38.7539,143.6643,Vic
+University Hospital Geelong,-38.1515,144.365,Vic
+Casterton Memorial Hospital,-37.59,141.3923,Vic
+Western District Health Service [Coleraine],-37.5999,141.692,Vic
+South West Healthcare [Warrnambool],-38.3801,142.473,Vic
+Beaufort & Skipton Health Service [Skipton],-37.684,143.3675,Vic
+Heywood Rural Health,-38.1378,141.6243,Vic
+Timboon & District Healthcare Service,-38.4862,142.9767,Vic
+Moyne Health Services [Port Fairy],-38.3816,142.2275,Vic
+Portland District Health,-38.3407,141.6061,Vic
+Lorne Community Hospital,-38.5455,143.9807,Vic
+The McKellar Centre,-38.1188,144.3357,Vic
+South West Healthcare [Camperdown],-38.2371,143.1377,Vic
+Terang & Mortlake Health Service [Terang],-38.2394,142.9021,Vic
+East Grampians Health Service [Ararat],-37.2788,142.9329,Vic
+East Grampians Health Service [Willaura],-37.5448,142.7459,Vic
+Rural Northwest Health [Warracknabeal],-36.2526,142.3816,Vic
+Rural Northwest Health [Hopetoun],-35.7322,142.3664,Vic
+Ballarat Health Services [Base Hospital],-37.5597,143.847,Vic
+Ballarat Health Services [Queen Elizabeth Campus],-37.5643,143.8433,Vic
+Wimmera Base Hospital [Horsham],-36.7124,142.2085,Vic
+West Wimmera Health Service [Rupanyup],-36.6366,142.6318,Vic
+Stawell Regional Health,-37.0596,142.7816,Vic
+West Wimmera Health Service [Nhill],-36.334,141.6556,Vic
+West Wimmera Health Service [Kaniva],-36.3814,141.246,Vic
+West Wimmera Health Service [Jeparit],-36.1411,141.9847,Vic
+West Wimmera Health Service [Rainbow],-35.9039,141.9951,Vic
+East Wimmera Health Service [St Arnaud],-36.6093,143.2467,Vic
+Djerriwarrh Health Service [Bacchus Marsh],-37.6783,144.4333,Vic
+Beaufort & Skipton Health Service [Beaufort],-37.431,143.3823,Vic
+Dimboola District Hospital,-36.4499,142.0243,Vic
+Edenhope and District Memorial Hospital,-37.0353,141.2888,Vic
+Melton Health,-37.6864,144.5583,Vic
+Daylesford District Hospital,-37.3374,144.1458,Vic
+Creswick District Hospital,-37.4212,143.8915,Vic
+The Bendigo Hospital,-36.7487,144.2834,Vic
+Bendigo Health Care Group [Anne Caudle],-36.7509,144.2804,Vic
+Goulburn Valley Health [Waranga],-36.5878,145.0086,Vic
+Kyabram & District Health Service,-36.3155,145.0427,Vic
+Kyneton District Health Service,-37.2544,144.4697,Vic
+Heathcote Health,-36.9258,144.7095,Vic
+Maryborough District Health Service [Maryborough],-37.0448,143.7377,Vic
+Maryborough District Health Service [Dunolly],-36.8553,143.7351,Vic
+Swan Hill District Health [Swan Hill],-35.3406,143.5565,Vic
+Swan Hill District Health [Nyah],-35.1861,143.3554,Vic
+East Wimmera Health Service [Wycheproof],-36.0784,143.2338,Vic
+Cohuna District Hospital,-35.8001,144.2149,Vic
+Echuca Regional Health,-36.1382,144.7484,Vic
+Kerang District Health,-35.7243,143.9166,Vic
+Mildura Base Hospital,-34.1856,142.1433,Vic
+Mallee Track Health & Community Service [Ouyen],-35.0743,142.3123,Vic
+Maldon Hospital,-36.9927,144.0637,Vic
+Manangatang & District Hospital,-35.051,142.8805,Vic
+Boort District Health,-36.1117,143.7273,Vic
+Robinvale District Health Services,-34.5841,142.7814,Vic
+Rochester & Elmore District Health Service,-36.3666,144.6978,Vic
+East Wimmera Health Service [Donald],-36.3669,142.9766,Vic
+Inglewood & District Health Service,-36.5721,143.8738,Vic
+East Wimmera Health Service [Birchip],-35.9802,142.9159,Vic
+East Wimmera Health Service [Charlton],-36.271,143.3459,Vic
+Castlemaine Health,-37.0525,144.2123,Vic
+Goulburn Valley Health [Shepparton],-36.3636,145.4049,Vic
+Goulburn Valley Health [Tatura],-36.4391,145.2255,Vic
+Northeast Health Wangaratta,-36.354,146.3139,Vic
+Tallangatta Health Service,-36.2137,147.1837,Vic
+Albury Wodonga Health [Wodonga Campus],-36.1318,146.8794,Vic
+Yarrawonga Health,-36.0115,146.0066,Vic
+Alpine Health [Myrtleford],-36.5545,146.7288,Vic
+Alpine Health [Bright],-36.7327,146.9659,Vic
+Alpine Health [Mount Beauty],-36.7434,147.1694,Vic
+Corryong Health,-36.1987,147.9028,Vic
+Seymour District Memorial Hospital,-37.0184,145.1388,Vic
+Mansfield District Hospital,-37.0576,146.0861,Vic
+Alexandra District Hospital,-37.1951,145.7161,Vic
+Numurkah & District Health Service,-36.1,145.4437,Vic
+The Kilmore & District Hospital,-37.3018,144.9579,Vic
+Yea & District Memorial Hospital,-37.2136,145.4307,Vic
+Nathalia District Hospital,-36.0548,145.2043,Vic
+Benalla & District Memorial Hospital,-36.5552,145.9947,Vic
+Beechworth Health Service,-36.3494,146.6907,Vic
+Cobram District Health,-35.9163,145.651,Vic
+Bairnsdale Regional Health Service,-37.8308,147.6079,Vic
+West Gippsland Healthcare Group [Warragul],-38.173,145.9268,Vic
+Bass Coast Health,-38.6087,145.5809,Vic
+Yarram & District Health Service,-38.557,146.6783,Vic
+Omeo District Health,-37.0981,147.5973,Vic
+Central Gippsland Health Service [Sale],-38.1084,147.0806,Vic
+Gippsland Southern Health Service - Korumburra,-38.4303,145.8282,Vic
+Gippsland Southern Health Service - Leongatha,-38.4872,145.9503,Vic
+Latrobe Regional Hospital [Traralgon],-38.2185,146.4713,Vic
+Central Gippsland Health Service [Maffra],-37.961,146.9835,Vic
+South Gippsland Hospital [Foster],-38.6583,146.207,Vic
+Orbost Regional Health,-37.7018,148.465,Vic
+Box Hill Hospital,-37.8137,145.1191,Vic
+Monash Medical Centre [Clayton],-37.9276,145.1587,Vic
+Maroondah Hospital [East Ringwood],-37.8069,145.2545,Vic
+Angliss Hospital,-37.8987,145.3142,Vic
+St George's Health Service- Aged Care,-37.8091,145.0526,Vic
+Caritas Christi Hospice [Kew],-37.8047,145.0156,Vic
+Mercy Health - O'Connell Family Centre,-37.8167,145.0617,Vic
+The Peter James Centre [East Burwood],-37.8527,145.1645,Vic
+Wantirna Health,-37.8485,145.2259,Vic
+Royal Talbot Rehabilitation Centre [Kew],-37.7895,145.0237,Vic
+Healesville Hospital and Yarra Valley Health,-37.6469,145.529,Vic
+Yarra Ranges Health,-37.7563,145.3512,Vic
+Monash Medical Centre [Moorabbin],-37.9207,145.0632,Vic
+Rosebud Hospital,-38.3622,144.8849,Vic
+Sandringham Hospital,-37.961,145.0182,Vic
+Caulfield Hospital,-37.8827,145.0169,Vic
+Kooweerup Regional Health Service,-38.2007,145.4844,Vic
+Kingston Centre [Cheltenham],-37.955,145.079,Vic
+Dandenong Hospital,-37.9765,145.2185,Vic
+Cranbourne Integrated Care Centre,-38.1133,145.2808,Vic
+Frankston Hospital,-38.1508,145.1284,Vic
+Calvary Health Care Bethlehem,-37.897,145.0134,Vic
+Queen Elizabeth Centre [Noble Park],-37.9721,145.1783,Vic
+Casey Hospital,-38.0453,145.3472,Vic
+Golf Links Road Rehabilitation Centre,-38.1734,145.1498,Vic
+The Mornington Centre,-38.2302,145.0417,Vic
+The Alfred,-37.8461,144.9819,Vic
+Austin Hospital [Heidelberg],-37.7564,145.0602,Vic
+Heidelberg Repatriation Hospital [Heidelberg West],-37.756,145.0475,Vic
+Bundoora Extended Care Centre,-37.7011,145.0556,Vic
+Mercy Hospital for Women,-37.7561,145.061,Vic
+Western Hospital [Footscray],-37.7923,144.8872,Vic
+Royal Children's Hospital [Parkville],-37.795,144.9509,Vic
+Royal Women's Hospital [Parkville],-37.7988,144.9548,Vic
+The Royal Victorian Eye & Ear Hospital,-37.809,144.9762,Vic
+The Northern Hospital [Epping],-37.6534,145.0144,Vic
+Werribee Mercy Hospital,-37.8866,144.6986,Vic
+Orygen Inpatient Unit,-37.7919,144.8866,Vic
+Royal Melbourne Hospital [City Campus],-37.7993,144.9569,Vic
+Royal Melbourne Hospital [Royal Park Campus],-37.7788,144.948,Vic
+Sunshine Hospital,-37.7592,144.8165,Vic
+St Vincent's Hospital [Melbourne],-37.8065,144.9752,Vic
+Williamstown Hospital,-37.8636,144.8923,Vic
+Peter MacCallum Cancer Centre,-37.8,144.9566,Vic
+Tweddle Child & Family Health Centre [Footscray],-37.7974,144.8874,Vic
+Sunbury Day Hospital,-37.577,144.7327,Vic
+Broadmeadows Health Service,-37.6843,144.9131,Vic
+Craigieburn Health Service,-37.596,144.9193,Vic
+The Royal Dental Hospital of Melbourne,-37.7993,144.9645,Vic
+Albury Wodonga Health [Albury Campus],-36.0784,146.9391,NSW
+Victorian Institute of Forensic Mental Health,-37.7893,145.013,Vic
+Victorian Institute of Forensic Mental Health Prison Health Service,-37.8128,144.9508,Vic
+Mater Adult Hospital,-27.4855,153.0281,Qld
+Mater Mothers' Hospital,-27.4854,153.027,Qld
+The Prince Charles Hospital,-27.3905,153.022,Qld
+Princess Alexandra Hospital,-27.4994,153.0335,Qld
+Ipswich Hospital,-27.6195,152.7593,Qld
+Redcliffe Hospital,-27.2283,153.1052,Qld
+Ellen Barron Family Centre,-27.3859,153.0252,Qld
+Queen Elizabeth II Jubilee Hospital,-27.5597,153.0489,Qld
+Redland Hospital,-27.54,153.2514,Qld
+Logan Hospital,-27.6702,153.1417,Qld
+Caboolture Hospital,-27.0808,152.9636,Qld
+Beaudesert Hospital,-27.9849,153.0025,Qld
+Boonah Hospital,-27.9991,152.6789,Qld
+Caloundra Hospital,-26.8006,153.1198,Qld
+Esk Hospital,-27.2404,152.4182,Qld
+Gatton Hospital,-27.5668,152.2763,Qld
+Kilcoy Hospital,-26.941,152.5615,Qld
+Laidley Hospital,-27.6327,152.4,Qld
+Maleny Hospital,-26.7549,152.845,Qld
+Nambour General Hospital,-26.6217,152.9522,Qld
+Gold Coast University Hospital,-27.9589,153.3812,Qld
+Biggenden Hospital,-25.5064,152.0511,Qld
+Bundaberg Base Hospital,-24.8689,152.3362,Qld
+Cherbourg Hospital,-26.2915,151.9563,Qld
+Childers Hospital,-25.2394,152.2733,Qld
+Eidsvold Hospital,-25.3826,151.1255,Qld
+Gayndah Hospital,-25.6314,151.6045,Qld
+Gin Gin Hospital,-24.9857,151.9534,Qld
+Gympie Hospital,-26.1844,152.6583,Qld
+Hervey Bay Hospital,-25.2987,152.8206,Qld
+Kingaroy Hospital,-26.5325,151.8383,Qld
+Maryborough Hospital,-25.5221,152.6899,Qld
+Monto Hospital,-24.8664,151.1125,Qld
+Mundubbera Hospital,-25.5876,151.2933,Qld
+Murgon Hospital,-26.2391,151.9507,Qld
+Nanango Hospital,-26.6664,152.0078,Qld
+Wondai Hospital,-26.3233,151.8787,Qld
+Chinchilla Hospital,-26.7413,150.6349,Qld
+Dalby Hospital,-27.1672,151.2789,Qld
+Goondiwindi Hospital,-28.548,150.3023,Qld
+Inglewood Hospital,-28.4176,151.0619,Qld
+Jandowae Hospital,-26.781,151.1053,Qld
+Miles Hospital,-26.6582,150.191,Qld
+Millmerran Hospital,-27.8789,151.2627,Qld
+Oakey Hospital,-27.4241,151.7191,Qld
+Stanthorpe Hospital,-28.6609,151.9284,Qld
+Tara Hospital,-27.2737,150.4564,Qld
+Taroom Hospital,-25.6388,149.7987,Qld
+Texas Hospital,-28.856,151.1795,Qld
+Toowoomba Hospital,-27.5699,151.9444,Qld
+Warwick Hospital,-28.2243,152.018,Qld
+Augathella Hospital,-25.7961,146.5909,Qld
+Charleville Hospital,-26.4105,146.2392,Qld
+Cunnamulla Hospital,-28.0717,145.6904,Qld
+Dirranbandi Hospital,-28.5793,148.2292,Qld
+Injune Hospital,-25.8471,148.5625,Qld
+Mitchell Hospital,-26.4899,147.9725,Qld
+Mungindi Hospital,-28.9728,148.9891,Qld
+Quilpie Hospital,-26.6165,144.2746,Qld
+Roma Hospital,-26.5688,148.7758,Qld
+St George Hospital Qld,-28.0272,148.5927,Qld
+Surat Hospital,-27.1566,149.0638,Qld
+Alpha Hospital,-23.649,146.633,Qld
+Baralaba Hospital,-24.1843,149.8096,Qld
+Biloela Hospital,-24.3958,150.5175,Qld
+Blackwater Hospital,-23.5719,148.8782,Qld
+Emerald Hospital,-23.5148,148.155,Qld
+Gladstone Hospital,-23.8507,151.2485,Qld
+Mount Morgan Hospital,-23.6451,150.3926,Qld
+Moura Hospital,-24.5759,149.976,Qld
+Rockhampton Hospital,-23.3795,150.4945,Qld
+Springsure Hospital,-24.1201,148.0848,Qld
+Theodore Hospital,-24.9431,150.0753,Qld
+Capricorn Coast Hospital,-23.1439,150.7345,Qld
+Woorabinda Hospital,-24.1315,149.456,Qld
+Barcaldine Hospital,-23.5533,145.2937,Qld
+Blackall Hospital,-24.4227,145.4493,Qld
+Longreach Hospital,-23.439,144.2609,Qld
+Winton Hospital,-22.3812,143.0407,Qld
+Clermont Hospital,-22.8262,147.6322,Qld
+Mackay Base Hospital,-21.1458,149.1553,Qld
+Moranbah Hospital,-22.0021,148.0553,Qld
+Proserpine Hospital,-20.4,148.585,Qld
+Sarina Hospital,-21.4212,149.2103,Qld
+Dysart Hospital,-22.5827,148.353,Qld
+Ayr Hospital,-19.5641,147.4088,Qld
+Bowen Hospital,-20.0071,148.2403,Qld
+Charters Towers Hospital,-20.0762,146.2641,Qld
+Collinsville Hospital,-20.5461,147.8381,Qld
+Home Hill Hospital,-19.6618,147.4168,Qld
+Ingham Hospital,-18.6523,146.1642,Qld
+Joyce Palmer Health Service,-18.7327,146.5787,Qld
+Townsville University Hospital,-19.3207,146.7621,Qld
+Royal Brisbane & Women's Hospital,-27.447,153.0279,Qld
+Atherton Hospital,-17.2666,145.4832,Qld
+Babinda Hospital,-17.3431,145.9189,Qld
+Bamaga Hospital,-10.894,142.3851,Qld
+Cairns Hospital,-16.9125,145.7685,Qld
+Cooktown Hospital,-15.4781,145.2496,Qld
+Gordonvale Hospital,-17.0873,145.7862,Qld
+Herberton Hospital,-17.3794,145.3818,Qld
+Innisfail Hospital,-17.5189,146.03,Qld
+Mareeba Hospital,-16.9871,145.4245,Qld
+Mossman Hospital,-16.464,145.368,Qld
+Thursday Island Hospital,-10.588,142.2116,Qld
+Tully Hospital,-17.9276,145.9241,Qld
+Weipa Hospital,-12.6234,141.8812,Qld
+Cloncurry Hospital,-20.7042,140.5276,Qld
+Hughenden Hospital,-20.8424,144.1892,Qld
+Julia Creek Hospital,-20.6561,141.7499,Qld
+Mount Isa Base Hospital,-20.7309,139.4938,Qld
+Normanton Hospital,-17.6787,141.0864,Qld
+Richmond Hospital,-20.7387,143.1505,Qld
+Mornington Island Hospital,-16.6655,139.1786,Qld
+Doomadgee Hospital,-17.9425,138.8253,Qld
+Baillie Henderson Hospital,-27.5244,151.9363,Qld
+Charters Towers Rehabilitation Unit,-20.0768,146.2805,Qld
+Kirwan Rehabilitation Unit,-19.3038,146.7316,Qld
+The Park Centre For Mental Health,-27.6004,152.9102,Qld
+Hampstead Rehabilitation Centre,-34.8607,138.6204,SA
+The Queen Elizabeth Hospital,-34.8842,138.534,SA
+Royal Adelaide Hospital,-34.921,138.5874,SA
+Lyell McEwin Hospital,-34.7476,138.6648,SA
+Modbury Hospital,-34.8342,138.6905,SA
+Pregnancy Advisory Centre,-34.88,138.543,SA
+St Margaret's Hospital,-34.8464,138.4805,SA
+Women's and Children's Hospital,-34.9114,138.5996,SA
+Wudinna Hospital,-33.0503,135.467,SA
+Cleve District Hospital and Aged Care,-33.6978,136.4942,SA
+Cowell District Hospital and Aged Care,-33.6853,136.9214,SA
+Cummins and District Memorial Hospital,-34.2642,135.7332,SA
+Elliston Hospital,-33.6479,134.8924,SA
+Kimba District Hospital and Aged Care,-33.1436,136.416,SA
+Ceduna District Health Service,-32.1191,133.6723,SA
+Port Lincoln Health Service,-34.7241,135.8502,SA
+Streaky Bay Hospital,-32.7928,134.2175,SA
+Tumby Bay Hospital and Health Services,-34.3723,136.1039,SA
+Gumeracha District Soldiers' Memorial Hospital,-34.8263,138.8816,SA
+Kangaroo Island Health Service,-35.6527,137.6413,SA
+Karoonda and District Soldiers' Memorial Hospital,-35.0942,139.8894,SA
+Lameroo District Health Service,-35.3282,140.5146,SA
+Tailem Bend District Hospital,-35.2548,139.4527,SA
+Mannum District Hospital,-34.9165,139.3086,SA
+Meningie and Districts Memorial Hospital and Health Services,-35.6932,139.3356,SA
+Mount Barker District Soldiers' Memorial Hospital,-35.0818,138.8703,SA
+Mount Pleasant District Hospital,-34.7739,139.0542,SA
+Murray Bridge Soldiers' Memorial Hospital,-35.1289,139.2805,SA
+Pinnaroo Soldiers' Memorial Hospital,-35.2575,140.9024,SA
+South Coast District Hospital,-35.5612,138.6064,SA
+Strathalbyn and District Health Service,-35.2577,138.8936,SA
+Booleroo Centre District Hospital and Health Services,-32.8779,138.351,SA
+Crystal Brook and District Hospital,-33.3543,138.2132,SA
+Jamestown Hospital and Health Service,-33.2123,138.6162,SA
+Laura and District Hospital,-33.1749,138.2987,SA
+Orroroo and District Health Service,-32.7385,138.6072,SA
+Peterborough Soldiers' Memorial Hospital,-32.9808,138.8303,SA
+Port Broughton and District Hospital and Health Service,-33.6013,137.9344,SA
+Port Pirie Regional Health Service,-33.1773,138.0055,SA
+McLaren Vale & Districts War Memorial Hospital Inc,-35.2214,138.545,SA
+Coober Pedy Hospital and Health Service,-29.0049,134.7621,SA
+Hawker Memorial Hospital,-31.8934,138.4278,SA
+Port Augusta Hospital and Regional Health Services,-32.5094,137.7763,SA
+Quorn Health Service,-32.3509,138.0381,SA
+Roxby Downs Health Service,-30.5628,136.8943,SA
+Whyalla Hospital and Health Services,-33.034,137.5776,SA
+Barmera Health Service,-34.2491,140.4717,SA
+Riverland General Hospital,-34.2761,140.601,SA
+Loxton Hospital Complex,-34.4547,140.5643,SA
+Renmark Paringa District Hospital,-34.1648,140.7452,SA
+Waikerie Health Service,-34.1824,139.9849,SA
+Bordertown Memorial Hospital,-36.3121,140.7664,SA
+Kingston Soldiers' Memorial Hospital,-36.8355,139.8488,SA
+Millicent and District Hospital and Health Service,-37.5984,140.3589,SA
+Mount Gambier and Districts Health Service,-37.805,140.7867,SA
+Naracoorte Health Service,-36.9668,140.7437,SA
+Penola War Memorial Hospital,-37.3829,140.8365,SA
+Flinders Medical Centre,-35.0222,138.5694,SA
+Noarlunga Hospital,-35.1399,138.5002,SA
+Gawler Health Service,-34.5937,138.755,SA
+Angaston District Hospital,-34.5035,139.0547,SA
+Balaklava Soldiers' Memorial District Hospital,-34.1396,138.4196,SA
+Burra Hospital,-33.6855,138.9346,SA
+Clare Hospital,-33.8296,138.6144,SA
+Eudunda Hospital,-34.1755,139.0906,SA
+Kapunda Hospital,-34.3303,138.9217,SA
+Central Yorke Peninsula Hospital (Maitland),-34.3705,137.6739,SA
+Riverton District Soldiers' Memorial Hospital,-34.1604,138.7427,SA
+Snowtown Hospital and Health Service,-33.7869,138.2128,SA
+Southern Yorke Peninsula Health Service (Yorketown),-35.021,137.6049,SA
+Tanunda War Memorial Hospital,-34.5281,138.9609,SA
+Northern Yorke Peninsula Health Service (Wallaroo),-33.9277,137.6368,SA
+Glenside Health Services,-34.9434,138.6277,SA
+King Edward Memorial Hospital,-31.9501,115.8186,WA
+Sir Charles Gairdner Hospital,-31.9683,115.8155,WA
+Selby Authorised Lodge,-31.9582,115.802,WA
+Osborne Park Hospital,-31.886,115.8047,WA
+Kalamunda Hospital,-31.9665,116.0603,WA
+"Next Step Drug And Alcohol Services, East Perth",-31.9534,115.8692,WA
+Joondalup Health Campus (Public),-31.7388,115.7717,WA
+Royal Perth Hospital Wellington Street Campus,-31.9542,115.8663,WA
+Fremantle Hospital and Health Service,-32.0583,115.7514,WA
+Armadale-Kelmscott Memorial Hospital,-32.1332,116.02,WA
+Bentley Health Service,-32.0053,115.9279,WA
+Rockingham General Hospital,-32.2914,115.7709,WA
+Murray District Hospital,-32.6397,115.8716,WA
+Peel Health Campus,-32.5326,115.7635,WA
+Fitzroy Crossing Hospital,-18.1914,125.5628,WA
+Halls Creek Hospital,-18.226,127.666,WA
+Broome Hospital,-17.961,122.2363,WA
+Derby Hospital,-17.3063,123.6334,WA
+Wyndham Hospital,-15.4778,128.1278,WA
+Kununurra Hospital,-15.7754,128.7342,WA
+Hedland Health Campus,-20.4135,118.5982,WA
+Onslow Hospital,-21.6432,115.1154,WA
+Roebourne Hospital,-20.7763,117.144,WA
+Tom Price Hospital,-22.6954,117.7903,WA
+Newman Hospital,-23.3548,119.7365,WA
+Paraburdoo Hospital,-23.203,117.6706,WA
+Carnarvon Hospital,-24.8866,113.659,WA
+Exmouth Hospital,-21.9283,114.1199,WA
+Geraldton Hospital,-28.7828,114.6108,WA
+Meekatharra Hospital,-26.5914,118.4919,WA
+Morawa Health Service,-29.2129,116.003,WA
+Mullewa Health Service,-28.536,115.51,WA
+Northampton Kalbarri Health Service,-28.3512,114.6351,WA
+North Midlands Health Service,-29.5342,115.7592,WA
+Kalbarri Health Centre,-27.7128,114.1616,WA
+Dongara Eneabba Mingenew Health Service,-29.2652,114.9342,WA
+Lake Grace Hospital,-33.1025,118.4527,WA
+Merredin Hospital,-31.4852,118.2765,WA
+Narrogin Hospital,-32.9373,117.1685,WA
+Northam Hospital,-31.6496,116.6577,WA
+Wagin Hospital,-33.3047,117.3473,WA
+York Hospital,-31.8944,116.7574,WA
+Beverley Hospital,-32.1028,116.923,WA
+Boddington Hospital,-32.8037,116.4758,WA
+Bruce Rock Memorial Hospital,-31.873,118.1464,WA
+Corrigin Hospital,-32.3244,117.8788,WA
+Dalwallinu Hospital,-30.2772,116.6565,WA
+Dumbleyung Memorial Hospital,-33.3104,117.7405,WA
+Kellerberrin Memorial Hospital,-31.6289,117.7165,WA
+Goomalling Hospital,-31.3039,116.8311,WA
+Kondinin Hospital,-32.4889,118.2654,WA
+Kununoppin Health Service,-31.1097,117.9229,WA
+Moora Hospital,-30.6396,116.0011,WA
+Narembeen Memorial Hospital,-32.0616,118.3913,WA
+Pingelly Health Centre,-32.533,117.0898,WA
+Southern Cross Hospital,-31.2307,119.3378,WA
+Wongan Hills Hospital,-30.8942,116.7248,WA
+Wyalkatchem-Koorda and Districts Hospital,-31.1762,117.3862,WA
+Quairading Hospital,-32.0145,117.4026,WA
+Esperance Hospital,-33.8562,121.8922,WA
+Kalgoorlie Health Campus,-30.7408,121.4701,WA
+Laverton Hospital,-28.6268,122.3999,WA
+Leonora Hospital,-28.8943,121.3375,WA
+Norseman Hospital,-32.1986,121.7677,WA
+Albany Hospital,-35.0034,117.9045,WA
+Denmark Hospital and Health Service,-34.9559,117.3579,WA
+Katanning Hospital,-33.683,117.5634,WA
+Gnowangerup Hospital,-33.9305,118.0029,WA
+Plantagenet Hospital,-34.6261,117.6546,WA
+Ravensthorpe Health Centre,-33.5849,120.0455,WA
+Kojonup Hospital,-33.8295,117.1529,WA
+Augusta Hospital,-34.3058,115.158,WA
+Bunbury Hospital,-33.367,115.6482,WA
+Busselton Health Campus,-33.6544,115.3196,WA
+Collie Hospital,-33.3514,116.1622,WA
+Margaret River Hospital,-33.9522,115.0712,WA
+Donnybrook Hospital,-33.5769,115.8165,WA
+Harvey Hospital,-33.0776,115.8967,WA
+Nannup Hospital,-33.9828,115.7672,WA
+Pemberton Hospital,-34.4449,116.032,WA
+Boyup Brook Soldiers Memorial Hospital,-33.8392,116.3906,WA
+Warren Hospital,-34.241,116.1541,WA
+Bridgetown Hospital,-33.9517,116.1322,WA
+Graylands Selby-Lemnos and Special Care Health Service,-31.9614,115.7909,WA
+Royal Hobart Hospital,-42.88,147.3301,Tas
+Launceston General Hospital,-41.4466,147.1421,Tas
+North West Regional Hospital,-41.0484,145.8808,Tas
+Mersey Community Hospital,-41.2291,146.4224,Tas
+Royal Darwin Hospital,-12.3558,130.8818,NT
+Alice Springs Hospital,-23.7058,133.8781,NT
+Tennant Creek Hospital,-19.6478,134.1869,NT
+Katherine Hospital,-14.439,132.2721,NT
+Gove Hospital,-12.186,136.7779,NT
+The Canberra Hospital,-35.3458,149.1009,ACT
+North Canberra Hospital (previously known as Calvary Public Hospital Bruce),-35.2533,149.0897,ACT
+Robina Hospital,-28.0722,153.3773,Qld
+Queensland Children's Hospital,-27.4843,153.0267,Qld
+Fiona Stanley Hospital,-32.0701,115.8469,WA
+St John of God Midland Public Hospital,-31.8948,116.0089,WA
+Byron Central Hospital,-28.6374,153.5559,NSW
+Women's at Sandringham,-37.961,145.0182,Vic
+Sunshine Coast University Hospital,-26.7468,153.1138,Qld
+Perth Children's Hospital,-31.9695,115.8172,WA
+Karratha Health Campus,-20.7322,116.8395,WA
+Northern Beaches Hospital,-33.7506,151.2338,NSW
+Palmerston Regional Hospital,-12.4751,131.0045,NT
+Dame Phyllis Frost Centre - Marmak unit,-37.7813,144.7423,Vic
+Goodooga Health Service,-29.1102,147.4561,NSW
+Ivanhoe Hospital,-32.8982,144.2989,NSW
+Menindee Health Service,-32.3903,142.4149,NSW
+QEII Family Centre,-35.3233,149.0792,ACT
+Sydney Dental Hospital,-33.8845,151.2078,NSW
+Tibooburra Health Service,-29.4332,142.0128,NSW
+Mallee Track Health & Community Service [Sea Lake],-35.5004,142.858,Vic
+Ursula Frayne Centre,-37.7911,144.8867,Vic
+Surgical Treatment and Rehabilitation Service,-27.4493,153.0261,Qld
+St Vincent's On the Park,-37.8111,144.9778,Vic
+Jacaranda Place Queensland Adolescent Extended Treatment Centre,-27.3877,153.0266,Qld
+James Nash House,-34.8498,138.6373,SA
+University of Canberra Hospital,-35.2329,149.0819,ACT
+Glenside Rural & Remote,-34.944,138.6288,SA
+Victorian Heart Hospital,-37.9125,145.1398,Vic
+Blackburn Public Surgical Centre,-37.8333,145.1561,Vic
+Frankston Public Surgical Centre,-38.1544,145.1331,Vic
+Sandringham Monash,-37.961,145.0182,Vic
+Adolescent and Young Adult Hospice Manly,-33.8072,151.2956,NSW
+North Canberra Hospital,-35.2533,149.0897,ACT
+Casey Early Parenting Centre,-38.094,145.3434,Vic
+Wyndham Early Parenting Centre,-37.8877,144.6924,Vic
+Whittlesea Early Parenting Centre,-37.649,145.0777,Vic
+St James Transitional Care Unit,-31.996,115.9101,WA
+White Cliffs Health Service,-30.8507,143.0896,NSW
+Wayipunga Early Parenting Centre,-36.7655,144.291,Vic
+Goulburn Valley Health [Euroa],-36.7591,145.5703,Vic
+Mater Hospital Springfield,-27.6858,152.9089,Qld

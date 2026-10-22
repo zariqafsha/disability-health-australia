@@ -1,0 +1,267 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bullet chart: unmet GP, specialist and dental care for two disability groups (bars), each compared with the all-disability baseline (tick). Percent of each group living in households who needed the service but did not receive it at least once in 2022. Source AIHW ACCESS.2 and ACCESS.3.",
+  "background": "transparent",
+  "width": "container",
+  "height": 300,
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#486267",
+      "titleColor": "#456064"
+    },
+    "header": {
+      "labelFont": "Arial",
+      "labelColor": "#173E42"
+    }
+  },
+  "data": {
+    "url": "data/08_unmet_care_by_disability.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "unmet_pct": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.disability_group == 'All people with disability' ? datum.unmet_pct : null",
+      "as": "base_only"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "base_only",
+          "as": "baseline"
+        }
+      ],
+      "groupby": [
+        "service"
+      ]
+    },
+    {
+      "filter": "datum.disability_group != 'All people with disability'"
+    },
+    {
+      "calculate": "datum.unmet_pct - datum.baseline",
+      "as": "diff"
+    },
+    {
+      "calculate": "datum.unmet_pct + '%  (' + (datum.diff > 0 ? '+' : '') + datum.diff + ' vs all)'",
+      "as": "label"
+    },
+    {
+      "calculate": "datum.baseline - 0.18",
+      "as": "tick_start"
+    },
+    {
+      "calculate": "datum.baseline + 0.18",
+      "as": "tick_end"
+    },
+    {
+      "calculate": "max(datum.unmet_pct, datum.tick_end)",
+      "as": "label_x"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "service",
+      "type": "nominal",
+      "sort": [
+        "GP",
+        "Medical specialist",
+        "Dental professional"
+      ],
+      "title": null,
+      "axis": {
+        "labelFontSize": 13,
+        "labelFontWeight": "bold",
+        "labelLimit": 200,
+        "labelPadding": 10,
+        "ticks": false,
+        "domain": false
+      }
+    },
+    "yOffset": {
+      "field": "disability_group",
+      "sort": [
+        "Psychosocial disability",
+        "Sensory or speech disability"
+      ]
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#EEF2EF",
+        "height": {
+          "band": 1
+        }
+      },
+      "encoding": {
+        "x": {
+          "datum": 40,
+          "type": "quantitative"
+        },
+        "yOffset": {
+          "value": 0
+        }
+      }
+    },
+    {
+      "params": [
+        {
+          "name": "pickGroup",
+          "select": {
+            "type": "point",
+            "fields": [
+              "disability_group"
+            ]
+          },
+          "bind": "legend"
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3,
+        "height": {
+          "band": 0.7
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "unmet_pct",
+          "type": "quantitative",
+          "title": "Needed the service but missed it at least once (%)",
+          "scale": {
+            "domain": [
+              0,
+              40
+            ]
+          },
+          "axis": {
+            "grid": false,
+            "tickCount": 5,
+            "labelFontSize": 11
+          }
+        },
+        "color": {
+          "field": "disability_group",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "Psychosocial disability",
+              "Sensory or speech disability",
+              "All with disability (tick)"
+            ],
+            "range": [
+              "#C9783F",
+              "#4FA6A0",
+              "#173F45"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "labelFontSize": 12,
+            "labelLimit": 300,
+            "symbolType": "square"
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "pickGroup",
+            "value": 1
+          },
+          "value": 0.25
+        },
+        "tooltip": [
+          {
+            "field": "disability_group",
+            "title": "Disability group"
+          },
+          {
+            "field": "service",
+            "title": "Service"
+          },
+          {
+            "field": "unmet_pct",
+            "title": "Missed care (%)",
+            "format": ".0f"
+          },
+          {
+            "field": "baseline",
+            "title": "All people with disability (%)",
+            "format": ".0f"
+          },
+          {
+            "field": "diff",
+            "title": "Difference (percentage points)",
+            "format": "+.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 7,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#3A3A3A"
+      },
+      "encoding": {
+        "x": {
+          "field": "label_x",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "bar",
+        "height": {
+          "band": 1
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "tick_start",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "tick_end"
+        },
+        "yOffset": {
+          "value": 0
+        },
+        "color": {
+          "datum": "All with disability (tick)"
+        },
+        "tooltip": [
+          {
+            "field": "service",
+            "title": "Service"
+          },
+          {
+            "field": "baseline",
+            "title": "All people with disability (%)",
+            "format": ".0f"
+          }
+        ]
+      }
+    }
+  ]
+}

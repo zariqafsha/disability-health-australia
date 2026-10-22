@@ -54,3 +54,14 @@
 /* Figure 9 weighted bipartite network replaces the ordinary grouped bars. */
 .chart-holder--barrier{min-height:400px}
 @media(max-width:680px){.chart-holder--barrier{min-height:405px}}
+
+/* Hero: key statistics stacked vertically in the right-hand column (replaces the decorative motif) */
+.hero__grid.hero__grid--stats{grid-template-columns:minmax(0,1.5fr) minmax(290px,1fr);gap:64px}
+.hero__stats--stacked{grid-template-columns:1fr;gap:0;margin-top:0;padding-top:0;border-top:0;align-self:center}
+.hero__stats--stacked .stat{border-right:0;border-bottom:1px solid rgba(255,255,255,.14);padding:24px 0;min-height:0}
+.hero__stats--stacked .stat:first-child{padding-top:0}
+.hero__stats--stacked .stat:last-of-type{border-bottom:0}
+.hero__stats--stacked .stat__number{min-width:150px}
+.hero__stats--stacked .hero__stat-source{margin-top:6px}
+@media (max-width:950px){.hero__grid.hero__grid--stats{grid-template-columns:minmax(0,1fr) 250px;gap:36px}.hero__stats--stacked .stat{flex-direction:row;align-items:center}.hero__stats--stacked .stat__number{min-width:110px}}
+@media (max-width:680px){.hero__stats--stacked{margin-top:34px;align-self:auto}.hero__stats--stacked .stat{padding:16px 0}}

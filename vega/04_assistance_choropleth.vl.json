@@ -20,13 +20,21 @@
   "description": "ABS 2021 Census core-activity assistance need: percentage of all residents for states and territories, choose 2016 or 2021.",
   "height": 410,
   "projection": {
-    "type": "mercator"
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -134,
+      0
+    ]
   },
   "data": {
-    "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
+    "url": "data/aus_states.json",
     "format": {
-      "type": "json",
-      "property": "features"
+      "type": "topojson",
+      "feature": "states"
     }
   },
   "params": [

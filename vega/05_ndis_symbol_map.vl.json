@@ -20,7 +20,15 @@
   "description": "NDIS active participants on 30 June 2026, filtered by primary disability; circles use schematic anchor points within jurisdictions, NOT residential locations.",
   "height": 455,
   "projection": {
-    "type": "mercator"
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -134,
+      0
+    ]
   },
   "params": [
     {
@@ -43,10 +51,10 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
+        "url": "data/aus_states.json",
         "format": {
-          "type": "json",
-          "property": "features"
+          "type": "topojson",
+          "feature": "states"
         }
       },
       "mark": {

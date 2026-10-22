@@ -1,11 +1,15 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Six 10×10 person-icon panels; each symbol represents one percentage point of health-service usage among people with disability living in households, SDAC 2022. Titles include direct percentages and glyphs are enlarged for readability. Source: AIHW 2026 ACCESS.1.",
+  "description": "Six 10\u00d710 person-icon panels; each symbol represents one percentage point of health-service usage among people with disability living in households, SDAC 2022. Titles include direct percentages and glyphs are enlarged for readability. Source: AIHW 2026 ACCESS.1.",
   "background": "transparent",
   "data": {
     "url": "data/07_health_service_usage_pictogram.csv",
     "format": {
-      "type": "csv"
+      "type": "csv",
+      "parse": {
+        "col": "number",
+        "row": "number"
+      }
     }
   },
   "transform": [
@@ -18,7 +22,7 @@
       "as": "filled"
     },
     {
-      "calculate": "datum.service + ' · ' + datum.usage_pct + '%'",
+      "calculate": "datum.service + ' \u00b7 ' + datum.usage_pct + '%'",
       "as": "service_display"
     }
   ],
@@ -26,12 +30,12 @@
     "field": "service_display",
     "type": "nominal",
     "sort": [
-      "GP visit · 93%",
-      "Medical specialist · 63%",
-      "Dental care · 51%",
-      "Emergency visit · 25%",
-      "Hospital admission · 25%",
-      "Telehealth · 43%"
+      "GP visit \u00b7 93%",
+      "Medical specialist \u00b7 63%",
+      "Dental care \u00b7 51%",
+      "Emergency visit \u00b7 25%",
+      "Hospital admission \u00b7 25%",
+      "Telehealth \u00b7 43%"
     ],
     "header": {
       "labelFontSize": 17,
@@ -59,8 +63,7 @@
         "sort": "ascending",
         "axis": null,
         "scale": {
-          "paddingInner": 0.07,
-          "paddingOuter": 0.16
+          "padding": 0.3
         }
       },
       "y": {
@@ -69,8 +72,7 @@
         "sort": "ascending",
         "axis": null,
         "scale": {
-          "paddingInner": 0.09,
-          "paddingOuter": 0.12
+          "padding": 0.3
         }
       },
       "color": {

@@ -58,6 +58,26 @@
           "expr": "(datum.x1 - datum.x0) > 76 && (datum.y1 - datum.y0) > 60"
         }
       ]
+    },
+    {
+      "name": "slim_labels",
+      "source": "leaves",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "(datum.x1 - datum.x0) > 76 && (datum.y1 - datum.y0) <= 60 && (datum.y1 - datum.y0) >= 18"
+        }
+      ]
+    },
+    {
+      "name": "tall_labels",
+      "source": "leaves",
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "(datum.x1 - datum.x0) <= 76 && (datum.x1 - datum.x0) >= 16 && (datum.y1 - datum.y0) > 90"
+        }
+      ]
     }
   ],
   "scales": [
@@ -163,7 +183,7 @@
             "signal": "datum.y0 + 11"
           },
           "text": {
-            "signal": "(datum.x1-datum.x0) < 150 && length(datum.short_label) > 15 ? slice(datum.short_label, 0, 13) + '…' : datum.short_label"
+            "signal": "(datum.x1-datum.x0) < 150 && length(datum.short_label) > 15 ? slice(datum.short_label, 0, 13) + '\u2026' : datum.short_label"
           },
           "limit": {
             "signal": "max(35, datum.x1-datum.x0-20)"
@@ -209,6 +229,99 @@
           },
           "text": {
             "signal": "format(datum.value, '.1f') + '%'"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "slim_labels"
+      },
+      "encode": {
+        "enter": {
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": 700
+          },
+          "fill": {
+            "value": "#12383E"
+          },
+          "interactive": {
+            "value": false
+          }
+        },
+        "update": {
+          "x": {
+            "signal": "datum.x0 + 11"
+          },
+          "y": {
+            "signal": "(datum.y0 + datum.y1) / 2"
+          },
+          "text": {
+            "signal": "format(datum.value, '.1f') + '% \u00b7 ' + datum.short_label"
+          },
+          "limit": {
+            "signal": "max(35, datum.x1 - datum.x0 - 20)"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {
+        "data": "tall_labels"
+      },
+      "encode": {
+        "enter": {
+          "align": {
+            "value": "left"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "font": {
+            "value": "Arial"
+          },
+          "fontSize": {
+            "value": 12
+          },
+          "fontWeight": {
+            "value": 700
+          },
+          "fill": {
+            "value": "#12383E"
+          },
+          "interactive": {
+            "value": false
+          },
+          "angle": {
+            "value": -90
+          }
+        },
+        "update": {
+          "x": {
+            "signal": "(datum.x0 + datum.x1) / 2"
+          },
+          "y": {
+            "signal": "datum.y1 - 11"
+          },
+          "text": {
+            "signal": "format(datum.value, '.1f') + '% \u00b7 ' + datum.short_label"
+          },
+          "limit": {
+            "signal": "max(35, datum.y1 - datum.y0 - 20)"
           }
         }
       }

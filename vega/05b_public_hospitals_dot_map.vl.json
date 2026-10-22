@@ -1,0 +1,164 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dot map: open public hospitals listed on AIHW MyHospitals, one dot per hospital, over Australian state boundaries.",
+  "width": "container",
+  "height": 455,
+  "background": "transparent",
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "DM Sans",
+    "axis": {
+      "labelColor": "#405963",
+      "titleColor": "#405963"
+    },
+    "legend": {
+      "labelColor": "#3A5159",
+      "titleColor": "#3A5159",
+      "labelFontSize": 11
+    }
+  },
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -134,
+      0
+    ]
+  },
+  "params": [
+    {
+      "name": "stateChoice",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "name": "Highlight: ",
+        "options": [
+          "All",
+          "NSW",
+          "Vic",
+          "Qld",
+          "WA",
+          "SA",
+          "Tas",
+          "NT",
+          "ACT"
+        ],
+        "labels": [
+          "All states and territories",
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "Western Australia",
+          "South Australia",
+          "Tasmania",
+          "Northern Territory",
+          "Australian Capital Territory"
+        ]
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "data/aus_states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#EAF0EB",
+        "stroke": "#B6C9C4",
+        "strokeWidth": 1.1
+      }
+    },
+    {
+      "data": {
+        "url": "data/05b_public_hospitals.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.lon < 155"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 26,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "color": {
+          "value": "#0C6B70"
+        },
+        "opacity": {
+          "condition": {
+            "test": "stateChoice == 'All' || datum.state == stateChoice",
+            "value": 0.85
+          },
+          "value": 0.08
+        },
+        "tooltip": [
+          {
+            "field": "name",
+            "title": "Hospital"
+          },
+          {
+            "field": "state",
+            "title": "State"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 133.4,
+            "lat": -17.6,
+            "text": "NT: 6 hospitals"
+          },
+          {
+            "lon": 146.4,
+            "lat": -40.1,
+            "text": "Tas: 4 main hospitals listed"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#3A5159",
+        "align": "center"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    }
+  ]
+}

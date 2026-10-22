@@ -1,4 +1,4 @@
-# FIT3179 Disability and Health Services in Australia — Section 1 datasets
+# Data notes: Chapter 1 datasets
 
 These three UTF-8 CSV files are tidied, reproducible transcriptions from published Australian Bureau of Statistics (ABS) and Australian Institute of Health and Welfare (AIHW) online data tables, prepared for Vega-Lite/Vega.
 

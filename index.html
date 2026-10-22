@@ -26,27 +26,20 @@
   </header>
   <main id="main">
     <section class="hero" aria-labelledby="page-title">
-      <div class="wrap hero__grid">
+      <div class="wrap hero__grid hero__grid--stats">
         <div class="hero__copy">
           <p class="eyebrow"><span class="eyebrow__line"></span> DISABILITY & HEALTH SERVICES · AUSTRALIA</p>
           <h1 id="page-title">Living with disability in <em>Australia.</em></h1>
           <p class="hero__subtitle">Who lives with disability, where is support needed, and can people access healthcare and daily assistance?</p>
           <div class="hero__explanation">This visual story combines disability-survey, Census, AIHW and NDIS reporting. Follow all <strong>four chapters</strong>: disability prevalence, geographic support patterns, healthcare access and NDIS changes from 2022 to 2026.</div>
         </div>
-        <div class="hero__motif" aria-hidden="true">
-          <div class="motif-circle motif-circle--big"></div>
-          <div class="motif-circle motif-circle--medium"></div>
-          <div class="motif-circle motif-circle--small"></div>
-          <div class="motif-lines"><span></span><span></span><span></span><span></span><span></span></div>
-          <span class="hero__motif-caption">PEOPLE · PATTERNS · PLACE</span>
-        </div>
+        <aside class="hero__stats hero__stats--stacked" aria-label="Key figures from 2022">
+          <div class="stat"><span class="stat__number">5.5<span>m</span></span><div class="stat__body"><strong>Australians</strong><span>estimated to have disability in 2022</span></div></div>
+          <div class="stat"><span class="stat__number">21.4<span>%</span></span><div class="stat__body"><strong>Of the population</strong><span>had disability in the 2022 survey</span></div></div>
+          <div class="stat"><span class="stat__number">+3.7<span>pp</span></span><div class="stat__body"><strong>Since 2018</strong><span>difference in reported prevalence</span></div></div>
+          <p class="hero__stat-source">Source: ABS 2022 SDAC via <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/disability-population/how-many-people-have-disability" target="_blank" rel="noopener noreferrer">AIHW (2026)</a>. Estimates are not exact headcounts. pp = percentage points.</p>
+        </aside>
       </div>
-      <div class="wrap hero__stats" aria-label="Key figures from 2022">
-        <div class="stat"><span class="stat__number">5.5<span>m</span></span><div class="stat__body"><strong>Australians</strong><span>estimated to have disability in 2022</span></div></div>
-        <div class="stat"><span class="stat__number">21.4<span>%</span></span><div class="stat__body"><strong>Of the population</strong><span>had disability in the 2022 survey</span></div></div>
-        <div class="stat"><span class="stat__number">+3.7<span>pp</span></span><div class="stat__body"><strong>Since 2018</strong><span>difference in reported prevalence</span></div></div>
-      </div>
-      <p class="wrap hero__stat-source">Source: ABS 2022 SDAC via <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/disability-population/how-many-people-have-disability" target="_blank" rel="noopener noreferrer">AIHW (2026)</a>. Estimates are not exact headcounts. pp = percentage points.</p>
     </section>
 
     <section class="wrap narrative-intro" aria-labelledby="section-heading">
@@ -92,7 +85,7 @@
       <div class="wrap section-bridge__inner">
         <div class="section-bridge__number">02 <span>/ 04</span></div>
         <div><p class="eyebrow">GEOGRAPHIC PATTERNS · NEED & SUPPORT</p><h2 id="section2-heading">Where is support needed?</h2>
-        <p>Disability is not spread evenly across Australia. Compare <strong>need for help with everyday activities</strong>, <strong>NDIS participation</strong> and <strong>the share of funding used</strong>. These are different measures drawn from separate sources and reference periods.</p></div>
+        <p>Disability is not spread evenly across Australia. Compare <strong>need for help with everyday activities</strong>, <strong>NDIS participation</strong> and <strong>where public hospitals are</strong>. These are different measures drawn from separate sources and reference periods.</p></div>
       </div>
     </section>
 
@@ -103,7 +96,7 @@
         <div class="chart-holder chart-holder--map" id="chart-4" role="img" aria-label="Interactive Australian state choropleth map of core activity assistance needs in 2016 or 2021. Tasmania reached 6.8 percent in 2021."><span class="chart-loading">Loading choropleth map…</span></div>
         <aside class="takeaway"><div class="takeaway__icon" aria-hidden="true">↗</div><p class="takeaway__label">2021 SNAPSHOT</p><p><strong>6.8%</strong> in Tasmania versus <strong>3.6%</strong> in the Northern Territory.</p><small>These are Census assistance-need rates—not overall disability prevalence. Age structure contributes to the geographic differences.</small></aside>
       </div>
-      <p class="chart-note">Select 2016 or 2021 above the map. The figure measures <strong>core-activity need for assistance</strong>, a narrower definition than the Survey of Disability, Ageing and Carers. Source: <a href="https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia" target="_blank" rel="noopener noreferrer">ABS, 2021 Census profile, state table</a>. The state boundaries are from an <a href="https://github.com/rowanhogan/australian-states" target="_blank" rel="noopener noreferrer">independently maintained GeoJSON file</a> and are used for display.</p>
+      <p class="chart-note">Select 2016 or 2021 above the map. The figure measures <strong>core-activity need for assistance</strong>, a narrower definition than the Survey of Disability, Ageing and Carers. Source: <a href="https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia" target="_blank" rel="noopener noreferrer">ABS, 2021 Census profile, state table</a>. State boundaries: <a href="https://github.com/rowanhogan/australian-states" target="_blank" rel="noopener noreferrer">rowanhogan/australian-states</a>, simplified to TopoJSON with mapshaper and stored in this repository (<code>data/aus_states.json</code>).</p>
     </section>
 
     <section class="wrap exhibit" aria-labelledby="chart5-heading">
@@ -114,17 +107,13 @@
       <p class="chart-note">Circle locations are <strong>schematic state reference points</strong>, not participant residences, hospitals or service addresses. Symbols encode counts, not percentages. The mapped eight jurisdictions total 781,904; the national 782,013 also includes 93 participants in other territories and 16 with missing locations. Source: <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">NDIA June 2026 Quarterly Report, Appendix D.1 and D.8</a>.</p>
     </section>
 
-    <section class="wrap exhibit" aria-labelledby="chart6-heading">
-      <div class="exhibit__topline"><span>FIGURE 06 · TILE-GRID MAP</span><span>NDIS · OCT 2025–MAR 2026</span></div>
-      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">FROM FUNDING TO ACTUAL USE</p><h3 id="chart6-heading">Allocated support isn't always fully used.</h3></div><p>Every state and territory has the same tile size. The colour and label show the <strong>share of NDIS plan funding used</strong>. Choose a participant group to compare utilisation differences.</p></div>
-      <div class="exhibit__body exhibit__body--split">
-        <div class="chart-holder chart-holder--tile" id="chart-6" role="img" aria-label="Equal-area tile grid map for Australia showing plan budget utilisation, with choice of all participants, in supported independent living, or not in supported independent living."><span class="chart-loading">Loading tile map…</span></div>
-        <aside class="takeaway takeaway--amber"><div class="takeaway__icon" aria-hidden="true">%</div><p class="takeaway__label">WHY THIS MATTERS</p><p>National utilisation was <strong>73%</strong> for the measured period across the two living-support groups combined.</p><small>Funding utilisation is not a direct measure of service quality or satisfaction. Recent payments may be reported late.</small></aside>
-      </div>
-      <p class="chart-note"><strong>Tile-map layout is schematic:</strong> the eight equal-size tiles preserve only approximate relative state positions, not real borders or land areas. SIL means Supported Independent Living. For these figures, utilisation refers to <strong>1 October 2025–31 March 2026</strong>, and certain in-kind supports/plans are excluded; actual utilisation may be higher. Source: <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">NDIA June 2026 Quarterly Report, Appendix D.29 and notes</a>.</p>
+    <section class="wrap exhibit" aria-labelledby="chart5b-heading">
+      <div class="exhibit__topline"><span>FIGURE 06 · DOT MAP</span><span>AIHW MYHOSPITALS · 2026</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">WHERE CARE IS LOCATED</p><h3 id="chart5b-heading">Public hospitals cluster along the east and south-east coast.</h3></div><p>Each dot is <strong>one open public hospital</strong>. Inland and in the north, hospitals are far apart, so reaching care can mean travelling a long way. Use the selector to highlight one state or territory, and hover over a dot for the hospital's name.</p></div>
+      <div class="chart-holder chart-holder--map" id="chart-5b" role="img" aria-label="Dot map of 690 open public hospitals in Australia. Most are in New South Wales, Victoria and Queensland; the Northern Territory has six."><span class="chart-loading">Loading hospital map…</span></div>
+      <div class="insight-row"><div class="insight-row__metric">224 <span>vs</span> 6</div><p><strong>New South Wales</strong> has 224 public hospitals in the list; the <strong>Northern Territory</strong>, which covers a far larger area, has 6. Counting hospitals does not measure their size, staffing or specialties.</p></div>
+      <p class="chart-note">One dot per hospital at its listed coordinates. Includes public hospitals that report to MyHospitals; closed and private hospitals are excluded. Tasmania looks sparse because the list includes only its four main public hospitals, not smaller district hospitals. Lord Howe Island (NSW) is off the map's edge and not shown. Source: <a href="https://www.aihw.gov.au/hospitals/other-resources/myhospitals-api" target="_blank" rel="noopener noreferrer">AIHW MyHospitals API, reporting units list</a>.</p>
     </section>
-
-
     <section class="section-bridge section-bridge--care" aria-labelledby="section3-heading">
       <div class="wrap section-bridge__inner">
         <div class="section-bridge__number">03 <span>/ 04</span></div>
@@ -142,10 +131,10 @@
     </section>
 
     <section class="wrap exhibit" aria-labelledby="chart8-heading">
-      <div class="exhibit__topline"><span>FIGURE 08 · HEATMAP</span><span>2022 · UNMET CARE × DISABILITY GROUP</span></div>
-      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">WHEN PEOPLE MISS OUT</p><h3 id="chart8-heading">People with psychosocial disability report more missed care.</h3></div><p>Colours represent the percentage who <strong>needed a service but did not receive it at least once</strong> in the previous year. Compare the all-disability baseline with two selected disability groups.</p></div>
-      <div class="chart-holder chart-holder--care-heatmap" id="chart-8" role="img" aria-label="Heatmap comparing unmet GP, medical specialist and dental care. Among people with psychosocial disability the rates were 26%, 20%, 25%; among sensory or speech disability the rates were 16%, 12%, 16%; national disability baseline 20%, 14%, 19%."><span class="chart-loading">Loading unmet-care heatmap…</span></div>
-      <div class="insight-row insight-row--amber"><div class="insight-row__metric">26<span>%</span></div><p>Among people with <strong>psychosocial disability</strong>, 26% missed needed GP care at least once—compared with <strong>16%</strong> among those with sensory or speech disability.</p></div>
+      <div class="exhibit__topline"><span>FIGURE 08 · BULLET CHART</span><span>2022 · UNMET CARE × DISABILITY GROUP</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">WHEN PEOPLE MISS OUT</p><h3 id="chart8-heading">People with psychosocial disability report more missed care.</h3></div><p>Each bar shows the percentage who <strong>needed a service but did not receive it at least once</strong> in the previous year. The dark tick marks the rate for <strong>all people with disability</strong>, so bars past the tick are above average. Click a group in the legend to highlight it.</p></div>
+      <div class="chart-holder chart-holder--care-heatmap" id="chart-8" role="img" aria-label="Bullet chart comparing unmet GP, medical specialist and dental care with the all-disability rate. Among people with psychosocial disability the rates were 26%, 20%, 25%; among sensory or speech disability the rates were 16%, 12%, 16%; national disability baseline 20%, 14%, 19%."><span class="chart-loading">Loading unmet-care chart…</span></div>
+      <div class="insight-row insight-row--amber"><div class="insight-row__metric">+6<span> pp</span></div><p>For <strong>every service</strong>, people with <strong>psychosocial disability</strong> missed needed care 6 percentage points more often than people with disability overall (26% vs 20% for GPs). People with <strong>sensory or speech disability</strong> were 2–4 points below the overall rate.</p></div>
       <p class="chart-note">The two disability groups can <strong>overlap</strong> with other disabilities and must not be added together. Values refer to people with disability living in households and having at least one episode of unmet need; these are <strong>not</strong> percentages of all medical appointments. Source: <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/health/access-to-health-services" target="_blank" rel="noopener noreferrer">AIHW (2026), Figures ACCESS.2–ACCESS.3 and supporting text</a>.</p>
     </section>
 
@@ -192,7 +181,7 @@
       <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">FUNDING PUT TO USE</p><h3 id="chart12-heading">Plan utilisation differs substantially by support needs.</h3></div><p>These percentages show the <strong>share of committed NDIS supports paid for</strong> during each October–March window. Compare participants receiving Supported Independent Living (SIL), other participants and all participants. Hover over the lines or points for the exact values. All three groups are shown together for comparison.</p></div>
       <div class="chart-holder chart-holder--util" id="chart-12" role="img" aria-label="National plan utilisation from October to March in 2024, 2025 and 2026: SIL 89, 87, 87 percent; not SIL 71, 68, 68 percent; all participants 77, 74, 73 percent."><span class="chart-loading">Loading utilisation trends…</span></div>
       <div class="insight-row"><div class="insight-row__metric">19<span>pp</span></div><p>In the October 2025–March 2026 window, utilisation was <strong>87%</strong> for people in SIL and <strong>68%</strong> for those not in SIL—a <strong>19-percentage-point gap</strong>. Group composition and support needs differ, so this is not a like-for-like comparison of care quality.</p></div>
-      <p class="chart-note"><strong>Time period:</strong> each point uses the six months from 1 October of the preceding year to 31 March of the labelled year; the most recent April–June quarter is excluded because of payment-reporting lags. <strong>Chart 12 replaces the original support-class concept</strong> because comparable published class-level historical figures could not be independently extracted. Figures exclude certain in-kind supports and plans; utilisation may be understated. The axis starts at 50% to make modest changes legible. Sources: <a href="https://www.ndis.gov.au/media/7219/download?attachment=" target="_blank" rel="noopener noreferrer">2024 Appendix D.28</a>, <a href="https://ndis.gov.au/media/7893/download?attachment=" target="_blank" rel="noopener noreferrer">2025 Appendix D.29</a>, <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">2026 Appendix D.29</a>.</p>
+      <p class="chart-note"><strong>Time period:</strong> each point uses the six months from 1 October of the preceding year to 31 March of the labelled year; the most recent April–June quarter is excluded because of payment-reporting lags. <strong>Figure 12 replaces the original support-class concept</strong> because comparable published class-level historical figures could not be independently extracted. Figures exclude certain in-kind supports and plans; utilisation may be understated. The axis starts at 50% to make modest changes legible. Sources: <a href="https://www.ndis.gov.au/media/7219/download?attachment=" target="_blank" rel="noopener noreferrer">2024 Appendix D.28</a>, <a href="https://ndis.gov.au/media/7893/download?attachment=" target="_blank" rel="noopener noreferrer">2025 Appendix D.29</a>, <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">2026 Appendix D.29</a>.</p>
     </section>
 
     <section class="wrap chapter-ending chapter-ending--final">
@@ -202,6 +191,6 @@
       <div class="chapter-roadmap"><span class="chapter-roadmap__done">01 · WHO HAS DISABILITY?</span><span class="chapter-roadmap__done">02 · WHERE IS SUPPORT NEEDED?</span><span class="chapter-roadmap__done">03 · CAN PEOPLE GET CARE?</span><span class="chapter-roadmap__done">04 · HOW IS SUPPORT CHANGING?</span></div>
     </section>
   </main>
-  <footer class="footer"><div class="wrap footer__inner"><div><strong>Disability & Health Services in Australia</strong><p>FIT3179 Data Visualisation 2 · Four-chapter draft · October 2026</p><p>Sources: <a href="https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022" target="_blank" rel="noopener noreferrer">ABS SDAC 2022</a>, <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/disability-population/how-many-people-have-disability" target="_blank" rel="noopener noreferrer">AIHW 2026</a>, <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">NDIS 2026</a>, <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/health/access-to-health-services" target="_blank" rel="noopener noreferrer">AIHW healthcare access 2026</a>, and <a href="https://ndis.gov.au/publications/quarterly-reports" target="_blank" rel="noopener noreferrer">NDIA historical quarterly reports</a>.</p></div><div class="footer__aside"><span>CREATED FOR A GENERAL AUDIENCE</span><span>AUTHOR: Zariq Afsha Bin Zainal Abidin</span><span>AI ASSISTANCE: CHECK FOR ERROR AND SPELLING WITH CHATGPT; VERIFY AND ACKNOWLEDGE.</span></div></div></footer>
+  <footer class="footer"><div class="wrap footer__inner"><div><strong>Disability & Health Services in Australia</strong><p>FIT3179 Data Visualisation 2 · Four chapters · October 2026</p><p>Sources: <a href="https://www.abs.gov.au/statistics/health/disability/disability-ageing-and-carers-australia-summary-findings/2022" target="_blank" rel="noopener noreferrer">ABS SDAC 2022</a>, <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/disability-population/how-many-people-have-disability" target="_blank" rel="noopener noreferrer">AIHW 2026</a>, <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">NDIS 2026</a>, <a href="https://www.aihw.gov.au/reports/disability/people-with-disability-2026/contents/health/access-to-health-services" target="_blank" rel="noopener noreferrer">AIHW healthcare access 2026</a>, and <a href="https://ndis.gov.au/publications/quarterly-reports" target="_blank" rel="noopener noreferrer">NDIA historical quarterly reports</a>.</p></div><div class="footer__aside"><span>CREATED FOR A GENERAL AUDIENCE</span><span>AUTHOR: Zariq Afsha Bin Zainal Abidin</span><span>AI ASSISTANCE: CHECK FOR ERROR AND SPELLING WITH CHATGPT; VERIFY AND ACKNOWLEDGE.</span></div></div></footer>
 </body>
 </html>
