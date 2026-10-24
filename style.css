@@ -81,3 +81,7 @@
 .hero__grid--stats .hero__explanation{grid-area:explanation;margin-top:6px}
 @media (max-width:950px){.hero__grid.hero__grid--stats{grid-template-areas:"title stats" "subtitle subtitle" "explanation explanation";column-gap:36px;row-gap:28px}.hero__grid--stats .hero__explanation{margin-top:0}}
 @media (max-width:680px){.hero__grid.hero__grid--stats{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "subtitle" "explanation" "stats";row-gap:22px}.hero__grid--stats .hero__stats{margin-top:12px}}
+
+/* Figure 04: second snapshot inside the takeaway box */
+.takeaway__divider{border:0;border-top:1px solid #C9E2D8;margin:6px 0 20px}
+.takeaway small + small{margin-top:12px}

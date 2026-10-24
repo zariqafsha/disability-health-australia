@@ -31,7 +31,7 @@ The page has four chapters and 12 figures.
 - ABS, [Census 2016 and 2021, core need for assistance](https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia)
 - Australian Institute of Health and Welfare (AIHW), [People with disability in Australia 2026](https://www.aihw.gov.au/reports/disability/people-with-disability-2026)
 - AIHW, [MyHospitals API](https://www.aihw.gov.au/hospitals/other-resources/myhospitals-api) (hospital locations)
-- National Disability Insurance Agency (NDIA), [Quarterly reports to disability ministers](https://www.ndis.gov.au/about-us/publications/quarterly-reports) (2022–2026)
+- National Disability Insurance Agency (NDIA), [Quarterly reports to disability ministers](https://www.ndis.gov.au/about-us/publications/quarterly-reports) (2022-2026)
 - State boundaries: [rowanhogan/australian-states](https://github.com/rowanhogan/australian-states), simplified to TopoJSON with mapshaper (`data/aus_states.json`)
 
 Column definitions for the Chapter 1 files are in `data/README.md`.
