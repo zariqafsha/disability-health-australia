@@ -71,3 +71,13 @@
 .hero__stats--stacked .stat__number{flex:0 0 3.95em;min-width:0}
 @media (max-width:950px){.hero__stats--stacked .stat{flex-direction:column;align-items:flex-start;gap:6px}.hero__stats--stacked .stat__number{flex:none}}
 @media (max-width:680px){.hero__stats--stacked .stat{flex-direction:row;align-items:center;gap:15px}.hero__stats--stacked .stat__number{flex:0 0 135px}}
+
+/* Hero layout: title | stats on the first row, question | explanation on the second */
+.hero__grid.hero__grid--stats{grid-template-areas:"title stats" "subtitle explanation";column-gap:64px;row-gap:44px;align-items:start}
+.hero__grid--stats .hero__copy{grid-area:title;align-self:center}
+.hero__grid--stats .hero__copy h1{margin-bottom:0}
+.hero__grid--stats .hero__stats{grid-area:stats;align-self:center}
+.hero__grid--stats .hero__subtitle{grid-area:subtitle;margin-bottom:0}
+.hero__grid--stats .hero__explanation{grid-area:explanation;margin-top:6px}
+@media (max-width:950px){.hero__grid.hero__grid--stats{grid-template-areas:"title stats" "subtitle subtitle" "explanation explanation";column-gap:36px;row-gap:28px}.hero__grid--stats .hero__explanation{margin-top:0}}
+@media (max-width:680px){.hero__grid.hero__grid--stats{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"title" "subtitle" "explanation" "stats";row-gap:22px}.hero__grid--stats .hero__stats{margin-top:12px}}
