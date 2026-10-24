@@ -3,49 +3,291 @@
   "description": "Crude population disability prevalence from five ABS Survey of Disability, Ageing and Carers survey years. Years are quantitative so time gaps are proportional.",
   "width": "container",
   "height": 285,
-  "padding": {"left": 8, "right": 20, "top": 20, "bottom": 5},
+  "padding": {
+    "left": 8,
+    "right": 20,
+    "top": 20,
+    "bottom": 5
+  },
   "background": "transparent",
-  "data": {"url": "data/01_prevalence_trend.csv", "format": {"type": "csv"}},
+  "data": {
+    "url": "data/01_prevalence_trend.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
   "transform": [
-    {"calculate": "toNumber(datum.year)", "as": "survey_year"},
-    {"calculate": "toNumber(datum.prevalence_pct)", "as": "rate"}
+    {
+      "calculate": "toNumber(datum.year)",
+      "as": "survey_year"
+    },
+    {
+      "calculate": "toNumber(datum.prevalence_pct)",
+      "as": "rate"
+    }
   ],
   "encoding": {
     "x": {
-      "field": "survey_year", "type": "quantitative", "title": null,
-      "scale": {"domain": [2008, 2023], "nice": false},
-      "axis": {"values": [2009, 2012, 2015, 2018, 2022], "format": "d", "labelFontSize": 12, "tickSize": 0, "labelPadding": 9, "grid": false, "domain": false}
+      "field": "survey_year",
+      "type": "quantitative",
+      "title": null,
+      "scale": {
+        "domain": [
+          2008,
+          2023
+        ],
+        "nice": false
+      },
+      "axis": {
+        "values": [
+          2009,
+          2012,
+          2015,
+          2018,
+          2022
+        ],
+        "format": "d",
+        "labelFontSize": 12,
+        "tickSize": 0,
+        "labelPadding": 9,
+        "grid": false,
+        "domain": false
+      }
     },
     "y": {
-      "field": "rate", "type": "quantitative", "title": "Share of Australians (%)",
-      "scale": {"domain": [0, 25], "nice": false},
-      "axis": {"values": [0, 5, 10, 15, 20, 25], "labelFontSize": 11, "grid": true, "gridColor": "#E7E8E1", "tickSize": 0, "domain": false, "titlePadding": 12}
+      "field": "rate",
+      "type": "quantitative",
+      "title": "Share of Australians (%)",
+      "scale": {
+        "domain": [
+          0,
+          25
+        ],
+        "nice": false
+      },
+      "axis": {
+        "values": [
+          0,
+          5,
+          10,
+          15,
+          20,
+          25
+        ],
+        "labelFontSize": 11,
+        "grid": true,
+        "gridColor": "#E7E8E1",
+        "tickSize": 0,
+        "domain": false,
+        "titlePadding": 12
+      }
     }
   },
   "layer": [
     {
-      "mark": {"type": "line", "stroke": "#2A5596", "strokeWidth": 3.5},
-      "encoding": {"order": {"field": "survey_year"}}
+      "data": {
+        "values": [
+          {
+            "x1": 2009,
+            "x2": 2018,
+            "y1": 0,
+            "y2": 25
+          }
+        ]
+      },
+      "mark": {
+        "type": "rect",
+        "color": "#E4EBF5",
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "x1",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y": {
+          "field": "y1",
+          "type": "quantitative"
+        },
+        "y2": {
+          "field": "y2"
+        }
+      }
     },
     {
-      "mark": {"type": "point", "filled": true, "fill": "#2A5596", "stroke": "#FFFFFF", "strokeWidth": 2, "size": 135},
+      "data": {
+        "values": [
+          {
+            "x": 2013.5,
+            "y": 24
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": 800,
+        "color": "#1B3B72"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "2009–2018: steady"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 2013.5,
+            "y": 24
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": 400,
+        "color": "#5A7177",
+        "dy": 17
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "four surveys between 17.7% and 18.5%"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "stroke": "#2A5596",
+        "strokeWidth": 3.5
+      },
+      "encoding": {
+        "order": {
+          "field": "survey_year"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "fill": "#2A5596",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 2,
+        "size": 135
+      },
       "encoding": {
         "tooltip": [
-          {"field": "survey_year", "title": "Survey year", "type": "quantitative", "format": "d"},
-          {"field": "rate", "title": "Disability prevalence", "type": "quantitative", "format": ".1f", "formatType": "number"}
+          {
+            "field": "survey_year",
+            "title": "Survey year",
+            "type": "quantitative",
+            "format": "d"
+          },
+          {
+            "field": "rate",
+            "title": "Disability prevalence",
+            "type": "quantitative",
+            "format": ".1f",
+            "formatType": "number"
+          }
         ]
       }
     },
     {
-      "transform": [{"filter": "datum.survey_year == 2018"}],
-      "mark": {"type": "text", "dy": 20, "fontSize": 12, "fontWeight": 700, "color": "#52636A"},
-      "encoding": {"text": {"field": "rate", "type": "quantitative", "format": ".1f"}}
+      "transform": [
+        {
+          "filter": "datum.survey_year == 2018"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": 20,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#52636A"
+      },
+      "encoding": {
+        "text": {
+          "field": "rate",
+          "type": "quantitative",
+          "format": ".1f"
+        }
+      }
     },
     {
-      "transform": [{"filter": "datum.survey_year == 2022"}],
-      "mark": {"type": "text", "dy": -16, "dx": -5, "fontSize": 17, "fontWeight": 800, "color": "#1B3B72"},
-      "encoding": {"text": {"field": "rate", "type": "quantitative", "format": ".1f"}}
+      "transform": [
+        {
+          "filter": "datum.survey_year == 2022"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -14,
+        "dy": -30,
+        "fontSize": 15,
+        "fontWeight": 800,
+        "color": "#1B3B72"
+      },
+      "encoding": {
+        "text": {
+          "value": "2022: 21.4%"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.survey_year == 2022"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -14,
+        "dy": -12,
+        "fontSize": 12,
+        "fontWeight": 400,
+        "color": "#5A7177"
+      },
+      "encoding": {
+        "text": {
+          "value": "+3.7 pp since 2018"
+        }
+      }
     }
   ],
-  "config": {"view": {"stroke": null}, "axis": {"labelColor": "#45565F", "titleColor": "#45565F", "labelFont": "Arial", "titleFont": "Arial"}}
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#45565F",
+      "titleColor": "#45565F",
+      "labelFont": "Arial",
+      "titleFont": "Arial"
+    }
+  }
 }

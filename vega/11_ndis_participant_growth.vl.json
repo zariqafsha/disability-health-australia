@@ -167,6 +167,10 @@
       "transform": [
         {
           "filter": "datum.yr == 2026"
+        },
+        {
+          "calculate": "format(datum.total, ',') + ' in June 2026'",
+          "as": "lbl"
         }
       ],
       "mark": {
@@ -174,14 +178,33 @@
         "color": "#9C4A0E",
         "fontWeight": 800,
         "fontSize": 15,
-        "dy": -19,
-        "dx": -24
+        "dy": -40,
+        "dx": 8,
+        "align": "right"
       },
       "encoding": {
         "text": {
-          "field": "total",
-          "type": "quantitative",
-          "format": ","
+          "field": "lbl"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.yr == 2026"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": 8,
+        "dy": -22,
+        "fontSize": 12,
+        "color": "#5A7177"
+      },
+      "encoding": {
+        "text": {
+          "value": "+247,358 participants (+46%) since 2022"
         }
       }
     }

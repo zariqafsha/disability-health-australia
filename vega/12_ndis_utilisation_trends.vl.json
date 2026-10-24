@@ -6,7 +6,7 @@
   "background": "transparent",
   "padding": {
     "left": 5,
-    "right": 130,
+    "right": 150,
     "top": 22,
     "bottom": 8
   },
@@ -100,13 +100,7 @@
           "#D9822B"
         ]
       },
-      "legend": {
-        "orient": "bottom",
-        "labelFontSize": 12,
-        "labelLimit": 210,
-        "symbolSize": 135,
-        "direction": "horizontal"
-      }
+      "legend": null
     },
     "detail": {
       "field": "participant_group",
@@ -178,6 +172,10 @@
       "transform": [
         {
           "filter": "datum.yr == 2026"
+        },
+        {
+          "calculate": "format(datum.rate,'.0f') + '%  ' + datum.participant_group",
+          "as": "lbl"
         }
       ],
       "mark": {
@@ -190,9 +188,20 @@
       },
       "encoding": {
         "text": {
-          "field": "rate",
-          "type": "quantitative",
-          "format": ".0f"
+          "field": "lbl"
+        },
+        "color": {
+          "condition": [
+            {
+              "test": "datum.participant_group === 'In SIL'",
+              "value": "#9C4A0E"
+            },
+            {
+              "test": "datum.participant_group === 'Not in SIL'",
+              "value": "#C27A33"
+            }
+          ],
+          "value": "#B8661C"
         }
       }
     },
@@ -229,7 +238,7 @@
       ],
       "mark": {
         "type": "rule",
-        "xOffset": 42,
+        "xOffset": -18,
         "strokeWidth": 2,
         "color": "#102D34"
       },
@@ -285,12 +294,13 @@
       ],
       "mark": {
         "type": "text",
-        "xOffset": 48,
-        "align": "left",
+        "xOffset": -26,
+        "align": "right",
         "baseline": "middle",
         "fontSize": 13,
         "fontWeight": 800,
-        "color": "#102D34"
+        "color": "#102D34",
+        "dy": -9
       },
       "encoding": {
         "y": {
@@ -302,6 +312,60 @@
         },
         "color": {
           "value": "#102D34"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.yr == 2026 && datum.participant_group !== 'All participants'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "max",
+              "field": "rate",
+              "as": "hi"
+            },
+            {
+              "op": "min",
+              "field": "rate",
+              "as": "lo"
+            }
+          ],
+          "groupby": [
+            "yr"
+          ]
+        },
+        {
+          "calculate": "(datum.hi + datum.lo) / 2",
+          "as": "mid"
+        },
+        {
+          "calculate": "format(datum.hi - datum.lo, '.0f') + ' pp gap'",
+          "as": "gap"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "xOffset": -26,
+        "align": "right",
+        "baseline": "middle",
+        "fontSize": 12,
+        "fontWeight": 400,
+        "color": "#102D34",
+        "dy": 8
+      },
+      "encoding": {
+        "y": {
+          "field": "mid",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "In SIL vs not"
+        },
+        "color": {
+          "value": "#5A7177"
         }
       }
     }

@@ -165,7 +165,7 @@
         "type": "text",
         "fontSize": 13,
         "fontWeight": 800,
-        "color": "#102D34",
+        "color": "#07666D",
         "align": "left"
       },
       "encoding": {
@@ -223,7 +223,7 @@
         "type": "text",
         "fontSize": 13,
         "fontWeight": 800,
-        "color": "#102D34",
+        "color": "#07666D",
         "align": "center"
       },
       "encoding": {
@@ -237,6 +237,124 @@
         },
         "text": {
           "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "state": "Tasmania",
+            "short": "Tas",
+            "lon": 149.6,
+            "lat": -42.2
+          }
+        ]
+      },
+      "transform": [
+        {
+          "lookup": "state",
+          "from": {
+            "data": {
+              "url": "data/04_assistance_by_state.csv",
+              "format": {
+                "type": "csv"
+              }
+            },
+            "key": "state",
+            "fields": [
+              "rate_2016_pct",
+              "rate_2021_pct"
+            ]
+          }
+        },
+        {
+          "calculate": "toNumber(assistanceYear) === 2016 ? toNumber(datum.rate_2016_pct) : toNumber(datum.rate_2021_pct)",
+          "as": "v"
+        },
+        {
+          "calculate": "datum.short + ' ' + format(datum.v, '.1f') + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 400,
+        "color": "#5A7177",
+        "align": "left",
+        "dy": 16
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "highest share"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "state": "Northern Territory",
+            "short": "NT",
+            "lon": 133.4,
+            "lat": -19.4
+          }
+        ]
+      },
+      "transform": [
+        {
+          "lookup": "state",
+          "from": {
+            "data": {
+              "url": "data/04_assistance_by_state.csv",
+              "format": {
+                "type": "csv"
+              }
+            },
+            "key": "state",
+            "fields": [
+              "rate_2016_pct",
+              "rate_2021_pct"
+            ]
+          }
+        },
+        {
+          "calculate": "toNumber(assistanceYear) === 2016 ? toNumber(datum.rate_2016_pct) : toNumber(datum.rate_2021_pct)",
+          "as": "v"
+        },
+        {
+          "calculate": "datum.short + ' ' + format(datum.v, '.1f') + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 400,
+        "color": "#5A7177",
+        "align": "center",
+        "dy": 16
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "lowest share"
         }
       }
     }

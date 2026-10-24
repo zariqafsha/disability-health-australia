@@ -149,6 +149,47 @@
         "strokeWidth": 3.5,
         "cornerRadius": 4
       }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.age_group === '90 and over' && datum.sex === 'Male'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": 26,
+        "dy": -68,
+        "fontSize": 13,
+        "fontWeight": 800,
+        "color": "#1B3B72"
+      },
+      "encoding": {
+        "text": {
+          "value": "Men aged 90 and over: 86.3%"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.age_group === '90 and over' && datum.sex === 'Male'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": 26,
+        "dy": -52,
+        "fontSize": 12,
+        "color": "#5A7177"
+      },
+      "encoding": {
+        "text": {
+          "value": "the highest rate of any group"
+        }
+      }
     }
   ],
   "config": {
@@ -161,5 +202,8 @@
       "labelFont": "Arial",
       "titleFont": "Arial"
     }
+  },
+  "padding": {
+    "top": 58
   }
 }
