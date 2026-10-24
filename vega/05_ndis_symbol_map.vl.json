@@ -137,6 +137,66 @@
           }
         ]
       }
+    },
+    {
+      "data": {
+        "url": "data/05_ndis_participants_by_state_and_disability.csv",
+        "format": {
+          "type": "csv"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.primary_disability === disabilityChoice"
+        },
+        {
+          "calculate": "toNumber(datum.participants)",
+          "as": "count"
+        },
+        {
+          "window": [
+            {
+              "op": "rank",
+              "as": "rk"
+            }
+          ],
+          "sort": [
+            {
+              "field": "count",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.rk === 1"
+        },
+        {
+          "calculate": "datum.state_code + ' ' + format(datum.count, ',')",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": 800,
+        "color": "#102D34",
+        "align": "left",
+        "dx": 34,
+        "dy": -4
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
     }
   ]
 }

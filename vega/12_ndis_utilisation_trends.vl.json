@@ -6,7 +6,7 @@
   "background": "transparent",
   "padding": {
     "left": 5,
-    "right": 60,
+    "right": 130,
     "top": 22,
     "bottom": 8
   },
@@ -193,6 +193,115 @@
           "field": "rate",
           "type": "quantitative",
           "format": ".0f"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.yr == 2026 && datum.participant_group !== 'All participants'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "max",
+              "field": "rate",
+              "as": "hi"
+            },
+            {
+              "op": "min",
+              "field": "rate",
+              "as": "lo"
+            }
+          ],
+          "groupby": [
+            "yr"
+          ]
+        },
+        {
+          "calculate": "(datum.hi + datum.lo) / 2",
+          "as": "mid"
+        },
+        {
+          "calculate": "format(datum.hi - datum.lo, '.0f') + ' pp gap'",
+          "as": "gap"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "xOffset": 42,
+        "strokeWidth": 2,
+        "color": "#102D34"
+      },
+      "encoding": {
+        "y": {
+          "field": "lo",
+          "type": "quantitative"
+        },
+        "y2": {
+          "field": "hi"
+        },
+        "color": {
+          "value": "#102D34"
+        },
+        "strokeDash": {
+          "value": [
+            1,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.yr == 2026 && datum.participant_group !== 'All participants'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "max",
+              "field": "rate",
+              "as": "hi"
+            },
+            {
+              "op": "min",
+              "field": "rate",
+              "as": "lo"
+            }
+          ],
+          "groupby": [
+            "yr"
+          ]
+        },
+        {
+          "calculate": "(datum.hi + datum.lo) / 2",
+          "as": "mid"
+        },
+        {
+          "calculate": "format(datum.hi - datum.lo, '.0f') + ' pp gap'",
+          "as": "gap"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "xOffset": 48,
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 13,
+        "fontWeight": 800,
+        "color": "#102D34"
+      },
+      "encoding": {
+        "y": {
+          "field": "mid",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "gap"
+        },
+        "color": {
+          "value": "#102D34"
         }
       }
     }

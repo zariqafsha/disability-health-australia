@@ -4,27 +4,20 @@
   "background": "transparent",
   "width": 440,
   "height": 330,
-  "data": {
-    "url": "data/10_assistance_waffle.csv",
-    "format": {
-      "type": "csv"
-    }
-  },
-  "transform": [
-    {
-      "calculate": "toNumber(datum.col)",
-      "as": "xc"
+  "config": {
+    "view": {
+      "stroke": null
     },
-    {
-      "calculate": "toNumber(datum.row)",
-      "as": "yc"
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelColor": "#486267",
+      "titleColor": "#456064"
+    },
+    "header": {
+      "labelFont": "Arial",
+      "labelColor": "#173E42"
     }
-  ],
-  "mark": {
-    "type": "rect",
-    "cornerRadius": 4,
-    "stroke": "#FFFFFF",
-    "strokeWidth": 3
   },
   "encoding": {
     "x": {
@@ -46,62 +39,95 @@
         "paddingInner": 0.025,
         "paddingOuter": 0.025
       }
-    },
-    "color": {
-      "field": "assistance_type",
-      "type": "nominal",
-      "sort": [
-        "Formal assistance (may also receive informal)",
-        "Informal assistance only",
-        "No assistance"
-      ],
-      "title": null,
-      "scale": {
-        "domain": [
-          "Formal assistance (may also receive informal)",
-          "Informal assistance only",
-          "No assistance"
-        ],
-        "range": [
-          "#1F7FB4",
-          "#A6D0EA",
-          "#C9CFD1"
-        ]
-      },
-      "legend": {
-        "orient": "bottom",
-        "direction": "vertical",
-        "labelFontSize": 11,
-        "labelLimit": 360,
-        "symbolSize": 155,
-        "title": null
-      }
-    },
-    "tooltip": [
-      {
-        "field": "assistance_type",
-        "title": "Assistance received"
-      },
-      {
-        "field": "share_pct",
-        "title": "Share of those needing assistance (%)",
-        "format": ".0f"
-      }
-    ]
-  },
-  "config": {
-    "view": {
-      "stroke": null
-    },
-    "axis": {
-      "labelFont": "Arial",
-      "titleFont": "Arial",
-      "labelColor": "#486267",
-      "titleColor": "#456064"
-    },
-    "header": {
-      "labelFont": "Arial",
-      "labelColor": "#173E42"
     }
-  }
+  },
+  "data": {
+    "url": "data/10_assistance_waffle.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum.col)",
+      "as": "xc"
+    },
+    {
+      "calculate": "toNumber(datum.row)",
+      "as": "yc"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "cornerRadius": 4,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "color": {
+          "field": "assistance_type",
+          "type": "nominal",
+          "sort": [
+            "Formal assistance (may also receive informal)",
+            "Informal assistance only",
+            "No assistance"
+          ],
+          "title": null,
+          "scale": {
+            "domain": [
+              "Formal assistance (may also receive informal)",
+              "Informal assistance only",
+              "No assistance"
+            ],
+            "range": [
+              "#1F7FB4",
+              "#A6D0EA",
+              "#C9CFD1"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "vertical",
+            "labelFontSize": 11,
+            "labelLimit": 360,
+            "symbolSize": 155,
+            "title": null
+          }
+        },
+        "tooltip": [
+          {
+            "field": "assistance_type",
+            "title": "Assistance received"
+          },
+          {
+            "field": "share_pct",
+            "title": "Share of those needing assistance (%)",
+            "format": ".0f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.assistance_type === 'No assistance' && datum.xc === 1"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -14,
+        "fontSize": 15,
+        "fontWeight": 800,
+        "color": "#102D34"
+      },
+      "encoding": {
+        "text": {
+          "value": "1 in 10 received no assistance"
+        }
+      }
+    }
+  ]
 }

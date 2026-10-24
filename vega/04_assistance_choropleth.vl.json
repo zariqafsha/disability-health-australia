@@ -30,13 +30,6 @@
       0
     ]
   },
-  "data": {
-    "url": "data/aus_states.json",
-    "format": {
-      "type": "topojson",
-      "feature": "states"
-    }
-  },
   "params": [
     {
       "name": "assistanceYear",
@@ -51,74 +44,201 @@
       }
     }
   ],
-  "transform": [
+  "layer": [
     {
-      "lookup": "properties.STATE_NAME",
-      "from": {
-        "data": {
-          "url": "data/04_assistance_by_state.csv",
-          "format": {
-            "type": "csv"
+      "data": {
+        "url": "data/aus_states.json",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "transform": [
+        {
+          "lookup": "properties.STATE_NAME",
+          "from": {
+            "data": {
+              "url": "data/04_assistance_by_state.csv",
+              "format": {
+                "type": "csv"
+              }
+            },
+            "key": "state",
+            "fields": [
+              "rate_2016_pct",
+              "rate_2021_pct",
+              "count_2021"
+            ]
           }
         },
-        "key": "state",
-        "fields": [
-          "rate_2016_pct",
-          "rate_2021_pct",
-          "count_2021"
+        {
+          "calculate": "toNumber(assistanceYear) === 2016 ? toNumber(datum.rate_2016_pct) : toNumber(datum.rate_2021_pct)",
+          "as": "share_needing_assistance_pct"
+        },
+        {
+          "calculate": "assistanceYear === 2021 ? toNumber(datum.count_2021) : null",
+          "as": "people_needing_assistance_2021"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "color": {
+          "field": "share_needing_assistance_pct",
+          "type": "quantitative",
+          "title": "Need assistance (%)",
+          "scale": {
+            "domain": [
+              3.0,
+              7.0
+            ],
+            "range": [
+              "#EAF5EF",
+              "#B1D9CF",
+              "#52A59F",
+              "#07666D"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "gradientLength": 260,
+            "format": ".1f",
+            "titleFontSize": 12
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.STATE_NAME",
+            "type": "nominal",
+            "title": "State or territory"
+          },
+          {
+            "field": "share_needing_assistance_pct",
+            "type": "quantitative",
+            "title": "Residents needing assistance",
+            "format": ".1f"
+          }
         ]
       }
     },
     {
-      "calculate": "toNumber(assistanceYear) === 2016 ? toNumber(datum.rate_2016_pct) : toNumber(datum.rate_2021_pct)",
-      "as": "share_needing_assistance_pct"
+      "data": {
+        "values": [
+          {
+            "state": "Tasmania",
+            "short": "Tas",
+            "lon": 149.6,
+            "lat": -42.2
+          }
+        ]
+      },
+      "transform": [
+        {
+          "lookup": "state",
+          "from": {
+            "data": {
+              "url": "data/04_assistance_by_state.csv",
+              "format": {
+                "type": "csv"
+              }
+            },
+            "key": "state",
+            "fields": [
+              "rate_2016_pct",
+              "rate_2021_pct"
+            ]
+          }
+        },
+        {
+          "calculate": "toNumber(assistanceYear) === 2016 ? toNumber(datum.rate_2016_pct) : toNumber(datum.rate_2021_pct)",
+          "as": "v"
+        },
+        {
+          "calculate": "datum.short + ' ' + format(datum.v, '.1f') + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": 800,
+        "color": "#102D34",
+        "align": "left"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
     },
     {
-      "calculate": "assistanceYear === 2021 ? toNumber(datum.count_2021) : null",
-      "as": "people_needing_assistance_2021"
+      "data": {
+        "values": [
+          {
+            "state": "Northern Territory",
+            "short": "NT",
+            "lon": 133.4,
+            "lat": -19.4
+          }
+        ]
+      },
+      "transform": [
+        {
+          "lookup": "state",
+          "from": {
+            "data": {
+              "url": "data/04_assistance_by_state.csv",
+              "format": {
+                "type": "csv"
+              }
+            },
+            "key": "state",
+            "fields": [
+              "rate_2016_pct",
+              "rate_2021_pct"
+            ]
+          }
+        },
+        {
+          "calculate": "toNumber(assistanceYear) === 2016 ? toNumber(datum.rate_2016_pct) : toNumber(datum.rate_2021_pct)",
+          "as": "v"
+        },
+        {
+          "calculate": "datum.short + ' ' + format(datum.v, '.1f') + '%'",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": 800,
+        "color": "#102D34",
+        "align": "center"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
     }
-  ],
-  "mark": {
-    "type": "geoshape",
-    "stroke": "#FFFFFF",
-    "strokeWidth": 1.2
-  },
-  "encoding": {
-    "color": {
-      "field": "share_needing_assistance_pct",
-      "type": "quantitative",
-      "title": "Need assistance (%)",
-      "scale": {
-        "domain": [
-          3.0,
-          7.0
-        ],
-        "range": [
-          "#EAF5EF",
-          "#B1D9CF",
-          "#52A59F",
-          "#07666D"
-        ]
-      },
-      "legend": {
-        "orient": "bottom",
-        "gradientLength": 260,
-        "format": ".1f",
-        "titleFontSize": 12
-      }
-    },
-    "tooltip": [
-      {
-        "field": "properties.STATE_NAME",
-        "type": "nominal",
-        "title": "State or territory"
-      },
-      {
-        "field": "share_needing_assistance_pct",
-        "type": "quantitative",
-        "title": "Residents needing assistance",
-        "format": ".1f"
-      }
-    ]
-  }
+  ]
 }

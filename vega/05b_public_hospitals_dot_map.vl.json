@@ -130,21 +130,96 @@
           {
             "lon": 133.4,
             "lat": -17.6,
-            "text": "NT: 6 hospitals"
+            "text": "NT: 6 hospitals",
+            "key": 1
           },
           {
-            "lon": 146.4,
-            "lat": -40.1,
-            "text": "Tas: 4 main hospitals listed"
+            "lon": 144.6,
+            "lat": -31.6,
+            "text": "NSW: 224 hospitals",
+            "key": 1
           }
         ]
       },
       "mark": {
         "type": "text",
+        "align": "center",
+        "fontSize": 13,
+        "fontWeight": 800,
+        "color": "#102D34",
+        "stroke": "#FFFFFF",
+        "strokeWidth": 4,
+        "strokeJoin": "round"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 133.4,
+            "lat": -17.6,
+            "text": "NT: 6 hospitals",
+            "key": 1
+          },
+          {
+            "lon": 144.6,
+            "lat": -31.6,
+            "text": "NSW: 224 hospitals",
+            "key": 1
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "fontSize": 13,
+        "fontWeight": 800,
+        "color": "#102D34"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "lon": 146.4,
+            "lat": -40.1,
+            "text": "Tas: 4 main hospitals listed",
+            "key": 0
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
         "fontSize": 11,
-        "fontWeight": 600,
-        "color": "#3A5159",
-        "align": "center"
+        "fontWeight": 500,
+        "color": "#5A7177"
       },
       "encoding": {
         "longitude": {

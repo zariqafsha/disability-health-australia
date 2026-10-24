@@ -238,7 +238,10 @@
             "value": "round"
           },
           "tooltip": {
-            "signal": "datum.service + ' \u2022 ' + datum.barrier + ': ' + format(datum.percent_of_unmet, '.1f') + '% of people who missed that service'"
+            "signal": "datum.service + ' • ' + datum.barrier + ': ' + format(datum.percent_of_unmet, '.1f') + '% of people who missed that service'"
+          },
+          "strokeOpacity": {
+            "signal": "datum.percent_of_unmet >= 40 ? 0.95 : 0.35"
           }
         },
         "update": {
@@ -284,6 +287,9 @@
           },
           "strokeWidth": {
             "value": 1
+          },
+          "fillOpacity": {
+            "signal": "datum.percent_of_unmet >= 40 ? 1 : 0.45"
           }
         }
       }
@@ -313,6 +319,9 @@
           },
           "strokeWidth": {
             "value": 1
+          },
+          "fillOpacity": {
+            "signal": "datum.percent_of_unmet >= 40 ? 1 : 0.45"
           }
         }
       }
@@ -402,10 +411,10 @@
             "value": 12
           },
           "fontWeight": {
-            "value": "bold"
+            "signal": "datum.percent_of_unmet >= 40 ? 'bold' : 'normal'"
           },
           "fill": {
-            "value": "#334E53"
+            "signal": "datum.percent_of_unmet >= 40 ? '#102D34' : '#6B8287'"
           }
         }
       }
