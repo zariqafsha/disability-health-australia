@@ -82,7 +82,7 @@
       ],
       "mark": {
         "type": "circle",
-        "fill": "#E6A252",
+        "fill": "#D9822B",
         "fillOpacity": 0.77,
         "stroke": "#FFFFFF",
         "strokeWidth": 1.4
@@ -113,7 +113,7 @@
           "legend": {
             "orient": "bottom",
             "format": ",.0f",
-            "symbolFillColor": "#E6A252",
+            "symbolFillColor": "#D9822B",
             "symbolStrokeColor": "#FFFFFF",
             "titleFontSize": 12
           }

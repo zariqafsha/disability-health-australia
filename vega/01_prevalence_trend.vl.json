@@ -24,11 +24,11 @@
   },
   "layer": [
     {
-      "mark": {"type": "line", "stroke": "#0F777A", "strokeWidth": 3.5},
+      "mark": {"type": "line", "stroke": "#2A5596", "strokeWidth": 3.5},
       "encoding": {"order": {"field": "survey_year"}}
     },
     {
-      "mark": {"type": "point", "filled": true, "fill": "#0F777A", "stroke": "#FFFFFF", "strokeWidth": 2, "size": 135},
+      "mark": {"type": "point", "filled": true, "fill": "#2A5596", "stroke": "#FFFFFF", "strokeWidth": 2, "size": 135},
       "encoding": {
         "tooltip": [
           {"field": "survey_year", "title": "Survey year", "type": "quantitative", "format": "d"},
@@ -43,7 +43,7 @@
     },
     {
       "transform": [{"filter": "datum.survey_year == 2022"}],
-      "mark": {"type": "text", "dy": -16, "dx": -5, "fontSize": 17, "fontWeight": 800, "color": "#0B5559"},
+      "mark": {"type": "text", "dy": -16, "dx": -5, "fontSize": 17, "fontWeight": 800, "color": "#1B3B72"},
       "encoding": {"text": {"field": "rate", "type": "quantitative", "format": ".1f"}}
     }
   ],

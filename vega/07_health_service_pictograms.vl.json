@@ -78,7 +78,7 @@
       "color": {
         "condition": {
           "test": "datum.filled == 1",
-          "value": "#1D8989"
+          "value": "#23434A"
         },
         "value": "#D6E0DD"
       },

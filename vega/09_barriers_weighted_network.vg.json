@@ -94,12 +94,12 @@
         {
           "name": "Waiting / unavailable",
           "y": 84,
-          "color": "#177B83"
+          "color": "#A88400"
         },
         {
           "name": "Cost",
           "y": 241,
-          "color": "#D58B4B"
+          "color": "#4B52A3"
         }
       ]
     }
@@ -113,8 +113,8 @@
         "Cost"
       ],
       "range": [
-        "#177B83",
-        "#D58B4B"
+        "#A88400",
+        "#4B52A3"
       ]
     },
     {

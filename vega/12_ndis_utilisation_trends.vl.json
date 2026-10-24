@@ -95,9 +95,9 @@
           "All participants"
         ],
         "range": [
-          "#167F83",
-          "#E0A15C",
-          "#77849D"
+          "#9C4A0E",
+          "#F0B276",
+          "#D9822B"
         ]
       },
       "legend": {
@@ -149,6 +149,19 @@
       "encoding": {
         "order": {
           "field": "yr"
+        },
+        "strokeDash": {
+          "condition": {
+            "test": "datum.participant_group === 'All participants'",
+            "value": [
+              7,
+              5
+            ]
+          },
+          "value": [
+            1,
+            0
+          ]
         }
       }
     },

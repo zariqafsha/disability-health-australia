@@ -24,7 +24,7 @@
       "encoding": {
         "color": {
           "field": "rate", "type": "quantitative", "title": "Prevalence (%)",
-          "scale": {"domain": [0, 90], "range": ["#EDF5F2", "#B4DED6", "#67B5AF", "#227F80", "#085058"]},
+          "scale": {"domain": [0, 90], "range": ["#EEF2F9", "#BACBE6", "#7598CB", "#3A64A8", "#1B3B72"]},
           "legend": {"orient": "bottom", "direction": "horizontal", "gradientLength": 280, "labelFontSize": 11, "titleFontSize": 12, "titlePadding": 5}
         },
         "tooltip": [

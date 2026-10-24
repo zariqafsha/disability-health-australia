@@ -90,7 +90,7 @@
       "mark": {
         "type": "area",
         "opacity": 0.12,
-        "color": "#16827B"
+        "color": "#D9822B"
       },
       "encoding": {
         "order": {
@@ -101,7 +101,7 @@
     {
       "mark": {
         "type": "line",
-        "color": "#137C7D",
+        "color": "#D9822B",
         "strokeWidth": 3.5
       },
       "encoding": {
@@ -115,7 +115,7 @@
         "type": "point",
         "filled": true,
         "size": 145,
-        "fill": "#137C7D",
+        "fill": "#D9822B",
         "stroke": "#FFFFFF",
         "strokeWidth": 2
       },
@@ -171,7 +171,7 @@
       ],
       "mark": {
         "type": "text",
-        "color": "#105F62",
+        "color": "#9C4A0E",
         "fontWeight": 800,
         "fontSize": 15,
         "dy": -19,

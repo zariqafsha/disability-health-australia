@@ -236,7 +236,7 @@
         "color": {
           "condition": {
             "test": "datum.change_pp >= 0.8",
-            "value": "#B86A00"
+            "value": "#07666D"
           },
           "value": "#405963"
         },
