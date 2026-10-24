@@ -3,7 +3,7 @@
 @media (max-width:950px){.hero__grid{grid-template-columns:minmax(0,1fr) 200px}.hero__motif{height:240px}.motif-circle--big{width:206px;height:206px;right:0;top:15px}.motif-circle--medium{width:124px;height:124px;right:40px;top:56px}.motif-circle--small{width:64px;height:64px;right:70px;top:86px}.motif-lines{display:none}.hero__motif-caption{display:none}.exhibit__head{grid-template-columns:1fr;gap:13px}.exhibit__head>p{max-width:780px}.exhibit__body--split{grid-template-columns:1fr}.takeaway{display:grid;grid-template-columns:40px 1fr;gap:8px 17px}.takeaway__icon{grid-row:span 3}.takeaway__label{margin:0}.takeaway p:not(.takeaway__label){margin:0}.stat{align-items:start;flex-direction:column}.stat__body strong{margin:0}.chapter-roadmap{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:680px){.wrap{width:calc(100% - 28px)}.site-header__inner{min-height:66px}.brand{font-size:11px}.brand__symbol{font-size:24px}.issue__draft{display:none}.hero{padding:42px 0 22px}.hero__grid{display:block}.hero__motif{display:none}.hero__stats{gap:10px;margin-top:35px}.stat__number{font-size:28px}.stat__body{font-size:10px}.stat__body strong{font-size:11px}.narrative-intro{display:block;padding:55px 0 22px}.chapter-index{flex-direction:row;width:auto;align-items:baseline;gap:10px;margin-bottom:25px}.chapter-index strong{font-size:35px}.exhibit{padding:0 15px 17px}.exhibit__topline{font-size:9px}.exhibit__head{margin-top:20px}.chart-holder{min-height:260px}.chart-holder--wide{min-height:280px}.chart-holder--treemap{min-height:320px}.takeaway{display:block}.takeaway__icon{margin-bottom:12px}.insight-row{gap:12px;padding:13px}.insight-row__metric{font-size:26px}.insight-row p{font-size:11px}.footer__inner{display:block}.footer__aside{text-align:left;margin-top:22px}.chapter-roadmap{grid-template-columns:1fr}.chapter-ending{padding:50px 0 60px}}
 
-/* Chapter 2 map cards and bridge — matches Chapter 1 typography and spacing. */
+/* Chapter 2 map cards and bridge - matches Chapter 1 typography and spacing. */
 .section-bridge{background:#E6F1ED;margin:45px 0 58px;padding:65px 0 63px;border-top:1px solid #CDE3DC;border-bottom:1px solid #CDE3DC}
 .section-bridge__inner{display:grid;grid-template-columns:145px minmax(0,1fr);gap:50px;align-items:start}
 .section-bridge__number{font:800 77px/1 Manrope,Arial,sans-serif;letter-spacing:-.065em;color:#0F777A;border-top:4px solid #0F777A;padding-top:13px}
@@ -21,7 +21,7 @@
 @media(max-width:950px){.section-bridge__inner{grid-template-columns:105px minmax(0,1fr);gap:35px}.section-bridge__number{font-size:59px}}
 @media(max-width:680px){.section-bridge{margin:30px 0 35px;padding:40px 0}.section-bridge__inner{display:block}.section-bridge__number{font-size:42px;margin-bottom:19px}.section-bridge__number span{display:inline;margin-left:8px;font-size:12px}.section-bridge__inner p:not(.eyebrow){font-size:14px}.chart-holder--map{min-height:350px}.chart-holder--tile{min-height:400px}}
 
-/* Chapter 3 — Healthcare access */
+/* Chapter 3 - Healthcare access */
 .section-bridge--care{background:#FFF0E4;border-color:#F2DDC9}
 .section-bridge--care .section-bridge__number{color:#A6643B;border-color:#B37746}
 .section-bridge--care .section-bridge__number span{color:#956D53}
@@ -35,7 +35,7 @@
 @media(max-width:950px){.chart-holder--pictogram{min-height:850px}}
 @media(max-width:680px){.chart-holder--pictogram{min-height:1000px;overflow:auto}.chart-holder--care-heatmap{min-height:390px}.chart-holder--barrier{min-height:420px}.chart-holder--waffle{min-height:410px}}
 
-/* Chapter 4 — national growth and comparable SIL utilisation trends */
+/* Chapter 4 - national growth and comparable SIL utilisation trends */
 .section-bridge--trends{background:#E6EEF4;border-color:#CFDEE5}
 .section-bridge--trends .section-bridge__number{color:#47718A;border-color:#527F95}
 .section-bridge--trends .section-bridge__number span{color:#617E91}
@@ -45,7 +45,7 @@
 .chapter-ending--final{padding-bottom:95px}
 @media(max-width:680px){.chart-holder--trend{min-height:300px}.chart-holder--util{min-height:410px}.chapter-ending--final{padding-bottom:60px}}
 
-/* 16 Oct 2026 — Figure 7 readability pass: make the larger icon lattice fit, avoid
+/* 16 Oct 2026 - Figure 7 readability pass: make the larger icon lattice fit, avoid
    clipping on medium viewports, and remove unnecessarily tall blank chart-holder. */
 .chart-holder--pictogram{min-height:0;overflow:visible;padding:0 0 7px}
 @media(max-width:950px){.chart-holder--pictogram{min-height:0;overflow:visible}}
@@ -65,3 +65,9 @@
 .hero__stats--stacked .hero__stat-source{margin-top:6px}
 @media (max-width:950px){.hero__grid.hero__grid--stats{grid-template-columns:minmax(0,1fr) 250px;gap:36px}.hero__stats--stacked .stat{flex-direction:row;align-items:center}.hero__stats--stacked .stat__number{min-width:110px}}
 @media (max-width:680px){.hero__stats--stacked{margin-top:34px;align-self:auto}.hero__stats--stacked .stat{padding:16px 0}}
+
+/* Hero statistics: larger unit text (million, %, pp); same number width so descriptions line up */
+.hero__stats--stacked .stat__number span{font-size:.66em;letter-spacing:-.03em}
+.hero__stats--stacked .stat__number{flex:0 0 3.95em;min-width:0}
+@media (max-width:950px){.hero__stats--stacked .stat{flex-direction:column;align-items:flex-start;gap:6px}.hero__stats--stacked .stat__number{flex:none}}
+@media (max-width:680px){.hero__stats--stacked .stat{flex-direction:row;align-items:center;gap:15px}.hero__stats--stacked .stat__number{flex:0 0 135px}}
