@@ -85,3 +85,7 @@
 /* Figure 04: second snapshot inside the takeaway box */
 .takeaway__divider{border:0;border-top:1px solid #C9E2D8;margin:6px 0 20px}
 .takeaway small + small{margin-top:12px}
+
+/* Figure 08: takeaway box beside the pictogram grid */
+.exhibit__body--pictogram{align-items:start}
+@media (max-width:1140px){.exhibit__body--pictogram{grid-template-columns:1fr}}
