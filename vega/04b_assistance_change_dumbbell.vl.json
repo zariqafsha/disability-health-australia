@@ -1,0 +1,254 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Dumbbell chart: share of residents needing core-activity assistance in each state and territory, ABS Census 2016 vs 2021.",
+  "width": "container",
+  "height": 330,
+  "background": "transparent",
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "DM Sans",
+    "axis": {
+      "labelColor": "#405963",
+      "titleColor": "#405963",
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": 600,
+      "domain": false,
+      "ticks": false
+    },
+    "legend": {
+      "labelColor": "#3A5159",
+      "titleColor": "#3A5159",
+      "labelFontSize": 12
+    }
+  },
+  "data": {
+    "url": "data/04_assistance_by_state.csv",
+    "format": {
+      "type": "csv"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum.rate_2016_pct)",
+      "as": "rate_2016"
+    },
+    {
+      "calculate": "toNumber(datum.rate_2021_pct)",
+      "as": "rate_2021"
+    },
+    {
+      "calculate": "round((datum.rate_2021 - datum.rate_2016) * 10) / 10",
+      "as": "change_pp"
+    },
+    {
+      "calculate": "'+' + format(datum.change_pp, '.1f') + ' pp'",
+      "as": "change_label"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "state",
+      "type": "nominal",
+      "sort": {
+        "field": "rate_2021",
+        "order": "descending"
+      },
+      "title": null,
+      "axis": {
+        "labelLimit": 200,
+        "labelPadding": 10,
+        "grid": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 4,
+        "strokeCap": "round",
+        "color": "#C9DDD8"
+      },
+      "encoding": {
+        "x": {
+          "field": "rate_2016",
+          "type": "quantitative",
+          "title": "Residents needing help with a core activity (%)",
+          "scale": {
+            "domain": [
+              2.8,
+              7.6
+            ],
+            "zero": false
+          },
+          "axis": {
+            "values": [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "format": ".0f",
+            "grid": true,
+            "gridColor": "#E3ECEA"
+          }
+        },
+        "x2": {
+          "field": "rate_2021"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverState",
+            "empty": true,
+            "value": 1
+          },
+          "value": 0.35
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State or territory"
+          },
+          {
+            "field": "rate_2016",
+            "title": "2016 (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "rate_2021",
+            "title": "2021 (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "change_label",
+            "title": "Change"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "fold": [
+            "rate_2016",
+            "rate_2021"
+          ],
+          "as": [
+            "series",
+            "rate"
+          ]
+        },
+        {
+          "calculate": "datum.series === 'rate_2016' ? '2016 Census' : '2021 Census'",
+          "as": "census"
+        }
+      ],
+      "params": [
+        {
+          "name": "hoverState",
+          "select": {
+            "type": "point",
+            "fields": [
+              "state"
+            ],
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 150,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "rate",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "census",
+          "type": "nominal",
+          "title": null,
+          "scale": {
+            "domain": [
+              "2016 Census",
+              "2021 Census"
+            ],
+            "range": [
+              "#8FBFB5",
+              "#07666D"
+            ]
+          },
+          "legend": {
+            "orient": "top",
+            "direction": "horizontal",
+            "symbolSize": 140
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverState",
+            "empty": true,
+            "value": 1
+          },
+          "value": 0.35
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State or territory"
+          },
+          {
+            "field": "census",
+            "title": "Census"
+          },
+          {
+            "field": "rate",
+            "title": "Needing assistance (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 12,
+        "fontSize": 12,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "x": {
+          "field": "rate_2021",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "change_label"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.change_pp >= 0.8",
+            "value": "#B86A00"
+          },
+          "value": "#405963"
+        },
+        "opacity": {
+          "condition": {
+            "param": "hoverState",
+            "empty": true,
+            "value": 1
+          },
+          "value": 0.35
+        }
+      }
+    }
+  ]
+}

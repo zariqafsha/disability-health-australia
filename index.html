@@ -21,7 +21,7 @@
   <header class="site-header">
     <div class="site-header__inner wrap">
       <div class="brand"><span class="brand__symbol" aria-hidden="true">*</span><span>THE DATA STORY <small>FIT3179 · AUSTRALIA</small></span></div>
-      <span class="issue">FOUR CHAPTERS <span aria-hidden="true">/</span> 12 CHARTS <span 
+      <span class="issue">FOUR CHAPTERS <span aria-hidden="true">/</span> 13 CHARTS <span 
     </div>
   </header>
   <main id="main">
@@ -99,8 +99,16 @@
       <p class="chart-note">Select 2016 or 2021 above the map. The figure measures <strong>core-activity need for assistance</strong>, a narrower definition than the Survey of Disability, Ageing and Carers. Source: <a href="https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia" target="_blank" rel="noopener noreferrer">ABS, 2021 Census profile, state table</a>. State boundaries: <a href="https://github.com/rowanhogan/australian-states" target="_blank" rel="noopener noreferrer">rowanhogan/australian-states</a>, simplified to TopoJSON with mapshaper and stored in this repository (<code>data/aus_states.json</code>).</p>
     </section>
 
+    <section class="wrap exhibit" aria-labelledby="chart4b-heading">
+      <div class="exhibit__topline"><span>FIGURE 05 · DUMBBELL CHART</span><span>ABS CENSUS · 2016 → 2021</span></div>
+      <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">CHANGE BETWEEN CENSUSES</p><h3 id="chart4b-heading">The need for assistance rose in every state.</h3></div><p>Each line joins a state's <strong>2016</strong> rate (light dot) to its <strong>2021</strong> rate (dark dot). Longer lines mean a bigger rise. Hover over a dot to highlight that state.</p></div>
+      <div class="chart-holder chart-holder--wide" id="chart-4b" role="img" aria-label="Dumbbell chart comparing the share of residents needing core-activity assistance in 2016 and 2021 for eight states and territories. Every jurisdiction increased, by 0.4 to 0.8 percentage points; Victoria and Queensland rose most."><span class="chart-loading">Loading dumbbell chart…</span></div>
+      <div class="insight-row"><div class="insight-row__metric">+0.8<span>pp</span></div><p><strong>Victoria</strong> and <strong>Queensland</strong> had the largest rises, while Tasmania stayed highest overall at 6.8%. All eight states and territories went up, so the change is national rather than local.</p></div>
+      <p class="chart-note">pp = percentage points. The horizontal axis starts near 3% so that small changes are visible; compare line lengths, not distance from the edge. Same Census measure and source as Figure 04: <a href="https://www.abs.gov.au/articles/profile-people-core-need-assistance-australia" target="_blank" rel="noopener noreferrer">ABS, 2021 Census profile, state table</a>.</p>
+    </section>
+
     <section class="wrap exhibit" aria-labelledby="chart5-heading">
-      <div class="exhibit__topline"><span>FIGURE 05 · PROPORTIONAL SYMBOL MAP</span><span>NDIS · 30 JUNE 2026</span></div>
+      <div class="exhibit__topline"><span>FIGURE 06 · PROPORTIONAL SYMBOL MAP</span><span>NDIS · 30 JUNE 2026</span></div>
       <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">SUPPORT THROUGH THE NDIS</p><h3 id="chart5-heading">Participant counts are concentrated in populous states.</h3></div><p>The size of each circle represents the <strong>number of active NDIS participants</strong>. Change the primary disability category to see how different groups are distributed across the states and territories.</p></div>
       <div class="chart-holder chart-holder--map" id="chart-5" role="img" aria-label="Interactive Australian proportional symbol map for June 2026 NDIS participant counts, with disability-type selector. The largest states are New South Wales, Victoria and Queensland."><span class="chart-loading">Loading symbol map…</span></div>
       <div class="insight-row"><div class="insight-row__metric">230,427</div><p>New South Wales had the largest <strong>active NDIS participant count</strong> at 30 June 2026, followed by Victoria (210,846). Larger counts do not necessarily indicate greater unmet need: population size also matters.</p></div>
@@ -108,7 +116,7 @@
     </section>
 
     <section class="wrap exhibit" aria-labelledby="chart5b-heading">
-      <div class="exhibit__topline"><span>FIGURE 06 · DOT MAP</span><span>AIHW MYHOSPITALS · 2026</span></div>
+      <div class="exhibit__topline"><span>FIGURE 07 · DOT MAP</span><span>AIHW MYHOSPITALS · 2026</span></div>
       <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">WHERE CARE IS LOCATED</p><h3 id="chart5b-heading">Public hospitals cluster along the east and south-east coast.</h3></div><p>Each dot is <strong>one open public hospital</strong>. Inland and in the north, hospitals are far apart, so reaching care can mean travelling a long way. Use the selector to highlight one state or territory, and hover over a dot for the hospital's name.</p></div>
       <div class="chart-holder chart-holder--map" id="chart-5b" role="img" aria-label="Dot map of 690 open public hospitals in Australia. Most are in New South Wales, Victoria and Queensland; the Northern Territory has six."><span class="chart-loading">Loading hospital map…</span></div>
       <div class="insight-row"><div class="insight-row__metric">224 <span>vs</span> 6</div><p><strong>New South Wales</strong> has 224 public hospitals in the list; the <strong>Northern Territory</strong>, which covers a far larger area, has 6. Counting hospitals does not measure their size, staffing or specialties.</p></div>
@@ -123,7 +131,7 @@
     </section>
 
     <section class="wrap exhibit" aria-labelledby="chart7-heading">
-      <div class="exhibit__topline"><span>FIGURE 07 · PICTOGRAM GRID</span><span>AIHW / ABS SURVEY · 2022</span></div>
+      <div class="exhibit__topline"><span>FIGURE 08 · PICTOGRAM GRID</span><span>AIHW / ABS SURVEY · 2022</span></div>
       <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">USING HEALTHCARE</p><h3 id="chart7-heading">Most saw a GP—but other services were used less often.</h3></div><p>Each panel contains <strong>100 person symbols</strong>. Each coloured figure stands for 1% of people with disability who used the service in the previous year. <strong>Percentages appear beside service names</strong> for quick comparisons.</p></div>
       <div class="chart-holder chart-holder--pictogram" id="chart-7" role="img" aria-label="Six pictogram panels showing health service use among Australians with disability in 2022: GP 93%, medical specialist 63%, dental 51%, emergency department 25%, hospital admission 25%, telehealth 43%."><span class="chart-loading">Loading pictograms…</span></div>
       <div class="insight-row"><div class="insight-row__metric">93<span>%</span></div><p>Almost all people with disability living in households saw a GP, but fewer saw a medical specialist (<strong>63%</strong>) or dental professional (<strong>51%</strong>). These activities can overlap; percentages are not parts of a whole.</p></div>
@@ -131,7 +139,7 @@
     </section>
 
     <section class="wrap exhibit" aria-labelledby="chart8-heading">
-      <div class="exhibit__topline"><span>FIGURE 08 · BULLET CHART</span><span>2022 · UNMET CARE × DISABILITY GROUP</span></div>
+      <div class="exhibit__topline"><span>FIGURE 09 · BULLET CHART</span><span>2022 · UNMET CARE × DISABILITY GROUP</span></div>
       <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">WHEN PEOPLE MISS OUT</p><h3 id="chart8-heading">People with psychosocial disability report more missed care.</h3></div><p>Each bar shows the percentage who <strong>needed a service but did not receive it at least once</strong> in the previous year. The dark tick marks the rate for <strong>all people with disability</strong>, so bars past the tick are above average. Click a group in the legend to highlight it.</p></div>
       <div class="chart-holder chart-holder--care-heatmap" id="chart-8" role="img" aria-label="Bullet chart comparing unmet GP, medical specialist and dental care with the all-disability rate. Among people with psychosocial disability the rates were 26%, 20%, 25%; among sensory or speech disability the rates were 16%, 12%, 16%; national disability baseline 20%, 14%, 19%."><span class="chart-loading">Loading unmet-care chart…</span></div>
       <div class="insight-row insight-row--amber"><div class="insight-row__metric">+6<span> pp</span></div><p>For <strong>every service</strong>, people with <strong>psychosocial disability</strong> missed needed care 6 percentage points more often than people with disability overall (26% vs 20% for GPs). People with <strong>sensory or speech disability</strong> were 2–4 points below the overall rate.</p></div>
@@ -139,7 +147,7 @@
     </section>
 
     <section class="wrap exhibit" aria-labelledby="chart9-heading">
-      <div class="exhibit__topline"><span>FIGURE 09 · WEIGHTED NODE–LINK DIAGRAM</span><span>2022 · REASONS FOR UNMET NEED</span></div>
+      <div class="exhibit__topline"><span>FIGURE 10 · WEIGHTED NODE–LINK DIAGRAM</span><span>2022 · REASONS FOR UNMET NEED</span></div>
       <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">WHY CARE IS MISSED</p><h3 id="chart9-heading">Different services, different obstacles to care.</h3></div><p>Follow the connections from each <strong>missed healthcare service</strong> to two reported barriers. <strong>Thicker links</strong> mean a larger share of people who missed <em>that specific service</em> named the barrier.</p></div>
       <div class="exhibit__body exhibit__body--split">
         <div class="chart-holder chart-holder--barrier" id="chart-9" role="img" aria-label="Weighted node-link network between three healthcare services and two barriers: GP cost 8.8%, GP waiting 43%; medical specialist cost 24%, waiting 26%; dental cost 46%, waiting 8.5%. Line widths represent service-specific percentages, not numbers of people."><span class="chart-loading">Loading barriers comparison…</span></div>
@@ -149,7 +157,7 @@
     </section>
 
     <section class="wrap exhibit" aria-labelledby="chart10-heading">
-      <div class="exhibit__topline"><span>FIGURE 10 · WAFFLE CHART</span><span>2022 · HELP WITH DAILY ACTIVITIES</span></div>
+      <div class="exhibit__topline"><span>FIGURE 11 · WAFFLE CHART</span><span>2022 · HELP WITH DAILY ACTIVITIES</span></div>
       <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">BEYOND HEALTHCARE</p><h3 id="chart10-heading">Some people who need daily assistance receive none.</h3></div><p>Of people with disability who <strong>needed assistance with daily activities</strong>, each tile below represents one percentage point. The colours show three mutually exclusive patterns of help received.</p></div>
       <div class="exhibit__body exhibit__body--split">
         <div class="chart-holder chart-holder--waffle" id="chart-10" role="img" aria-label="A 100-tile waffle: 57 percent receive formal assistance (sometimes together with informal help); 33 percent receive informal-only help; 10 percent receive no help."><span class="chart-loading">Loading assistance waffle…</span></div>
@@ -167,7 +175,7 @@
     </section>
 
     <section class="wrap exhibit" aria-labelledby="chart11-heading">
-      <div class="exhibit__topline"><span>FIGURE 11 · ANNOTATED AREA / LINE</span><span>NDIA · 30 JUNE 2022–2026</span></div>
+      <div class="exhibit__topline"><span>FIGURE 12 · ANNOTATED AREA / LINE</span><span>NDIA · 30 JUNE 2022–2026</span></div>
       <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">A LARGER SCHEME</p><h3 id="chart11-heading">Almost a quarter of a million more participants in four years.</h3></div><p>The chart shows the national count of people holding an <strong>active NDIS plan on 30 June</strong> each year. Hover to compare annual totals and the net change since the previous June.</p></div>
       <div class="exhibit__body exhibit__body--split">
         <div class="chart-holder chart-holder--trend" id="chart-11" role="img" aria-label="National active NDIS participants grew from 534,655 in June 2022 to 782,013 in June 2026, with intermediate points 610,502, 661,267, and 739,414."><span class="chart-loading">Loading participant trend…</span></div>
@@ -177,11 +185,11 @@
     </section>
 
     <section class="wrap exhibit" aria-labelledby="chart12-heading">
-      <div class="exhibit__topline"><span>FIGURE 12 · INTERACTIVE GROUP TRENDS</span><span>NDIA · MATCHED OCTOBER–MARCH WINDOWS</span></div>
+      <div class="exhibit__topline"><span>FIGURE 13 · INTERACTIVE GROUP TRENDS</span><span>NDIA · MATCHED OCTOBER–MARCH WINDOWS</span></div>
       <div class="exhibit__head"><div><p class="eyebrow eyebrow--dark">FUNDING PUT TO USE</p><h3 id="chart12-heading">Plan utilisation differs substantially by support needs.</h3></div><p>These percentages show the <strong>share of committed NDIS supports paid for</strong> during each October–March window. Compare participants receiving Supported Independent Living (SIL), other participants and all participants. Hover over the lines or points for the exact values. All three groups are shown together for comparison.</p></div>
       <div class="chart-holder chart-holder--util" id="chart-12" role="img" aria-label="National plan utilisation from October to March in 2024, 2025 and 2026: SIL 89, 87, 87 percent; not SIL 71, 68, 68 percent; all participants 77, 74, 73 percent."><span class="chart-loading">Loading utilisation trends…</span></div>
       <div class="insight-row"><div class="insight-row__metric">19<span>pp</span></div><p>In the October 2025–March 2026 window, utilisation was <strong>87%</strong> for people in SIL and <strong>68%</strong> for those not in SIL—a <strong>19-percentage-point gap</strong>. Group composition and support needs differ, so this is not a like-for-like comparison of care quality.</p></div>
-      <p class="chart-note"><strong>Time period:</strong> each point uses the six months from 1 October of the preceding year to 31 March of the labelled year; the most recent April–June quarter is excluded because of payment-reporting lags. <strong>Figure 12 replaces the original support-class concept</strong> because comparable published class-level historical figures could not be independently extracted. Figures exclude certain in-kind supports and plans; utilisation may be understated. The axis starts at 50% to make modest changes legible. Sources: <a href="https://www.ndis.gov.au/media/7219/download?attachment=" target="_blank" rel="noopener noreferrer">2024 Appendix D.28</a>, <a href="https://ndis.gov.au/media/7893/download?attachment=" target="_blank" rel="noopener noreferrer">2025 Appendix D.29</a>, <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">2026 Appendix D.29</a>.</p>
+      <p class="chart-note"><strong>Time period:</strong> each point uses the six months from 1 October of the preceding year to 31 March of the labelled year; the most recent April–June quarter is excluded because of payment-reporting lags. <strong>Figure 13 replaces the original support-class concept</strong> because comparable published class-level historical figures could not be independently extracted. Figures exclude certain in-kind supports and plans; utilisation may be understated. The axis starts at 50% to make modest changes legible. Sources: <a href="https://www.ndis.gov.au/media/7219/download?attachment=" target="_blank" rel="noopener noreferrer">2024 Appendix D.28</a>, <a href="https://ndis.gov.au/media/7893/download?attachment=" target="_blank" rel="noopener noreferrer">2025 Appendix D.29</a>, <a href="https://www.ndis.gov.au/media/8793/download?attachment=" target="_blank" rel="noopener noreferrer">2026 Appendix D.29</a>.</p>
     </section>
 
     <section class="wrap chapter-ending chapter-ending--final">

@@ -7,6 +7,7 @@ const chartSpecs = [
   { target: '#chart-2', path: 'vega/02_age_sex_heatmap.vl.json' },
   { target: '#chart-3', path: 'vega/03_main_conditions_treemap.vg.json', treemap: true },
   { target: '#chart-4', path: 'vega/04_assistance_choropleth.vl.json' },
+  { target: '#chart-4b', path: 'vega/04b_assistance_change_dumbbell.vl.json' },
   { target: '#chart-5', path: 'vega/05_ndis_symbol_map.vl.json' },
   { target: '#chart-5b', path: 'vega/05b_public_hospitals_dot_map.vl.json' },
   { target: '#chart-7', path: 'vega/07_health_service_pictograms.vl.json' },
