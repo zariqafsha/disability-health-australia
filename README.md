@@ -15,7 +15,7 @@ The page has four chapters and 12 figures.
 | 02 | | Heatmap | Prevalence by age and sex, 2022 | `vega/02_age_sex_heatmap.vl.json` |
 | 03 | | Treemap (Vega) | Main health condition, 2022 | `vega/03_main_conditions_treemap.vg.json` |
 | 04 | Where is support needed? | Choropleth map | Need for core-activity assistance by state, 2016 and 2021 | `vega/04_assistance_choropleth.vl.json` |
-| 05 | | Dumbbell chart | Change in need for assistance by state, 2016 → 2021 | `vega/04b_assistance_change_dumbbell.vl.json` |
+| 05 | | Dumbbell chart | Change in need for assistance by state, 2016 to 2021 | `vega/04b_assistance_change_dumbbell.vl.json` |
 | 06 | | Proportional symbol map | NDIS participants by state and primary disability, June 2026 | `vega/05_ndis_symbol_map.vl.json` |
 | 07 | | Dot map | Open public hospitals | `vega/05b_public_hospitals_dot_map.vl.json` |
 | 08 | Can people get the care they need? | Pictogram grid | Health services used, 2022 | `vega/07_health_service_pictograms.vl.json` |

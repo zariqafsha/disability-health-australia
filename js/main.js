@@ -1,4 +1,4 @@
-/* FIT3179 Sections 1–4 — independently editable Vega-Lite and Vega JSON specs.
+/* FIT3179 Sections 1-4 - independently editable Vega-Lite and Vega JSON specs.
    Serve this project with VS Code Live Server, not a file:// URL.
    Requires network access to load the Vega scripts from jsDelivr. */
 'use strict';
