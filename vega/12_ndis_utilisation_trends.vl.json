@@ -58,18 +58,19 @@
       "title": "Plan utilisation (%)",
       "scale": {
         "domain": [
-          50,
-          95
+          0,
+          100
         ],
         "nice": false
       },
       "axis": {
         "values": [
-          50,
+          0,
+          20,
+          40,
           60,
-          70,
           80,
-          90
+          100
         ],
         "gridColor": "#E5ECE7",
         "domain": false,
@@ -300,7 +301,7 @@
         "fontSize": 13,
         "fontWeight": 800,
         "color": "#102D34",
-        "dy": -9
+        "dy": -15
       },
       "encoding": {
         "y": {
@@ -354,7 +355,7 @@
         "fontSize": 12,
         "fontWeight": 400,
         "color": "#102D34",
-        "dy": 8
+        "dy": 2
       },
       "encoding": {
         "y": {

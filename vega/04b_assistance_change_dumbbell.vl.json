@@ -79,18 +79,22 @@
           "title": "Residents needing help with a core activity (%)",
           "scale": {
             "domain": [
-              2.8,
-              7.6
+              0,
+              8
             ],
-            "zero": false
+            "zero": true
           },
           "axis": {
             "values": [
+              0,
+              1,
+              2,
               3,
               4,
               5,
               6,
-              7
+              7,
+              8
             ],
             "format": ".0f",
             "grid": true,
